@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.a{
+				border: 1px dashed red;
+			}
+		</style>
+	</head>
+	<body>
+		<button>切换</button>
+		<img src="img/pic.gif"/>
+	</body>
+	<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('button').click(function(){
+				$('img').toggleClass('a');
+			});
+		})
+	</script>
+</html>

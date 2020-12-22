@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html onclick="funHtml()">
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body onclick="funBody()">
+		<div onclick="div()">
+			<button onclick="bt()">bt</button>
+		</div>
+	</body>
+	<script type="text/javascript">
+		
+		
+		function bt (e){
+			var oEvent=e||event;
+			//阻止冒泡事件的发生
+			event.stopPropagation();
+			event.cancelBubble=true;
+			
+//			console.log(oEvent);
+			console.log('你点击了bt');
+		}
+		
+		function div () {
+			console.log('你点击了div');
+			
+			event.stopPropagation();
+			event.cancelBubble=true;
+		}
+		
+		function funBody () {
+			console.log('你点击了funBody');
+		}
+		
+		function funHtml () {
+			console.log('你点击了funHtml');
+		}
+	</script>
+</html>

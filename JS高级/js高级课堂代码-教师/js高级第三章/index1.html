@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			img{
+				width: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<p>
+			选择喜欢的书籍：
+			<input type="radio" name="sex" id="sex" value="小狗" onclick="add1()"/>小狗
+			<input type="radio" name="sex" id="sex" value="雾霾" onclick="add2()"/>雾霾
+		</p>
+		<div id="div">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		var div= document.getElementById('div');
+		
+		function add1(){
+			//创建img节点
+			var img  = document.createElement('img');
+			img.setAttribute('src','img/dog.jpg');
+			div.appendChild(img);
+		}
+		function add2(){
+			//创建img节点
+			var img  = document.createElement('img');
+			img.setAttribute('src','img/mai.jpg');
+			div.appendChild(img);
+		}
+	</script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			p{
+				margin: 0 auto;
+				width: 300px;
+				height: 300px;
+				line-height: 300px;
+				text-align: center;
+				background: black;
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<button class="btn1">slideUp</button>
+		<button class="btn2">slideDown</button>
+		<button class="btn3">slideToggle</button>
+		<p>slide</p>
+	</body>
+	<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function () {
+		
+			$('.btn1').click(function () {
+				$('p').slideUp(2000);
+			})
+			$('.btn2').click(function () {
+				$('p').slideDown(2000);
+			})
+			$('.btn3').click(function () {
+				$('p').slideToggle(2000);
+			})
+		
+		})
+	</script>
+</html>

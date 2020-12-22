@@ -1,0 +1,79 @@
+*{
+		margin: 0;
+		padding: 0;
+	}
+	.box{
+		margin: 0 auto;
+		width: 60%;
+		height: 400px;
+	}
+	ul{
+		list-style: none;
+	}
+	/*------------------------------左-------------------------------------*/
+	.left{
+		float: left;
+		width: 29%;
+		height: 394px;
+		border: 1px solid pink;
+	}
+	.left>p{
+		width: 97%;
+		height: 10%;
+		line-height: 42px;
+		margin-left: 4%;
+	}
+	.left>p:first-of-type{
+		margin-top: 42%;
+	}
+	.left>p:last-of-type{
+		line-height: 235px;
+		height: 35%;
+		text-align: right;
+	}
+	.left>p:last-of-type:hover{
+		transition: all 1s;
+		transform: translateX(-12px);
+	}
+	/*------------------------------右-------------------------------------*/
+	.right{
+		float: left;
+		width: 70%;
+		height: 100%;
+	}
+	.right>ul{
+		width: 100%;
+		height: 100%;
+	}
+	.right>ul>li{
+		float: left;
+		width: 49%;
+		height: 49%;
+		border: 1px solid pink;
+	}
+	.right>ul>li>ul{
+		float: left;
+		width: 50%;
+		height: 100%;
+	}
+	.right>ul>li>ul>li{
+		width: 100%;
+		height: 15%;
+	}
+	.right>ul>li>ul>li:first-of-type{
+		margin-top: 36%;
+	}
+	.right>ul>li>img{
+		float: right;
+		width: 50%;
+		height: 75%;
+		margin-top: 15%;
+	}
+	.right>ul>li>img:hover{
+		transition: all 1s;
+		transform: translateX(-12px);
+	}
+	
+		
+	
+	

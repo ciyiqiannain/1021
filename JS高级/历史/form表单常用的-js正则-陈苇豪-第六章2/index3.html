@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="" method="post">
+			<p>会员名：<input type="text" name="" id="hyming" value="" /><span></span></p>
+			<p>登录密码：<input type="password" name="" id="pas" value="" /><span></span></p>
+			<p>确认密码：<input type="password name="" id="pass" value="" /><span></span>
+			</p>
+			<p>昵称：<input type="text" name="" id="nc" value="" /><span></span></p>
+			<p>关联手机号：<input type="text" name="" id="sjh" value="" /><span></span></p>
+			<p>邮箱：<input type="text" name="" id="yx" value="" /><span></span></p>
+			<input type="submit" value="提交"/>
+		</form>
+	</body>
+	<script type="text/javascript">
+		var hyming=document.getElementById('hyming');
+		var sps=document.getElementsByTagName('span');
+		var pas=document.getElementById('pas');
+		var pass=document.getElementById('pass');
+		var nc=document.getElementById('nc');
+		var sjh=document.getElementById('sjh');
+		var yx=document.getElementById('yx');
+		
+		hyming.onfocus=function () {
+			sps[0].innerHTML='6-12个字符';
+			sps[0].style.display='inline-block';
+		}
+		hyming.onblur=function () {
+			var hyminghValue=hyming.value;
+			if (hyminghValue=='') {
+				sps[0].innerHTML='不能为空';
+				return false;
+			}
+		}
+		pas.onfocus=function () {
+			sps[1].innerHTML='至少包含6个字符';
+			sps[1].style.display='inline-block';
+		}
+		pas.onblur=function () {
+			var pasValue=pas.value;
+			if (pasValue.length<6) {
+				sps[1].innerHTML='格式错误';
+				return false;
+			}
+		}
+		pass.onblur=function () {
+			var pasValue=pas.value;
+			var passValue=pass.value;
+			if (pasValue != passValue) {
+				sps[2].innerHTML='两次密码不一样';
+				return false;
+			}
+			if (pasValue == passValue) {
+				sps[2].innerHTML='';
+				return false;
+			}
+		}
+		nc.onblur=function () {
+			var ncminghValue=nc.value;
+			if (ncminghValue=='') {
+				sps[3].innerHTML='不能为空';
+				return false;
+			}
+		}
+		sjh.onblur=function () {
+			var sjhminghValue=sjh.value;
+			console.log(sps[4]);
+			if (sjhminghValue=='') {
+				sps[4].innerHTML='不能为空';
+				return false;
+			}
+		}
+		yx.onblur=function () {
+			var yxValue=yx.value;
+			if (yxValue=='') {
+				sps[5].innerHTML='不能为空';
+				return false;
+			}
+			if (yxValue.indexOf('@')==-1 && yxValue.indexOf('.')==-1) {
+				sps[5].innerHTML='无@或.';
+				return false;
+			}
+		}
+	</script>
+</html>

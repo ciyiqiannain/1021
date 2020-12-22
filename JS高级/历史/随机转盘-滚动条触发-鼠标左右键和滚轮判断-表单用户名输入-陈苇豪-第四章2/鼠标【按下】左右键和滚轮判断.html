@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="bt">按钮</button>
+	</body>
+	<script type="text/javascript">
+		var bt=document.getElementById('bt');
+		
+		bt.onmousedown=function () {
+			console.log(event);
+			console.log(event.button);
+			if (event.button==0) {
+				alert('鼠标左键');
+			} else if(event.button==1){
+				alert('鼠标滚轮');
+			}else if(event.button==2){
+				alert('鼠标右键');
+			}
+		}
+	</script>
+</html>

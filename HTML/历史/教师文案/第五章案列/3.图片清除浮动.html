@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			ul{
+				border: 1px solid red;
+			}
+			li{
+				border: 1px dashed black;
+				margin-top: 20px;
+				float: left;
+			}
+			.text{
+				width: 500px;
+			}
+			/*方法一*/
+			/*.clear{
+				clear: both;
+				margin: 0;
+				padding: 0;
+			}*/
+			/*方法二*/
+			ul{
+				/*overflow: hidden;*/
+			}
+			/*第三章*/
+			.clear:after{
+				content: "";
+				display: block;
+				clear: both;
+			}
+			.clear{
+				zoom: 1;
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="clear">
+			<li><img src="img/photo-1.jpg"/></li>
+			<li><img src="img/photo-2.jpg"/></li>
+			<li><img src="img/photo-3.jpg"/></li>
+			<li class="text">
+				浮动的盒子可以向左浮动，也可以向右浮动，直到它的外边缘碰到包含框或另一个浮动盒子为止。本网页中共有三个图片，
+				分别代表日用品图片、图书图片和鞋子图片。这里使用这三个图片和本段文字来演示讲解浮动在网页中的应用，根据需要图
+				片所在的div分别向左浮动、向右浮动，或者不浮动。
+			</li>
+			<!--<p class="clear"></p>-->
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			p{
+				font-size: 18px;
+			}
+		</style>
+	</head>
+	<body>
+		<button onclick="jian()">-</button>
+		<button onclick="jia()">+</button>
+		<p id="p">
+			张文宏提到，在他接触的病例中，还没有出现过因空气传播感染的病例。
+			他介绍，一般是在密闭空间，并且存在大量的病毒载量的情况下，空气传
+			播有价值。他指出，医务人员不带N95口罩的情况下进行气管插管，打开
+			下呼吸道，大量的病毒释放出来，在一个密闭的医疗空间里面会造成气溶
+			胶传播，会有可能。在一般的电梯，只要没有进行剧烈的咳嗽，没有大量
+			的病毒量喷出来，这个空间量也不是太大，这种风险可能有，但是从数学
+			的概率来讲，这种我们可以忽略不计。
+		</p>
+	</body>
+	<script type="text/javascript">	
+		var p=document.getElementById('p');
+		var num=18;
+		function jia(){			
+			num=num+2;
+			p.style.fontSize=num+'px';
+			console.log(num);
+		}
+		function jian(){
+			console.log(num);
+			num=num-2;
+			p.style.fontSize=num+'px';
+		}
+	</script>
+</html>

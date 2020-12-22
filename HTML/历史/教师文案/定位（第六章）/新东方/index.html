@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 1200px;
+				height: 27px;
+				border:1px solid black ;
+				background: url(img/top_bg.gif);
+			}
+			ul{
+				list-style: none;
+			}
+			.da>li{
+				width: 80px;
+				float: left;
+				height: 21px;
+				line-height: 21px;
+				margin-left: 15px;
+				margin-top: 3px;
+				border-right: 1px solid black;
+				padding-right: 20px;
+			}
+			.li:hover>.xian{
+				display: block;
+			}
+			.xian{
+				width: 200px;
+				height: 300px;
+				border:1px solid red ;
+			}
+			.xian{
+				display: none;
+			}
+			.xian>li{
+				width: 200px;
+				height: 100px;
+			}
+			.xian>li>ul{
+				border-bottom: 1px solid black;
+			}
+			.xian>li>ul>li{
+				float: left;
+				margin-left: 10px;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<ul class="da">
+				<li><img src="img/logo.gif"/></li>
+				<li>购物车</li>
+				<li>优惠券</li>
+				<li>快速注卡</li>
+				<li>各地购课</li>
+				<li>手机报</li>
+				<li class="li">
+					网站导航 <img src="img/open_icon.gif"/>
+					<ul class="xian">
+						<li>
+							<ul>
+								<li>托福  </li>
+								<li>雅思</li>
+								<li>考研</li>
+								<li>职称英语</li>
+								<li>初中</li>
+								<li>日语</li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li>托福  </li>
+								<li>雅思</li>
+								<li>考研</li>
+								<li>职称英语</li>
+								<li>初中</li>
+								<li>日语</li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li>托福  </li>
+								<li>雅思</li>
+								<li>考研</li>
+								<li>职称英语</li>
+								<li>初中</li>
+								<li>日语</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

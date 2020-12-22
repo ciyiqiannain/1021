@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="div">
+			今天星期五
+		</div>
+		<a href="new_file1.html">来到new_file1页面</a>
+		<button onclick="back()">返回上一页面</button>
+	</body>
+	<script type="text/javascript">
+		var div=document.getElementById('div');
+//		div.innerHTML='今天很开心';
+//		div.innerHTML='<h1>今天很开心</h1>';
+//		div.innerText='今天礼拜五，马上礼拜天';
+		div.innerText='<h1>今天礼拜五，马上礼拜天</h1>';
+		function back(){
+			window.history.back();
+		}
+	</script>
+</html>

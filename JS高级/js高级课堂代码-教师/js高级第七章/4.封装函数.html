@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">		
+		function setCookie(name,value,Day){
+			var date=new Date();
+			date.setDate(date.getDate()+Day);
+			document.cookie=name+"="+value+";expires="+date;
+		}
+		
+		setCookie("username","abc",30);
+		setCookie("password","123456",30000);
+		alert(document.cookie);
+	</script>
+</html>

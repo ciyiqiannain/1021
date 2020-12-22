@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul{
+				height: 100px;
+				list-style: none;
+			}
+			li{
+				float: left;
+				text-align: center;
+				width: 100px;
+				font-size: 36px;
+				border: 3px solid blue;
+				cursor: pointer;
+			}
+			.div>li{
+				float: none;
+				width: 300px;
+				font-size: 24px;
+				text-align: left;
+				border: none;
+				display: none;
+				margin-top: 30px;
+			}
+			.div{
+				overflow: hidden;
+			}
+			.div>.li1{
+				display: block;
+			}
+			.div>.li4{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li onclick="li1()">1</li>
+			<li onclick="li2()">2</li>
+			<li onclick="li3()">3</li>
+		</ul>
+		<ul class="div">
+			<li class="li4">问题是因为你主观的认为它是问题，所以，反之...</li>
+			<li class="li5">你全力做到的最好，可能还不如别人的随便搞搞。</li>
+			<li class="li6">失败并不可怕，可怕的是你还相信这句话。</li>
+		</ul>
+	</body>
+	<script type="text/javascript">
+		var li=document.getElementsByTagName('li');
+		function li1 () {
+//			li[4].style.display='none';
+//			li[5].style.display='none';
+			zong();
+			li[3].style.display='block';
+		}
+		function li2 () {
+//			li[3].style.display='none';
+//			li[5].style.display='none';
+			zong();
+			li[4].style.display='block';
+		}
+		function li3 () {
+//			li[3].style.display='none';
+//			li[4].style.display='none';
+			zong()
+			li[5].style.display='block';
+		}
+		function zong () {
+			li[3].style.display='none';
+			li[4].style.display='none';
+			li[5].style.display='none';
+		}
+		
+	</script>
+</html>

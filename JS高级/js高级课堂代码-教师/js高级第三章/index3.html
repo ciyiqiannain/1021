@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			
+			tr>td{
+				padding: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<div><img src="img/dd_logo.jpg"/><button id="btn">关闭</button></div>
+			<table>
+				<tr>
+					<th>商品图片</th>
+					<th>商品信息</th>
+					<th>单价</th>
+					<th>数量</th>
+					<th>总价</th>
+					<th>操作</th>
+				</tr>
+				<tr>
+					<td><img src="img/dog.jpg" width="50px" height="80px"/></td>
+					<td>狗狗</td>
+					<td>￥<span>21.9</span></td>
+					<td><span>-</span><sapn>1</sapn><sapn>+</sapn></td>
+					<td>￥<span>21.9</span></td>
+					<td>
+						<span>移入收藏</span>
+						<p id="p1">删除</p>
+					</td>
+				</tr>
+				<tr>
+					<td><img src="img/mai.jpg" width="50px" height="80px"/></td>
+					<td>狗狗</td>
+					<td>￥<span>21.9</span></td>
+					<td><span>-</span><sapn>1</sapn><sapn>+</sapn></td>
+					<td>￥<span>21.9</span></td>
+					<td>
+						<span>移入收藏</span>
+						<p id="p2">删除</p>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+	<script type="text/javascript">
+		
+		
+		var p2=document.getElementById('p2');
+		var p1=document.getElementById('p1');
+		p2.onclick=function() {
+			var fa=p2.parentNode.parentNode.parentNode;
+				fa.removeChild(p2.parentNode.parentNode);
+		}
+		p1.onclick=function() {
+			var fa=p1.parentNode.parentNode.parentNode;
+				fa.removeChild(p1.parentNode.parentNode);
+		}
+		
+		var btn=document.getElementById('btn');
+		
+		btn.onclick=function(){
+//			window.close();
+			window.open("index2.html");
+		}
+	</script>
+</html>

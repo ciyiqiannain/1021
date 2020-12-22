@@ -1,0 +1,77 @@
+a{
+	text-decoration: none;
+}
+.one{
+	background: RGB(20, 140, 202);
+	color: white;
+}
+.one>ul>li:nth-child(n+2){
+	margin-top: 15px;
+}
+.one>ul>li>a{
+	color: white;
+}
+.one>ul>li>a:hover{
+	color: black;
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+	margin-right: 30px;
+}
+.right>li{
+	margin-top: 15px;
+}
+.two>img{
+	width: 100%;
+}
+.three>.img{
+	text-align: center;
+}
+.three>.img>h3{
+	color: blue;
+}
+.three>div>.ul1{
+	display: inline-block;
+}
+.four>div>a>p{
+	text-align: center;
+}
+.p1{
+	margin-top: 100px;
+}
+.five>div>ul{
+	list-style: none;
+}
+.six>p{
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

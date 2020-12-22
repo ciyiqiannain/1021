@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function setCookie(name,value,Day){
+			var date=new Date();
+			date.setDate(date.getDate()+Day);
+			document.cookie=name+"="+value+"; expires="+date;
+		}
+//		console.log(document.cookie);
+		function getCookie(name){
+			//cookie就是一个字符串      username=abc; password=123456; aaa=abc; bbb=123
+			var arr=document.cookie.split(';');
+			console.log(arr);
+			var i=0;
+			for(i=0;i<arr.length;i++){
+				var arr2=arr[i].split('=');
+				if(arr2[0]==name){
+					return arr2[1];
+				}
+			}
+			return '';
+		}
+//		alert(document.cookie);
+		setCookie("aaa","111",30);
+		setCookie("bbb","123",300);
+//		
+//		alert(getCookie('aaa'));
+		console.log(document.cookie);
+		alert(getCookie('aaa'));
+
+		
+		
+	</script>
+</html>

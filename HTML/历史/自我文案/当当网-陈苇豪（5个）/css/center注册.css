@@ -1,0 +1,43 @@
+.center1>ul>li{
+				float: left;
+				width: 313px;
+				height: 32px;
+				line-height: 30px;
+				text-align: center;
+			}
+			.center1>ul>.li1{
+				background-image: url(../img/register_tag_left.gif)
+			}
+			.center1>ul>.li2{
+				background-image: url(../img/register_tag_mid.gif)
+			}
+			.center1>ul>.li3{
+				background-image: url(../img/register_tag_mid.gif)
+			}
+			.center2{
+				width: 938px;
+				height: 80px;
+				border-bottom: 1px solid pink;
+				overflow: hidden;
+			}
+			.center2>div{
+				float: left;
+			}
+			.center2>.img{
+				margin-left: 122px;
+				margin-top: 30px;
+			}
+			.center2>.p{
+				margin-top: 36px;
+			}
+			.center3>form{
+				margin-top: 30px;
+			}
+			.center3>form>p>span{
+				width: 200px;
+				display: inline-block;
+				text-align: right;
+			}
+			.center3>form>.p{
+				margin: 10px 200px;
+			}

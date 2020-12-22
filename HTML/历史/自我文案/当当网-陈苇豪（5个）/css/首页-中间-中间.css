@@ -1,0 +1,221 @@
+.center>.middle{
+				float: left;
+				width: 820px;
+				height: 1410px;
+			}
+			.center>.middle>.one{
+				width: 820px;
+				height: 375px;
+				border-radius: 15px;
+				background-color: RGB(217, 227, 230);
+				border: 1px solid black;
+				position: relative;
+			}
+			.center>.middle>.one>.img1{
+				width: 820px;
+				height: 77px;
+			}
+			.center>.middle>.one>.img2{
+				width: 790px;
+				height: 253px;
+			}
+			.center>.middle>.one>ul{
+				position: absolute;
+				right: 0px;
+				top: 90px;
+			}
+			.center>.middle>.one>ul>li{
+				width: 20px;
+				height: 20px;
+				line-height: 20px;
+				text-align: center;
+				border: 1px solid black;
+			}
+			.center>.middle>.two{
+				width: 820px;
+				height: 375px;
+				margin-top: 15px;
+				border: 1px solid black;
+				float: left;
+			}
+			.center>.middle>.two>.top{
+				width: 820px;
+				height: 35px;
+				border: 1px solid pink;
+				float: left;
+				background-color: RGB(235, 235, 235);
+			}
+			.center>.middle>.two>.top>h2{
+				float: left;
+			}
+			.center>.middle>.two>.top>ul{
+				float: left;
+				width: 300px;
+				height: 45px;
+				margin-left: 145px;
+				margin-top: 4px;
+			}
+			.center>.middle>.two>.top>ul>.li{
+				background: white;
+				height: 22px;
+				border: 1px solid pink;
+				border-bottom: none;
+			}
+			.center>.middle>.two>.top>ul>li{
+				height: 21px;
+				float: left;
+				line-height: 30px;
+				border-radius: 5px;
+				margin: 5px;
+				margin-top: 0px;
+				padding: 5px;
+				background: -webkit-linear-gradient(top,pink,white);
+				font-size: 20px;
+			}
+			.center>.middle>.two>.top>p{
+				float: right;
+				font-size: 22px;
+			}
+			.center>.middle>.two>.bottom{
+				width: 818px;
+				height: 337px;
+				margin-left: 0px;
+				border: 1px solid black;
+				float: left;
+				text-align: left;
+				position: relative;
+			}
+			.center>.middle>.two>.bottom>.one{
+				width: 420px;
+				height: 165px;
+				margin-top: 15px;
+				float: left;
+			}
+			.center>.middle>.two>.bottom>.one>.ul1>li>a{
+				color: blue;
+			}
+			.center>.middle>.two>.bottom>.one>.ul1>.img{
+				width: 100px;
+			}
+			.center>.middle>.two>.bottom>.one>.ul1>.img>img{
+				width: 125px;
+				height: 125px;
+				float: left;
+			}
+			.center>.middle>.two>>.bottom>.one>.ul1{
+				float: left;
+				width: 415px;
+				height: 24px;
+				text-align: left;
+			}
+			
+			.center>.middle>.two>.bottom>.two{
+				width: 420px;
+				height: 165px;
+				float: left;
+			}
+			.center>.middle>.two>.bottom>.two>.ul2>li>a{
+				color: blue;
+			}
+			.center>.middle>.two>.bottom>.two>.ul2>.img{
+				width: 100px;
+			}
+			.center>.middle>.two>.bottom>.two>.ul2>.img>img{
+				width: 125px;
+				height: 125px;
+				float: left;
+			}
+			.center>.middle>.two>.bottom>.two>.ul2{
+				float: left;
+				width: 415px;
+				height: 24px;
+				text-align: left;
+			}
+			.center>.middle>.two>.bottom>.there{
+				width: 420px;
+				height: 165px;
+				float: right;
+				position: absolute;
+				right: 0px;
+				top: 0px;
+			}
+			.center>.middle>.two>.bottom>.there>.ul2>li>a{
+				color: blue;
+			}
+			.center>.middle>.two>.bottom>.there>.ul2>.img{
+				width: 100px;
+			}
+			.center>.middle>.two>.bottom>.there>.ul2>.img>img{
+				width: 125px;
+				height: 125px;
+				float: left;
+			}
+			.center>.middle>.two>.bottom>.there>.ul2{
+				float: left;
+				width: 415px;
+				height: 24px;
+				text-align: left;
+			}
+			.center>.middle>.two>.bottom>.four{
+				width: 420px;
+				height: 165px;
+				float: right;
+				position: absolute;
+				right: 0px;
+				top: 181px;
+			}
+			.center>.middle>.two>.bottom>.four>.ul2>li>a{
+				color: blue;
+			}
+			.center>.middle>.two>.bottom>.four>.ul2>.img{
+				width: 100px;
+			}
+			.center>.middle>.two>.bottom>.four>.ul2>.img>img{
+				width: 125px;
+				height: 125px;
+				float: left;
+			}
+			.center>.middle>.two>.bottom>.four>.ul2{
+				float: left;
+				width: 415px;
+				height: 24px;
+				text-align: left;
+			}
+			.center>.middle>.two>.bottom2{
+				width: 818px;
+				height: 640px;
+				margin-top: 15px;
+				margin-left: 0px;
+				border: 1px solid black;
+				float: left;
+			}
+			.center>.middle>.two>.bottom2>.top{
+				float: left;
+				width: 817px;
+				height: 35px;
+				background-color: RGB(235, 235, 235);
+			}
+			.center>.middle>.two>.bottom2>.top>h2{
+				float: left;
+			}
+			.center>.middle>.two>.bottom2>.bottom{
+				width: 817px;
+				height: 638px;
+				margin-left: 0px;
+			}
+			.center>.middle>.two>.bottom2>.bottom>ul{
+				float: left;
+			}
+			.center>.middle>.two>.bottom2>.bottom>ul>li{
+				width: 202px;
+				height: 265px;
+				float: left;
+				margin-top: 25px;
+			}
+			.center>.middle>.two>.bottom2>.bottom>ul>li>img{
+				width: 125px;
+				height: 125px;
+			}
+			.center>.middle>.two>.bottom2>.bottom>ul>li>p>a{
+				color: blue;
+			}

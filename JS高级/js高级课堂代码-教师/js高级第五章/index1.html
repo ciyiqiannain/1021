@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html onclick="funHtml()">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			div{
+				width: 300px;
+				height: 200px;
+				border: 1px solid red;
+			}
+		</style>
+	</head>
+	<body onclick="funBody()">
+		<div onclick="fun()">
+			<button onclick="btn()">按钮</button>
+		</div>
+	</body>
+	<script type="text/javascript">
+		function btn(e){
+			//兼容性
+			var oEvent=e||event;
+			//阻止冒泡事件的发生
+			oEvent.stopPropagation();
+			oEvent.cancelBubble=true;
+			
+			console.log(oEvent);
+			console.log('你点击了btn按钮');
+		}
+		function fun(e){
+			//兼容性
+			var oEvent=e||event;
+			//阻止冒泡事件的发生
+			oEvent.stopPropagation();
+			oEvent.cancelBubble=true;
+			
+			console.log('你点击了盒子');
+		}
+		function funBody(){
+			console.log('你触发了body事件');
+		}
+		function funHtml(){
+			console.log('你触发了html事件');
+		}
+	</script>
+</html>

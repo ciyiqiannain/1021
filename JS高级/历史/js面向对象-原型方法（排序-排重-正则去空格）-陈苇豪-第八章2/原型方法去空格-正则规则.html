@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		
+		// \将下一字符标记为特殊字符,赋予其‘正则’含义	^开头，$结尾	s任何空白字符，S任何非空白	+大于零	|或
+		String.prototype.trim=function () {
+			reg=/^\s+/;
+			return this.replace(reg,'');//清除前面空格
+		}
+		String.prototype.trim1=function () {
+			reg=/\s+$/;
+			return this.replace(reg,'');//清除后面空格
+		}
+		String.prototype.trim2=function () {
+			reg=/^\s+|\s+$/g;
+			return this.replace(reg,'');//清除前后空格
+		}
+		String.prototype.trim3=function () {
+			reg=/\s+/g;
+			return this.replace(reg,'');//清除所有空格
+		}
+		
+		var str=' kgc ssc ';
+		console.log(str.trim());
+		console.log(str.trim1());
+		console.log(str.trim2());
+		console.log(str.trim3());
+	</script>
+</html>

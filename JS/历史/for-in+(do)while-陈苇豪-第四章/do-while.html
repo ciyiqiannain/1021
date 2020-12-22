@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		
+		/*a可以被三整除
+		for (var a=1;a<100;a++) {
+			if (a%3==0) {
+				document.write(a+'<br/>');
+			}
+		}
+		
+		var a=1;
+		do{
+			if (a%3==0) {
+				document.write(a+'<br/>');
+			}
+			a++;
+		}while (a<100)*/
+		
+		/*水仙花
+		for (var num=100;num<1000;num++) {
+			var a=parseInt(num/100);
+			var b=parseInt(num/10)%10;
+			var c=num%10;
+			if (num==a*a*a+b*b*b+c*c*c) {
+				document.write(num+'<br/>');
+			}
+		}
+		
+		var num=100;
+		do{
+			var a=parseInt(num/100);
+			var b=parseInt(num/10)%10;
+			var c=num%10;
+			if (num==a*a*a+b*b*b+c*c*c) {
+				document.write(num+'<br/>');
+			}
+			num++;
+		}while (num<1000)*/
+		
+		/*a可以被3或7整除
+		for (var a=0;a<=50;a++) {
+			if (a%3==0 || a%7==0) {
+				document.write(a+'<br/>');
+			}
+		}
+		
+		var a=0;
+		do{
+			if (a%3==0 || a%7==0) {
+				document.write(a+'<br/>');
+			}
+			a++;
+		}while (a<=50)*/
+		
+		/*0-100内所有奇数和
+		var num=0;
+		for (var a=0;a<=100;a++) {
+			if (a%2==0) {
+				num += a;
+			}
+		}
+		document.write('0-100内所有奇数和'+num);
+		
+		do{
+			if (a%2==0) {
+				num +=a;
+			}
+			a++;
+		}while (a<=100)
+		document.write('0-100内所有奇数和'+num);*/
+		
+		欢迎学习Jscript这本书
+		for (var a=0;a<10;a++) {
+			document.write('欢迎学习Jscript这本书'+(a+1)+'遍<br/>');
+		}
+		
+		var a=0;
+		do{
+			document.write('欢迎学习Jscript这本书'+(a+1)+'遍<br/>');
+			a++;
+		}while (a<10)
+	</script>
+</html>

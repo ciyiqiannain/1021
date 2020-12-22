@@ -1,0 +1,22 @@
+.top1>h3{
+				float: left;
+				margin-left: 115px;
+			}
+			.top1>ul{
+				float: right;
+			}
+			.top1>ul>li{
+				float: left;
+				border-left:1px solid black ;
+				padding-left: 35px;
+				margin-left: 35px;
+			}
+			.top1>ul>.li-1{
+				border: none;
+			}
+			.top1>ul>.li-1>a{
+				text-decoration: none;
+			}
+			.top1>ul>.li-2{
+				margin-right: 35px;
+			}

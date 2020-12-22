@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		
+	</body>
+	<script type="text/javascript">
+		//通过Object方式创建对象
+		var user=new Object();
+		user.name='张三';
+		user.age=18;
+		user.sex='男',
+		
+		user.show=function(){
+			document.write('姓名：'+this.name+'---年龄'+this.age+'<br/>');
+		}
+		
+		user.show();
+
+		//对象字面量方式创建对象
+		//[ ]:数组    { }:对象
+//		var person={
+//			name:'李四',
+//			age:18,
+//			word:'中国内地演员、歌手',
+//			add:'中国北京海淀区',
+//			show:function(){
+//				document.write('姓名：'+this.name+'<br/>');
+//				document.write('年龄：'+this.age+'<br/>');
+//				document.write('工作：'+this.word+'<br/>');
+//				document.write('住址：'+this.add+'<br/>');
+//			}
+//		}
+//		person.show();
+		
+		//工厂模式创建
+		//带参函数     
+//		function createUser(name,password){
+//			var user=new Object();
+//			// =  是赋值    ：将右侧的值  赋值给  = 前面的参数
+//			user.name=name;
+//			user.password=password;
+//			user.show=function(){
+//				document.write(this.name+'------'+this.password);
+//			}
+//			return user;
+//		}
+		
+		//形式参数： name           实际参数：唐三
+		
+		//创建不同的对象
+//		var user1=createUser('唐三','666');
+//		user1.show();
+//		
+//		var user2=createUser('小舞','888');
+//		user2.show();
+//		document.write(user1.show()==user2.show());
+		//构造函数    
+//		function User(name,pas){
+//			//this指的是函数名
+//			this.name=name,
+//			this.pas=pas,
+//			
+//			this.show=function(){
+//				document.write(this.name+'------'+this.pas);
+//			}
+//		}
+		//上面的构造函数属性设置完毕     不可以再去添加属性
+//		User.age=18;//添加的属性   无效
+//		var user1=new User('李白','111');
+//		user1.show();
+//		var user2=new User('杜甫','222');
+//		user2.show();
+//		document.write(user1.age);
+
+		//原型    prototype   原型
+//		function User(name,pas){
+//			this.name=name;
+//			this.pas=pas;//姓名    班级    身份证     手机号     
+//		}
+//		
+//		User.prototype.show=function(){
+//			document.write(this.name+'------'+this.pas);
+//		}
+		//通过prototype原型  可以给构造函数   添加对应的  属性
+//		User.prototype.age=18;
+//		var user1=new User('李白','111');//		user1.show();
+//		
+//		var user2=new User('杜甫','222');//		user2.show();
+//		
+//		document.write(user1.age);
+//		user1.show();
+//		
+		//继承   封装    多态    企开学的
+	</script>
+</html>

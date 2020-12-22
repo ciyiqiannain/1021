@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box>li>ul{
+				display: none;
+			}
+			#box>li:hover{
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<ul id="box">
+			<li>账号管理
+				<ul>
+					<li>111111</li>
+					<li>111111</li>
+					<li>111111</li>
+					<li>111111</li>
+				</ul>
+			</li>
+			<li>购物指南
+				<ul>
+					<li>222222</li>
+					<li>222222</li>
+					<li>222222</li>
+					<li>222222</li>
+				</ul>
+			</li>
+			<li>支付方式
+				<ul>
+					<li>333333</li>
+					<li>333333</li>
+					<li>333333</li>
+					<li>333333</li>
+				</ul>
+			</li>
+		</ul>
+	</body>
+	<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('#box>li').hover(function(){
+				$(this).children().show();
+				//siblings指的是   同辈   
+				$(this).siblings().children().hide();
+			},function(){
+				$(this).children().hide();
+			})
+		})
+	</script>
+</html>

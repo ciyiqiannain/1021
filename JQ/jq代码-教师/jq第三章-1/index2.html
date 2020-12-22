@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			p{
+				width: 50px;
+				height: 50px;
+				background: red;
+				position: absolute;
+			}
+			button{
+				position: absolute;
+				top: 0px;
+				left: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<p></p>
+		<button>按钮</button>
+	</body>
+	
+	<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			
+			$('button').mousedown(function(){
+				//animate的书写格式和css设置多个样式的格式是一样的
+				$('p').animate({top:'500px',left:'200px'},3000);
+			})
+			$('button').mouseup(function(){
+				$('p').stop();
+			})
+		})
+	</script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		 function Person(address,sex){
+	        this.foot = 2;
+	        this.head = 1;
+	        this.address = address;
+	        this.sex = sex;
+	    }
+	
+	    function Student(name,no){
+	        //使用call或apply实现继承
+//	        Person.call(this,"北京","女");
+	        Person.apply(this,["北京","女"]);
+	        this.name = name;
+	        this.no = no;
+	    }
+	
+	    var stu1 = new Student("张三","s001");
+	    console.log(stu1.foot);
+	    console.log(stu1.head);
+	    console.log(stu1.address);
+	    console.log(stu1.sex);
+	</script>
+</html>

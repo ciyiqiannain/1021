@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/发帖.css"/>
+	</head>
+	<body>
+		<div class="box">
+			<button onclick="ft()">我要发帖</button>
+			<hr />
+			<div id="box1">
+				<p><input type="text" name="" id="input" value="" placeholder="请输入"/></p>
+				<p>所属板块：
+					<select name="" id="sel">
+						<option value="">请选择板块</option>
+						<option value="">电子书籍</option>
+						<option value="">新课来了</option>
+						<option value="">新手报到</option>
+						<option value="">职业规划</option>
+					</select>
+				</p>
+				<p><textarea name="" rows="" cols="" id="tex"></textarea></p>
+				<p><button onclick="fb()">发布 </button></p>
+			</div>
+			<div id="box2">
+				<ul id="ul">
+					
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		function ft(){
+			var box1=document.getElementById('box1');
+			box1.style.display='block';
+		}
+		
+		//Array数组
+		var tu=new Array('tou01.jpg','tou02.jpg','tou03.jpg','tou04.jpg');
+//		console.log(tu.length);
+		
+		var ul=document.getElementById('ul');	
+		function fb(){
+			var box1=document.getElementById('box1');
+			var input=document.getElementById('input');
+			var sel=document.getElementById('sel');
+			var tex=document.getElementById('tex');
+			var date=new Date();
+			//获取年月日
+			
+			//selectedIndex 属性可设置或返回下拉列表中被选选项的索引号。
+			//注意： 若允许多重选择，则仅会返回第一个被选选项的索引号。
+//			 console.log(sel);
+//			 console.log(sel.selectedIndex);
+							//options，选择
+			console.log(sel.options[sel.selectedIndex].text);
+			console.log(tex.value);
+			
+			
+			//创建 li,div,img 节点
+			var li=document.createElement('li');
+			//图片的
+			var div=document.createElement('div');
+			var img=document.createElement('img');
+			var index=Math.floor(Math.random()*4);
+//			console.log(tu[index]);
+			img.setAttribute('src','img/'+tu[index]);//setAttribute(,)设置节点
+			console.log(img);
+			div.appendChild(img);//A.appendChild(B)将B节点添加到A节点的末尾
+			li.appendChild(div);
+			
+			//右侧标题的
+			var h=document.createElement('h3');
+			h.innerHTML='标题:'+input.value;
+			li.appendChild(h);
+			
+			//右侧板块的
+			var p=document.createElement('p');
+			p.innerHTML="所属板块:"+sel.options[sel.selectedIndex].text;
+			li.appendChild(p);
+			
+			
+			
+			ul.appendChild(li);
+			box1.style.display='none';
+		}
+	</script>
+</html>

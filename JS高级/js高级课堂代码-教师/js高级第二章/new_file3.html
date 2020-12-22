@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>选择你的爱好：</h1>
+		<input type="checkbox" name="sex" id="" value="音乐" />音乐<br />
+		<input type="checkbox" name="sex" id="" value="登山" />登山<br />
+		<input type="checkbox" name="sex" id="" value="游泳" />游泳<br />
+		<input type="checkbox" name="sex" id="" value="阅读" />阅读<br />
+		<input type="checkbox" name="sex" id="" value="打球" />打球<br />
+		<input type="checkbox" name="sex" id="" value="跑步" />跑步<br />
+		<input type="checkbox" name="sex" id="" value="吃鸡" />吃鸡<br />
+		<input type="checkbox" name="sex" id="" value="其他" />其他<br />
+		<hr />
+		<button onclick="fun()">查看我选择的爱好</button>
+		<div id="div">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		function fun(){
+			//如何获取对象的三种方法
+			var inputs=document.getElementsByTagName('input');
+			var div=document.getElementById('div');
+			var txt='';
+			for(var i=0;i<inputs.length;i++){
+				if(inputs[i].checked==true){
+					//使用拼接的方法实现
+					txt=txt+inputs[i].value+'<br />';
+				}
+			}
+			div.innerHTML=txt;
+			for(var i=0;i<inputs.length;i++){
+				inputs[i].checked=false;
+			}
+		}
+	</script>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<input type="email" name="email" id="email" value="" />
+		<button onclick="an()">2333</button>
+	</body>
+	<script type="text/javascript">
+		
+		function an () {
+			var email=document.getElementById('email').value;
+			
+			if (email.indexOf('@')==-1 || email.indexOf('.')==-1) {
+				alert('格式错误');
+			} else{
+				alert('跳转中...');
+			}
+		}
+	</script>
+</html>

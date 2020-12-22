@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>游戏推荐 </title>
+	<style type="text/css" >
+	*{
+		margin:0px;
+		padding:0px;
+		font-size:12px;
+	}
+	#listbox{
+		margin:10px;
+		padding:15px;
+		border:1px solid #CCCCCC;
+		color:#0066FF;
+	}
+	dl{
+		display:block;
+		float:left;	
+		margin:15px;
+	}
+	dd{
+		font-size:14px;
+		color:#663300; 
+	}
+	
+	dd a{
+		text-decoration:none;
+		font-size:14px;
+		color:#FF3300;
+	}
+	dd a:hover{
+		text-decoration:underline;
+	}
+	.clear{
+		clear:both;
+		height:0px;
+	}
+	</style>
+
+</head>
+<body>
+ <div id='listbox'>
+ 	<dl>
+    	<dt><img src="img/p1.jpg" /></dt>
+        <dd>街机三国</dd>
+        <dd><a class='del' href='javascript:void(0);'>删除</a></dd>
+    </dl>
+    <dl>
+    	<dt><img src="img/p2.jpg" /></dt>
+        <dd>霸域</dd>
+        <dd><a class='del' href='javascript:void(0);'>删除</a></dd>
+    </dl>
+    <dl>
+    	<dt><img src="img/p3.jpg" /></dt>
+        <dd>斗破乾坤</dd>
+        <dd><a class='del' href='javascript:void(0);'>删除</a></dd>
+    </dl>
+    
+    <input type="button" value='新增游戏'  class='add'/>
+    <div class='clear'></div>
+ </div>
+	<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function () {
+			$('.add').click(function () {
+				var arr=['p1.jpg','p2.jpg','p3.jpg','p4.jpg'];
+				var number=Math.floor(Math.random()*4);
+				var arrimg='<img src="img/'+arr[number]+'" />';
+				
+				var dd=['街机三国','霸域','斗破乾坤','海贼王'];
+				var arrdd='<dd>'+dd[number]+'</dd>';
+				
+				$('.clear').append('<dl>'+'<dt>'+arrimg+'</dt>'+arrdd+'<a>'+'删除'+'</a>'+'</dl>');
+			})
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,311 @@
+ul{
+	list-style: none;
+}
+.header{
+	height: 42px;
+	background: RGB(128, 128, 128);
+}
+.header>.left{
+	float: left;
+	margin: 12px 5px 0px 5px;
+}
+.header>.left>li{
+	float: left;
+	color: white;
+	margin: 0px 5px;
+}
+.header>.left>li>a{
+	color: white;
+}
+.header>.right{
+	float: right;
+	color: white;
+	margin: 5px 5px 0px 5px;
+}
+.header>.right>li{
+	float: left;
+	margin: 0px 5px;
+}
+.header>.right>li>button>a{
+	color: white;
+}
+.header>.right>li:nth-child(2)>button>a{
+	color: black;
+}
+.two>.nav>li>a{
+	color: white;
+}
+.two>.nav>li>a:hover{
+	color: black;
+}
+.two>.nav>li:nth-child(1)>img{
+	margin-top: 10px;
+}
+.two>.nav>li:last-child>.dropdown>.btn{
+	background: black;
+	color: white;
+	border: none;
+	margin-top: 5px;
+}
+.two>.nav>li:last-child>.dropdown>ul{
+	background: black;
+}
+.two>.nav>li:last-child>.dropdown>ul>li>a{
+	color: white;
+}
+.two>.nav>li:last-child>.dropdown>ul>li>a:hover{
+	color: black;
+}
+.four{
+	background: #555;
+}
+.four>.left>ul>li{
+	color: #777;
+}
+.four>.left>ul>li:first-of-type>h3{
+	color: white;
+}
+.four>.right{
+	text-align: center;
+}
+.four>.right>p:first-of-type{
+	color: white;
+	margin-top: 30px;
+}
+.four>.right>p>button{
+	cursor: pointer;
+	color: black;
+	background: yellow;
+}
+.five{
+	position: relative;
+}
+.five>h1{
+	text-align: center;
+	color: RGB(0, 160, 128);
+	margin-top: 70px;
+}
+.five>.one{
+	background: RGB(0, 160, 128);
+	position: absolute;
+	top: 150px;
+}
+.five>.one>p:first-of-type{
+	margin-top: 30px;
+}
+.five>.one>p{
+	text-align: center;
+	color: white;
+	font-size: 24px;
+}
+.five>.one>p>img{
+	width: 100%;
+}
+.five>.two{
+	height: 335px;
+	background-image: url(../img/bg.jpg);
+	background-repeat: no-repeat;
+	background-size: 1170px 335px;
+	margin-top: 335px;
+	overflow: hidden;
+}
+.five>.two>p{
+	text-align: center;
+	color: white;
+}
+.five>.two>p:first-of-type{
+	margin-top: 180px;
+}
+.five>.two>p>span{
+	color: yellow;
+}
+.five>.two>.row>ul>li{
+	color: white;
+	text-align: center;
+}
+.five>.two>.row>ul>li:nth-child(2){
+	color: red;
+}
+.six{
+	text-align: center;
+	margin-top: 100px;
+}
+.six>h1{
+	color: RGB(0, 160, 128);
+}
+.six>.row>div{
+	margin-top: 20px;
+}
+.six>.row>div>img{
+	width: 100%;
+}
+.seven{
+	text-align: center;
+	margin-top: 100px;
+}
+.seven>h1{
+	color: RGB(0, 160, 128);
+}
+.seven>p>img{
+	width: 100%;
+}
+.seven>ul>li{
+	height: 50px;
+	line-height: 50px;
+	background: #777;
+	color: white;
+}
+.seven>ul>li:nth-child(2n+2){
+	background: #555;
+}
+.eight{
+	text-align: center;
+	margin-top: 100px;
+}
+.eight>h1{
+	color: RGB(0, 160, 128);
+}
+.nine{
+	text-align: center;
+	margin-top: 100px;
+	position: relative;
+}
+.nine>.one{
+	position: absolute;
+	top: 100px;
+}
+.nine>.one>img{
+	width: 100%;
+}
+.nine>.two{
+	background: RGB(0, 160, 128);
+	height: 335px;
+	margin-top: 210px;
+	
+}
+.nine>.two>ul{
+	margin-top: 200px;
+}
+.nine>.two>ul>li{
+	color: white;
+}
+.ten{
+	height: 395px;
+	background-image: url(../img/bg2.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	overflow: hidden;
+	text-align: center;
+}
+.ten>h1{
+	color: RGB(0, 160, 128);
+}
+.ten>p{
+	color: white;
+}
+.ten>.row>div>p{
+	color: white;
+}
+.ten>.row>div>p>img{
+	width: 35%;
+}
+.ten>.row>div>h1{
+	color: RGB(0, 160, 128);
+}
+.eleven{
+	margin-top: 100px;
+}
+.eleven>img{
+	width: 100%;
+}
+.eleven>div:nth-child(1){
+	text-align: center;
+	font-size: 32px;
+	color: gray;
+}
+.eleven>div:nth-child(2n){
+	text-align: right;
+}
+.eleven>div:nth-child(2){
+	text-align: center;
+}
+.twelve{
+	height: 100%;
+	padding: 50px 0px;
+	background-image: url(../img/bg3.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	text-align: center;
+	margin-top: 100px;
+}
+.twelve>div>h3{
+	color: RGB(0, 160, 128);
+}
+.twelve>.five{
+	margin-top: 50px;
+}
+.twelve>.five>.three>p{
+	margin-top: 15px;
+	color: white;
+	background: black;
+	opacity: 0.5;
+}
+.twelve>.five>.three>img{
+	width: 100%;
+}
+.thirteen{
+	text-align: center;
+	margin-top: 100px;
+}
+.thirteen>h1{
+	color: RGB(0, 160, 128);
+}
+.fourteen{
+	height: 600px;
+	text-align: center;
+	background-image: url(../img/bg.png);
+	background-size: 1170px 1050px;
+	margin-top: 100px;
+	overflow: hidden;
+}
+.fourteen>h1{
+	color: RGB(0, 160, 128);
+	margin-top: 70px;
+	margin-bottom: 30px;
+}
+.fourteen>ul>.row>div>p>img{
+	width: 100%;
+}
+.fourteen>ul>.row>div>p{
+	color: white;
+}
+.fourteen>ul>.row>div>img{
+	width: 100%;
+}
+.fifteen{
+	background: #333;
+	height: 170px;
+	text-align: center;
+	color: white;
+}
+.fifteen>ul{
+	margin: 30px 0px 10px 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="box">
+			<p>111111111</p>
+			<p>222222222</p>
+			<p>333333333</p>
+			<p>444444444</p>
+		</div>
+	</body>
+	<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			//children    指的是儿子
+//			console.log($('#box').children());
+
+			//选择下一个紧邻元素
+			$('p:eq(1)').next().hover(function(){
+				$(this).css('background','red')
+			})
+			//选择上一个紧邻元素
+			$('p:eq(1)').prev().hover(function(){
+				$(this).css('background','red')
+			})
+			
+		})
+	</script>
+</html>

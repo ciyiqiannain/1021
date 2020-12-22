@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jq基本选择器</title>
+	</head>
+	<body>
+		<div>
+			<p>111111111</p>
+			<h1>2222222222</h1>
+			<p id="p1">333333333</p>
+			<span class="span">4444444444444</span>
+		</div>
+	</body>
+	<script src="js/3.4.1jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">	
+		$(function(){
+			//设置一个样式的书写格式
+			$('p').css('background','pink');
+			$('h1').css({'font-size':'45px'});
+			//设置多个样式的书写格式
+			$('span').css({'background':'pink','font-size':'45px'});
+			
+			$('div>p').css('color','blue');
+		})
+	</script>
+</html>

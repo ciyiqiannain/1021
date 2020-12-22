@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function Person(){}
+		    Person.prototype.foot = 2;
+		    Person.prototype.head = 3;
+		    Person.prototype.saySelf=function(){
+	        console.log("Hello,我有："+this.foot+"只脚和"+this.head+"个头");
+	    }
+
+	    function Student(name,no){
+	        this.name = name;
+	        this.no = no;
+	    }
+
+	    //拷贝继承
+	    function extend2(Child,Parent){
+	        var p = Parent.prototype;
+	        var c = Child.prototype;
+	        for(var i in p){
+	            c[i] =p[i];
+	        }
+	    }
+
+	    extend2(Student,Person);
+	    var stu1 = new Student("张三","s001");
+	    console.log(stu1.foot);
+	    console.log(stu1.head);
+	    console.log(stu1.name);
+	    console.log(stu1.no);
+	    stu1.saySelf();
+	</script>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>QQ注册验证</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 452px;
+				height: 492px;
+				margin: 0 auto;
+				border: 1px solid black;
+			}
+			header{
+				width: 450px;
+				height: 90px;
+				border: 1px solid black;
+				overflow: hidden;
+			}
+			header>img{
+				height: 90px;
+			}
+			article{
+				width: 450px;
+				height: 400px;
+				border: 1px solid black;
+			}
+			article>h2{
+				margin: 15px 0px;
+			}
+			p{
+				margin: 15px 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<header>
+				<img src="img/bg_chs.png"/>
+			</header>
+			<article>
+				<h2>注册账号</h2>
+				<form action="" method="post">
+					<p>
+					  <label for="niceng">昵称:</label>
+					  <input type="text" name="" id="niceng" value="" pattern="[-\w\u4E00-\u9FA5]{4,10}"/>
+					</p>
+					<p>
+					  <label for="m">密码:</label>
+					  <input type="password" name="" id="m" value="" pattern="[\dA-Za-z]{6,16}"/>
+					</p>  
+					<p>  
+					  <label for="q">手机号码:</label>
+					  <input type="text" name="" id="q" value="" pattern="1[3578]\d{9}"/>
+					</p>  
+					<p>  
+					  <label for="s">邮箱:</label>
+					  <input type="email" name="" id="s" value="" />
+					</p>  
+					<p>  
+					  <label for="y">年龄:</label>
+					  <input type="text" name="" id="y" value="" pattern="\d|[1-9]\d|1[0-2]\d"/>
+					</p> 
+					<p>  
+					  <label for="i"><img src="img/btn.bmp"/></label>
+					  <input type="image" name="" id="i" value="" />
+					</p>  
+					
+				</form>
+			</article>
+		</div>
+	</body>
+</html>

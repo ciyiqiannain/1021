@@ -1,0 +1,23 @@
+jQuery是目前最流行的JaveScript程序库，它是对JaveScript对象和函数的封装。
+
+他的设计思想是write less,do more
+
+jQuery能做什么？
+访问和操作DOM元素
+控制页面样式
+对页面事件进行处理
+扩展新的jQuery插件
+与Ajax技术完美融合
+
+jQuery的优势
+体积小
+强大的选择器
+出色的DOM封装
+可靠的事件处理机制
+出色的浏览器兼容性
+使用隐式迭代简化方程
+丰富的插件控制
+
+$(funcition{
+      js
+})

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			canvas{
+				margin-left: 100px;
+				margin-top: 50px;
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="c" width="600" height="600"></canvas>
+	</body>
+	<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var c=document.getElementById('c')
+		var cxt=c.getContext('2d')
+		
+		c.onmousedown=function (e) {
+			var x=e.clientX-c.offsetLeft
+			var y=e.clientY-c.offsetTop
+			cxt.moveTo(x,y)
+			c.onmousemove=function (e) {
+				var xx=e.clientX-c.offsetLeft
+				var yy=e.clientY-c.offsetTop
+				cxt.lineTo(xx,yy)
+				cxt.lineWidth=3
+				cxt.strokeStyle='blue';
+				cxt.stroke()
+			}
+		}
+		c.onmouseup=function () {
+			c.onmousemove=null;
+		}
+		c.onmouseover=function () {
+			c.onmousemove=null;
+		}
+	</script>
+</html>

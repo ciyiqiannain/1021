@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			.box{
+				margin: 0 auto;
+				/*width: 325px;*/
+				width: 100%;
+				border: 1px solid black;
+			}
+			header{
+				margin-top: 20px;
+				width: 100%;
+				height: 102px;
+				background-color: blue;
+			}
+			.header_span{
+				float: right;
+			}
+			header>div{
+				margin: 0 auto;
+				width: 90%;
+			}
+			.header_two>ul{
+				float: left;
+			}
+			.header_two>ul>li:first-of-type{
+				margin-top: 4%;
+			}
+			.header_two>ul>li{
+				margin-left: 23%;
+			}
+			.header_img{
+				float: left;
+				width: 20%;
+			}
+			.down{
+				width: 100%;
+				background: pink;
+				overflow: hidden;
+			}
+			.down>div{
+				margin: 0 auto;
+				margin-top: 5%;
+				background: white;
+				width: 90%;
+			}
+			.down>div:last-of-type{
+				margin-bottom: 5%;
+			}
+			.down>div>ul{
+				width: 100%;
+			}
+			.down>div>ul>li{
+				width: 90%;
+				padding-left: 10%;
+				background: white;
+				border-bottom: 1px solid paleturquoise;
+			}
+			.header_fixed{
+				position: fixed;
+				top: 0px;
+				background: blue;
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="header_fixed">
+				我的<span class="header_span">设置</span>
+			</div>
+			<header>
+				<div class="header_two">
+					<ul>
+						<img src="img/u=3266778615,2732938384&fm=26&gp=0.jpg" class="header_img"/>
+						<li>XXX</li>
+						<li>XXX******XX</li>
+					</ul>
+				</div>
+			</header>
+			<div class="down">
+				<div class="index_two">
+				<ul>
+					<li>支付宝会员</li>
+				</ul>
+				</div>
+				<div class="index_three">
+					<ul>
+						<li>账单</li>
+						<li>总资产</li>
+						<li>余额</li>
+						<li>余额宝</li>
+						<li>花呗</li>
+						<li>银行卡</li>
+					</ul>
+				</div>
+				<div class="index_four">
+					<ul>
+						<li>芝麻信用</li>
+						<li>蚂蚁保险</li>
+						<li>相互宝</li>
+						<li>借呗</li>
+						<li>网商银行</li>
+					</ul>
+				</div>
+				<div class="index_five">
+					<ul>
+						<li>我的小程序</li>
+						<li>我的公益</li>
+						<li>我的客服</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

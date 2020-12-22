@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>动画柱子变长和还原</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			p{
+				width: 100px;
+				height: 30px;
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<p></p>
+		<button id="bt1">变长</button>
+		<button id="bt2">还原</button>
+	</body>
+	<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function () {
+			$('#bt1').click(function () {
+				$('p').stop().animate({width:'300px'},1000,function () {
+					$(this).css('background','yellow')
+				})
+			})
+			$('#bt2').click(function () {
+				$('p').stop().animate({width:'100px'},1000,function () {
+					$(this).css('background','red')
+				})
+			})
+		})
+	</script>
+</html>

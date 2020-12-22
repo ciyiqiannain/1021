@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		
+	</body>
+	<script type="text/javascript">
+		//创建cookie
+		//name:名称     value:值      day:过期时间
+		//封装cookie
+		function setCookie(name,value,day){
+			var date=new Date();
+			//cookie的过期时间只在原先的日上面进行设置  不要改变标准时间的格式
+			date.setDate(date.getDate()+day);
+			console.log(date);
+			document.cookie=name+"="+value+"; expires="+date;
+			console.log(document.cookie);
+		}
+		//先设置一个cookie值
+		setCookie('user6','666',2);
+		setCookie('user1','888',2);
+		//获取cookie
+		//通过  name  找  value   
+		function getCookie(name){
+			//将cookie通过;分割成数组
+			var  arr=document.cookie.split(';');
+			console.log(arr);
+			for (var i=0;i<arr.length;i++) {
+				//将cookie的name和value通过=分割成数组
+				var arr2=arr[i].split('=');
+				//如果出现多个数组   如何遍历
+				console.log(arr2);
+				if(name==arr2[0]){
+					return arr2[1];
+				}
+			}
+			return '';
+		}
+		getCookie('user6');
+		console.log(getCookie('user1'));
+//		删除cookie
+		console.log(document.cookie);
+		//函数名是什么无所谓   起的名字都是见名之意
+		function removeCookie(name){
+			//进行重新设置    并把过期时间设置今天之前的时间
+			setCookie(name,'999',-1);
+		}
+		removeCookie('user6');
+		console.log(document.cookie);
+	</script>
+</html>

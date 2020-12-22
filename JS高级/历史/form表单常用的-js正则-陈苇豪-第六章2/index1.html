@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="" method="post" id="myform">
+			<p>名字：<input type="text" name="" id="mz" value="" /></p>
+			<p>姓氏：<input type="text" name="" id="xsh" value="" /></p>
+			<p>登录名：<input type="text" name="" id="dlming" value="" /><span></span></p>
+			<p>密码：<input type="password" name="" id="pas" value="" /><span></span></p>
+			<p>确认密码：<input type="password name="" id="pass" value="" /></p>
+			<p>电子邮箱：<input type="text" name="" id="ema" value="" /><span></span></p>
+			<p>性别：<input type="radio" name="a"/>男<input type="radio" name="a"/>女</p>
+			<p>爱好： 
+				<input type="checkbox" name="" id="" value="" />运动
+				<input type="checkbox" name="" id="" value="" />聊天
+				<input type="checkbox" name="" id="" value="" />游戏
+			</p>出生日期：
+			<select name="" id="nian">
+				<option value="">xxxx</option>
+				<option value="">2020</option>
+			</select>年
+			<select name="" id="yue">
+				<option value="">xx</option>
+				<option value="">4</option>
+			</select>月
+			<select name="" id="ri">
+				<option value="">xx</option>
+				<option value="">10</option>
+			</select>日
+			<p><input type="submit" value="提交"/><input type="reset" id="" value="重填" /></p>
+		</form>
+	</body>
+	<script type="text/javascript">
+		var mz=document.getElementById('mz');
+		var xsh=document.getElementById('xsh');
+		var dlming=document.getElementById('dlming');
+		var sps=document.getElementsByTagName('span');
+		var pas=document.getElementById('pas');
+		var pass=document.getElementById('pass');
+		var eam=document.getElementById('ema');
+//		var nian=document.getElementById('nian');
+//		var yue=document.getElementById('yue');
+//		var ri=document.getElementById('ri');
+		
+		mz.onblur=function () {
+			var mzValue=mz.value;
+			if (mzValue=='') {
+				alert('名字不能为空');
+				return false;
+			}
+		}
+		xsh.onblur=function () {
+			var xshValue=xsh.value;
+			if (xshValue=='') {
+				alert('姓氏不能为空');
+				return false;
+			}
+		}
+		dlming.onfocus=function () {
+			sps[0].innerHTML='（可包含a-z，0-9和下划线）';
+			sps[0].style.display='inline-block';
+		}
+		dlming.onblur=function () {
+			var dlminghValue=dlming.value;
+			if (dlminghValue=='') {
+				alert('登录名不能为空');
+				return false;
+			}
+		}
+		pas.onfocus=function () {
+			sps[1].innerHTML='（至少包含6个字符）';
+			sps[1].style.display='inline-block';
+		}
+		pas.onblur=function () {
+			var pasValue=pas.value;
+			if (pasValue.length<6) {
+				alert('密码至少六位');
+				return false;
+			}
+		}
+		pass.onblur=function () {
+			var pasValue=pas.value;
+			var passValue=pass.value;
+			if (pasValue != passValue) {
+				alert('两次密码不一样');
+				return false;
+			}
+		}
+		eam.onfocus=function () {
+			sps[2].innerHTML='（必须包含@和.字符）';
+			sps[2].style.display='inline-block';
+		}
+		ema.onblur=function () {
+			var emaValue=ema.value;
+			if (emaValue.indexOf('@')==-1 && emaValue.indexOf('.')==-1) {
+				alert('无@或.');
+				return false;
+			}
+		}
+		
+//		nian.onblur=function () {
+//			var nianValue=nian.innerHTML;
+//			if (nianValue='xxxx') {
+//				alert('年不能为空');
+//			}
+//		}
+//		myform.onsubmit=function () {
+//			
+//		}
+	</script>
+</html>

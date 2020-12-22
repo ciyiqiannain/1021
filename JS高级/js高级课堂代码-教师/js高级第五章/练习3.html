@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			
+			div{
+				width: 100px;
+				height: 100px;
+				background: red;
+				position: absolute;
+				cursor: move;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div"></div>
+	</body>
+	<script type="text/javascript">
+		var div=document.getElementById('div');
+		div.onmousedown=function(e){
+			var oEvent=e||event;
+			//获取鼠标点击在盒子的位置坐标	
+			var x=oEvent.clientX-div.offsetLeft;
+			var y=oEvent.clientY-div.offsetTop;
+//			console.log(x+'--------'+y);
+//			console.log(oEvent.clientX);
+//			console.log(oEvent.clientY);
+//			console.log(div.offsetLeft+'-----'+div.offsetTop);
+//			console.log(div.offsetWidth+'----'+div.offsetHeight)
+//			console.log(document.documentElement.clientWidth);
+//			console.log(document.documentElement.clientHeight);
+			document.onmousemove=function(e){
+//				div.style.cursor='move';
+				var oEvent=e||event;
+				var left=oEvent.clientX-x;
+				var top=oEvent.clientY-y;
+				var maxW=document.documentElement.clientWidth-div.offsetWidth;
+				var maxH=document.documentElement.clientHeight-div.offsetHeight;
+				console.log(document.documentElement.clientWidth);
+				console.log(document.documentElement.clientHeight);
+				console.log(div.offsetWidth+'----'+div.offsetHeight)
+				console.log(top+'----'+left);
+				if(left<0){
+					left=0;
+				}
+				if(top<0){
+					top=0;
+				}
+				if(left>maxW){
+					left=maxW;
+				};
+				if(top>maxH){
+					top=maxH;
+				};
+				div.style.left=left+'px';
+				div.style.top=top+'px';
+			}
+		}
+		div.onmouseup=function(){
+			document.onmousemove=null;
+		}
+	</script>
+</html>

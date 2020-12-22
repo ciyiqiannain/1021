@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		//if-for排序
+		var arr=[15,6,65,841,32,9,87];
+		for (var i=0;i<arr.length-1;i++) {//比较的次数
+			for (var j=0;j<arr.length-1;j++) {
+				if (arr[j]>arr[j+1]) {//'>',a-b;'<',b-a
+				
+					arr[j]=arr[j+1];//使j=j+1
+					var temp=arr[j];
+					arr[j+1]=temp;//使j+!=j
+					
+				}
+			}
+		}
+		document.write(arr);
+		
+		/*//返回最大值
+		var num=prompt('请输入第1个数');
+		var nmu=prompt('请输入第2个数');
+		function f1 () {
+			if (num>nmu) {
+				return num;
+			} else{
+				return nmu;
+			}
+		}
+		document.write(f1());*/
+		
+		/*//abc重复三次
+		for (i=0;i<3;i++) {
+			document.write('abc'+'<br/>');
+		}*/
+	</script>
+</html>

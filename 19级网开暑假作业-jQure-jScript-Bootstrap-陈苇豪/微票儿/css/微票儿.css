@@ -1,0 +1,146 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+ul{
+	list-style: none;
+}
+.navbar{
+	margin-bottom: 0px;
+}
+.one{
+	height: 450px;
+	background-image: url(../img/bannerbg.png);
+}
+.one>.left{
+	margin-top: 30px;
+	margin-left: 30px;
+}
+.one>.right{
+	height: 300px;
+	background: white;
+	margin-top: 45px;
+}
+.one>.right>p|>img{
+	width: 100%;
+}
+.one>.right>p:nth-child(4){
+	border-bottom: 1px dashed black;
+}
+
+.two{
+	margin-top: 30px;
+}
+.two>.right{
+	height: 235px;
+	background: white;
+}
+.li-img>img{
+	width: 100%;
+}
+.three{
+	height: 100px;
+}
+.three>img{
+	width: 100%;
+	height: 100%;
+}
+.caption>h3{
+	color: #777;
+}
+.caption>h3>span{
+	font-size: 16px;
+	color: black;
+}
+.four>.left>ul>li>a{
+	color: black;
+}
+.four>.right>h3{
+	height: 50px;
+	line-height: 50px;
+	background: RGB(46, 210, 193);
+	color: white;
+	margin: 0px;
+	text-align: center;
+}
+.four>.right>h3>span{
+	font-size: 16px;
+}
+.four>.right>.row{
+	margin-top: 30px;
+}
+.four>.right>a{
+	color: pink;
+	text-decoration: none;
+}
+.five>.left>h1>span{
+	font-size: 16px;
+	float: right;
+	color: pink;
+}
+.five>.right>.row{
+	padding-bottom: 20px;
+}
+.five>.right>p:first-of-type{
+	border-top: 1px solid pink;
+}
+.five>.right>p{
+	border-bottom: 1px dashed black;
+	padding: 5px 0px;
+	margin: 0px;
+}
+.six{
+	background: black;
+}
+.six>.row>.row>.left{
+	margin-top: 20px;
+}
+.six>.row>.row>.right{
+	color: #777;
+}
+.six>.bottom{
+	color: #777;
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function Person(){
+			
+		}
+		Person.prototype.foot=2;
+		Person.prototype.head=1;
+		
+		function Student(name,no){
+	        this.name=name;
+	        this.no=no;
+	    }
+		
+		 //空对象作为中介完成继承
+	    function extend(Child,Parent){
+	        var F= function(){};
+	        F.prototype = Parent.prototype;
+	        Child.prototype = new F();
+	        Child.prototype.constructor = Child;
+	    }
+	    
+	    extend(Student,Person);
+	    var stu1=new Student('张三','s001');
+	    console.log(stu1.constructor);
+    	console.log(stu1.name);
+    	console.log(stu1.no);
+    	
+    	console.log(stu1.foot);
+		console.log(stu1.head);
+		
+		 //F空对象作为中介解决了如下缺点
+	    // 缺点：把父类Person的constructor也同步改掉了
+	    console.log(Person.prototype.constructor);
+	</script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>鼠标事件</title>
+		<style type="text/css">
+			div{
+				width: 200px;
+				height: 200px;
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div">
+			
+		</div>
+		<button id="btn">按钮</button>
+	</body>
+	<script type="text/javascript">
+		var btn=document.getElementById('btn');
+		var div=document.getElementById('div');
+		btn.onclick=function(){
+			console.log('你单击了按钮');
+		}
+		btn.ondblclick=function(){
+			console.log('你双击了按钮');
+		}
+		btn.onmouseover=function(){
+			console.log('鼠标移入按钮');
+		}
+		btn.onmouseout=function(){
+			console.log('鼠标移出按钮');
+		}
+		div.onmousemove=function(){
+			console.log('移动');
+		}
+		
+	</script>
+</html>

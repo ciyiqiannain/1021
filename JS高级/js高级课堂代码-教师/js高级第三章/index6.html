@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>事件</title>
+	</head>
+	<body>
+		<img src="img/dog.jpg" id="img"/>
+	</body>
+	<script type="text/javascript">
+		var img=document.getElementById('img');
+		
+		img.onclick=function(){
+			console.log('你点击了图片');
+		}
+		img.onmouseover=function(){
+			console.log('鼠标移入了图片');
+		}
+		img.onmouseout=function(){
+			console.log('鼠标移出了图片');
+		}
+		img.onmousedown=function(){
+			console.log('鼠标按下了鼠标');
+		}
+		img.onmouseup=function(){
+			console.log('鼠标松开了鼠标');
+		}
+	</script>
+</html>

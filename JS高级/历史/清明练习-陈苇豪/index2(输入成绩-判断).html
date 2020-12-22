@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var num=parseInt(prompt('请输入成绩：'));
+		
+		if (num>0 && num<100) {
+			if (num<60) {
+				alert('不及格');
+			}
+			else if (num>=60 &&num<=69) {
+				alert('及格');
+			}
+			else if (num>69 && num<=79) {
+				alert('中')
+			}
+			else if (num>=80 && num<=89) {
+				alert('良好');
+			}
+			else if (num>=90 && num<=100) {
+				alert('优秀');
+			}
+		}else{
+			alert('0<成绩<100');
+		}
+	</script>
+</html>

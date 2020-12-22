@@ -1,0 +1,174 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+ul{
+	list-style: none;
+}
+.box{
+	width: 1920px;
+	height: 1105px;
+	background-image: url(../img/promPic.png);
+	background-size: 1920px 1105px;
+	position: relative;
+}
+header{
+	width: 1920px;
+	height: 100px;
+}
+header>.left{
+	float: left;
+	width: 218px;
+	height: 41px;
+	margin-top: 35px;
+}
+header>.left>img{
+	width: 218px;
+	height: 41px;
+}
+header>.right{
+	float: right;
+	width: 600px;
+	height: 29px;
+	margin-top: 35px;
+}
+header>.right>ul{
+	float: right;
+}
+header>.right>ul>li{
+	float: left;
+	width: 120px;
+	height: 29px;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+}
+header>.right>ul>li>a{
+	text-decoration: none;
+	color: white;
+}
+
+.form{
+	width: 500px;
+	height: 600px;
+	position: absolute;
+	right: 338px;
+	top: 226px;
+	background-color: white;
+}
+.form>header{
+	width: 500px;
+	height: 100px;
+	position: relative;
+}
+.form>header>.left{
+	width: 500px;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+	margin-top: 0px;
+}
+.form>header>.logo{
+	width: 83px;
+	height: 83px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.form>p>input{
+	width: 400px;
+	height: 35px;
+	font-size: 20px;
+	margin-left: 50px;
+	margin-top: 30px;
+}
+.form>.p3{
+	color: pink;
+	font-size: 20px;
+	line-height: 35px;
+}
+.form>.p3>input{
+	width: 35px;
+	height: 17px;
+	font-size: 20px;
+	margin-left: 50px;
+	margin-top: 30px;
+}
+.form>.p3>span{
+	float: right;
+	margin: 22px 50px;
+	cursor: pointer;
+	color: blue;
+}
+.form>.p4{
+	width: 400px;
+	height: 35px;
+	background-color: blue;
+	color: white;
+	margin-left: 50px;
+	margin-top: 30px;
+	text-align: center;
+	font-size: 22px;
+	cursor: pointer;
+}
+.form>.p5{
+	width: 500px;
+	height: 35px;
+	margin-top: 30px;
+	text-align: center;
+	font-size: 18px;
+}
+.form>.p6{
+	width: 500px;
+	height: 35px;
+	margin-top: 30px;
+	text-align: center;
+	font-size: 18px;
+	color: blue;
+}
+.form>.p7{
+	width: 500px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	font-size: 18px;
+	margin-top: 49px;
+}
+.form>.p7>img{
+	vertical-align: middle;
+}
+.form>.p7>span{
+	border: 1px solid blue;
+	color: blue;
+	cursor: pointer;
+	margin-left: 5px;
+}
+
+.down{
+	width: 1920px;
+	height: 50px;
+}
+.down>ul{
+	margin: 0 auto;
+	width: 790px;
+}
+.down>ul>li{
+	float: left;
+	width: 120px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+}
+.down>ul>li:nth-child(4){
+	width: 110px;
+}
+.down>ul>li:nth-child(5){
+	width: 10px;
+}
+.down>ul>li:nth-child(6){
+	width: 250px;
+}
+.down>ul>li:nth-child(7){
+	width: 60px;
+}
+

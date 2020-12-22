@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>微博减字</title>
+	</head>
+	<body>
+		<textarea name="" rows="" cols="" id="tet" maxlength="40"></textarea>
+		<span id="span"></span>
+	</body>
+	<script type="text/javascript">
+		var span=document.getElementById('span');
+		var tet=document.getElementById('tet');
+		
+		//onkeyup键盘的键被松开
+		tet.onkeyup=function(){
+			var length=tet.value.length;
+			span.innerHTML='还可以输入'+(40-length)+'个字符';
+		}
+	</script>
+</html>

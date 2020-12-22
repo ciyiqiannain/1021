@@ -1,0 +1,16 @@
+ul{
+	width: 50%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	border: 1px solid black;
+	margin: 0 auto;
+	padding: 10px 0px;
+}
+ul>li>img{
+	width: 30%;
+}
+h1{
+	width: 50%;
+	margin: 0 auto;
+}

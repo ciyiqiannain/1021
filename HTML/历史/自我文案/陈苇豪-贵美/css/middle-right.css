@@ -1,0 +1,16 @@
+.right{
+				width: 230px;
+				height: 262px;
+				border: 1px solid black;
+				position: absolute;
+				left: 747px;
+				top: 174px;
+			}
+			.middle>.right>ul>li{
+				height: 63px;
+				line-height: 63px;
+			}
+			.middle>.right>ul>li>img{
+				vertical-align: middle;
+				border: 1px solid pink;
+			}

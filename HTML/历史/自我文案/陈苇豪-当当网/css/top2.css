@@ -1,0 +1,19 @@
+.top2{
+				width: 1400px;
+				height: 65px;
+				overflow: hidden;
+			}
+			.top2>.img{
+				width: 160px;
+				height: 70px;
+				float: left;
+			}
+			.top2>.right{
+				float: right;
+				margin-right: 457px;
+				margin-top: 5px;
+			}
+			.top2>.right>.p{
+				color: yellowgreen;
+				margin-bottom: 10px;
+			}

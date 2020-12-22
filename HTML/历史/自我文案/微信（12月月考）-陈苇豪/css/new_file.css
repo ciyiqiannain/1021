@@ -1,0 +1,199 @@
+*{
+				margin: 0;
+				padding: 0;
+			}
+			ul{
+				list-style: none;
+			}
+			.box{
+				margin: 0 auto;
+				width: 1000px;
+				height: 1080px;
+			}
+			header{
+				margin: 0 auto;
+				width: 1000px;
+				height: 100px;
+				background: black;
+			}
+			header>ul{
+				float: left;
+				margin: 0 auto;
+				width: 1000px;
+				height: 100px;
+				background: black;
+			}
+			header>ul>li{
+				color: #FFFFFF;
+				float: left;
+				margin: 0 auto;
+				width: 100px;
+				text-align: center;
+				line-height: 100px;
+				height: 100px;
+			}
+			header>ul>li:hover{
+				color: #FF0000;
+			}
+			
+			
+			.two{
+				width: 1000px;
+				height: 470px;
+			}
+			.two>.left{
+				float: left;
+				width: 600px;
+				height: 470px;
+			}
+			.two>.left>header{
+				width: 600px;
+				height: 100px;
+				background: none;
+			}
+			.two>.left>header>p{
+				width: 565px;
+				height: 100px;
+				line-height: 100px;
+				text-align: center;
+				color: #000000;
+				font-size: 36px;
+			}
+			.two>.left>ul{
+				width: 470px;
+				height: 220px;
+			}
+			.two>.left>ul>li{
+				color: #979797;
+				width: 400px;
+				height: 50px;
+				line-height: 50px;
+				text-align: left;
+				margin-left: 100px ;
+			}
+			.two>.left>ul>li:last-of-type{
+				height: 65px;
+			}
+			.two>.left>ul:last-of-type>li{
+				color: #609700;
+			}
+			
+			.two>.right{
+				float: left;
+				width: 400px;
+				height: 440px;
+			}
+			.two>.right>ul{
+				float: left;
+				width: 480px;
+				height: 440px;
+			}
+			.two>.right>ul>li{
+				width: 480px;
+				height: 50px;
+				text-align: center;
+				line-height: 75px;
+			}
+			.two>.right>ul>li:first-of-type{
+				height: 250px;
+			}
+			.two>.right>ul>li:last-of-type{
+				height: 50px;
+				line-height: 50px;
+			}
+			
+			
+			.there{
+				float: left;
+				width: 1000px;
+				height: 405px;
+			}
+			.there>.left{
+				float: left;
+				width: 600px;
+				height: 405px;
+			}
+			.there>.left>header{
+				float: left;
+				width: 600px;
+				height: 113px;
+				background: none;
+			}
+			.there>.left>header>img{
+				float: left;
+				width: 600px;
+			}
+			.there>.left>ul{
+				float: left;
+				width: 600px;
+				height: 350px;
+			}
+			.there>.left>ul>li{
+				float: left;
+				width: 200px;
+				height: 350px;
+			}
+			.there>.left>ul>li>ul{
+				float: left;
+				width: 200px;
+				height: 350px;
+			}
+			.there>.left>ul>li>ul>li{
+				float: left;
+				width: 200px;
+				height: 50px;
+				line-height: 50px;
+				color: #979797;
+			}
+			.there>.left>ul>li>ul>li:first-of-type{
+				font-size: 24px;
+				color: black;
+			}
+			.there>.left>ul>li>ul>li:last-of-type{
+				color: #609700;
+			}
+			
+			
+			.there>.right{
+				float: left;
+				width: 400px;
+				height: 405px;
+			}
+			.there>.right>ul{
+				float: left;
+				width: 400px;
+				height: 500px;
+			}
+			.there>.right>ul>li{
+				float: left;
+				width: 400px;
+				height: 50px;
+				line-height: 50px;
+				color: #609700;
+			}
+			.there>.right>ul>li>img{
+				vertical-align: middle;
+			}
+			.there>.right>ul>li:first-of-type{
+				font-size: 24px;
+				color: black;
+			}
+			.there>.right>ul>li:last-of-type{
+				color: black;
+			}
+			
+			.bottom{
+				float: left;
+				width: 1000px;
+				height: 100px;
+			}
+			.bottom>p{
+				width: 1000px;
+				height: 100px;
+				line-height: 100px;
+				text-align: center;
+				border-top: 1px solid pink;
+			}
+			
+			
+			

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width:1200px;
+				height:1000px;
+				border: 1px solid black;
+				margin: 0 auto;
+			}
+			/*顶部*/
+			.top{
+				width: 100%;
+				height: 200px;
+				background: pink;
+			}
+			/*中间内容*/
+			.center{
+				width: 100%;
+				height: 500px;
+			}
+			.center>div{
+				display: inline-block;
+				width: 300px;
+				height: 500px;
+			}
+			.left{
+				
+				background: red;
+			}
+			.middle{
+			
+				background: blue;
+			}
+			.right{
+				
+				background: green;
+			}
+			/*底部*/
+			.foot{
+				width: 100%;
+				height: 300px;
+				background: burlywood;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="top">
+				头部
+			</div>
+			<div class="center">
+				<!--身体-->
+				<div class="left">
+					左
+				</div>
+				<div class="middle">
+					中
+				</div>
+				<div class="right">
+					又
+				</div>
+			</div>
+			<div class="foot">
+				底部
+			</div>
+		</div>
+	</body>
+</html>

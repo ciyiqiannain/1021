@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function setCookie (name,value,day) {
+			var date=new Date();
+			date.setDate(date.getDate()+day);
+			document.cookie=name+'='+value+';expires='+date;
+		}
+		
+		function getCookie (name) {
+			var arr=document.cookie.split(';');
+			for (var i=0;i<arr.length;i++) {
+				var arr2=arr[i].split('=');
+				if (name==arr2[0]) {
+					return arr2[1];
+				}
+			}
+			return '';
+		}
+		
+		function removeCookie (name) {
+			setCookie(arr,'333',-1);
+		}
+	</script>
+</html>

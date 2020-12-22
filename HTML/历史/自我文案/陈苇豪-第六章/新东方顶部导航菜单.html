@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>新东方顶部导航菜单</title>
+		<style type="text/css">                                /*问题案例，复习请查看“教师文案----新东方”*/
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				height: 30px;
+				background-image: url(img/top_bg.gif);
+			}
+			.img{
+				margin-right:100px ;
+				vertical-align: middle;
+			}
+			ul{
+				display: inline-block;
+				list-style: none;
+			}
+			li{
+				display: inline-block;
+				padding-right: 30px;
+				margin-left: 30px;
+				border-right:1px solid black ;
+				cursor: pointer;
+			}
+			.xl{
+				width: 250px;
+				height: 158px;
+				border: 1px solid black;
+			}
+			.xl>ul>li{
+				display: inline-block;
+				padding: 0;
+				padding-bottom: 5px;
+				margin: 0;
+				border: none;
+			}
+			.xl>ul{
+				border-bottom: 1px solid pink;
+				width: 230px;
+				margin-left: 10px;
+			}
+			.xl{
+				display: none;
+				position: relative;
+				left: 752px;
+			}
+			.bottom:hover>.xl{
+				display: inline-block;
+				/*转变的思路...................................*/
+				position: relative;
+				left: 0px;
+			}
+			.bottom{
+				width: 255px;
+				height: 160px;
+				margin-left:752px ;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<img class="img" src="img/logo.gif"/>
+			<ul>
+				<li>购物车</li>
+				<li>优惠券</li>
+				<li>快速注卡</li>
+				<li>各地购课</li>
+				<li>手机报</li>
+				<li>网站导航<img src="img/open_icon.gif"/></li>
+			</ul>
+		</div>
+		<div class="bottom">
+			<div class="xl">
+						<ul>
+							<li>托福</li>
+							<li>雅思</li>
+							<li>考研</li>
+							<li>职称英语</li>
+							<li>初中</li>
+							<li>日语</li>
+						</ul>
+						<ul>
+							<li>网络课堂</li>
+							<li>资讯中心</li>
+							<li>知识堂</li>
+							<li>大师讲坛</li>
+							<li>学习论坛</li>
+							<li>学词</li>
+							<li></li>
+							<li>考研搜校</li>
+						</ul>
+						<ul>
+							<li>M-Zone</li>
+							<li>手机报</li>
+							<li>时时英语</li>
+						</ul>
+			</div>
+		</div>
+	</body>
+</html>

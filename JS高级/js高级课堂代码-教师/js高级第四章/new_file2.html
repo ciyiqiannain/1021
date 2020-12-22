@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="" method="post">
+			<input type="text" name="" id="input1" value="" />
+			<input type="submit" value="提交"/>
+			<span>请输入6-10位数</span>
+		</form>
+	</body>
+	<script type="text/javascript">
+		var input1=document.getElementById('input1');
+		//获取焦点
+		input1.onfocus=function(){
+			console.log('你获取了焦点');
+			input1.style.border='1px solid red';
+		}
+		//失去焦点
+		input1.onblur=function(){
+			console.log('你失去焦点');
+			input1.style.border='1px solid black';
+		}
+	</script>
+</html>

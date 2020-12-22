@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>彩妆热卖产品列表</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;	
+			}
+			.box{
+				width: 400px;
+				height: 600px;
+				border: 1px solid black;
+			}
+			.top{
+				background-color: green;
+				color: white;
+				padding-top: 10px;
+			}
+			ul{
+				list-style: none;
+			}
+			li{
+				margin-top: 5px;
+				margin-bottom: 5px;
+				border-bottom: 1px dashed black;
+			}
+			/*li>*/img{
+				display: none;
+			}
+			li:hover>img{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<!--top-->
+			<div class="top">
+				<h3>大家都喜欢的彩妆</h3>
+			</div>
+			<!--bottom-->
+			<div class="bottom">
+				<ul>
+					<li>
+						1 Za姬芮新能真皙美白隔离霜 35g
+						<img src="img/icon-1.jpg"/>
+					</li>
+					
+					<li>
+						2 美宝莲精纯矿物奇妙新颜乳霜BB霜 30ml
+						<img src="img/icon-2.jpg"/>
+					</li>
+					
+					<li>
+						<img src="img/icon-3.jpg"/>
+						3 菲奥娜水漾CC霜40g
+					</li>
+					
+					<li>
+						<img src="img/icon-4.jpg"/>
+						4 DHC 蝶翠诗橄榄卸妆油 200ml
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>

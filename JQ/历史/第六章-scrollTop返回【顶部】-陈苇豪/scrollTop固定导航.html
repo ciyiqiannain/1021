@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul{
+				list-style: none;
+			}
+			.box{
+				height: 2000px;
+				position: relative;
+			}
+			header{
+				height: 398px;
+				border: 1px solid black;
+			}
+			#fix{
+				list-style: none;
+				width: 52px;
+				height: 312px;
+				position: fixed;
+				top: 100px;
+				right: 30px;
+			}
+			#fix>li{
+				width: 50px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				border: 1px solid black;
+				cursor: pointer;
+			}
+			#screen>li{
+				height: 400px;
+			}
+			#screen>li:nth-child(1){
+				background: blue;
+			}
+			#screen>li:nth-child(2){
+				background: green;
+			}
+			#screen>li:nth-child(3){
+				background: red;
+			}
+			#screen>li:nth-child(4){
+				background: darkviolet;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<header></header>
+			<ul id="screen">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<ul id="fix">
+				<li>蓝</li>
+				<li>绿</li>
+				<li>红</li>
+				<li>暗紫</li>
+				<li>客服</li>
+				<li>帮助</li>
+			</ul>
+		</div>
+	</body>
+	<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function () {
+			$('#fix>li').eq(0).click(function () {
+//				$(document).scrollTop(400);
+				$('html,body').stop().animate({scrollTop:400},100)
+			})
+			$('#fix>li').eq(1).click(function () {
+//				$(document).scrollTop(800);
+				$('html,body').stop().animate({scrollTop:800},100)
+			})
+			$('#fix>li').eq(2).click(function () {
+//				$(document).scrollTop(1200);
+				$('html,body').stop().animate({scrollTop:1200},100)
+			})
+			$('#fix>li').eq(3).click(function () {
+//				$(document).scrollTop(1600);
+				$('html,body').stop().animate({scrollTop:1600},100)
+			})
+		})
+	</script>
+</html>

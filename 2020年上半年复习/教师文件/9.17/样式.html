@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.one{
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>点击我  改变我的p标签的样式</h1>
+		<p class="one">123</p>
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				//1.css()
+//				$("h1").click(function(){
+//				$("p").css("color","red")
+//				
+//			})
+//              2.addClass()
+//        $("h1").click(function(){
+//				$("p").addClass("one")
+//				
+//			})
+//            3.removeClass()删除
+
+//           $("h1").click(function(){
+//				$("p").removeClass("one")
+//				
+//			})
+            //4.hasClass()做判断
+//        $("h1").click(function(){
+//        	if($("p").hasClass("one")){
+//        		$("p").removeClass("one")
+//        	}else{
+//        		$("p").addClass("one")
+//        	}
+//        })
+//             5.toggleClass()
+          $("h1").click(function(){
+          	$("p").toggleClass("one")
+          })
+			})
+			
+		</script>
+	</body>
+</html>

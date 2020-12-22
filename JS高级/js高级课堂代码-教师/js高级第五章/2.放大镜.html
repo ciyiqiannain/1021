@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#box1{
+				width: 300px;
+				height: 300px;
+				float: left;
+				border: 1px solid black;
+			}
+			#box1>img{
+				width: 300px;
+				height: 300px;
+			}
+			span{
+				display: inline-block;
+				width: 100px;
+				height: 100px;
+				background: rgba(0,0,0,0.3);
+				position: absolute;
+				/*top: 0;
+				left: 0;*/
+			}
+			#box2{
+				width: 200px;
+				height: 200px;
+				float: left;
+				overflow: hidden;
+				position: relative;
+			}
+			#box2>img{
+				width: 600px;
+				height: 600px;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box1">
+			<img src="img/smallpic.jpg"/>
+			<span></span>
+		</div>
+		<div id="box2">
+			<img src="img/bigpic.jpg"/>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var box1=document.getElementById('box1');
+		var box2=document.getElementById('box2');
+		var Span=document.getElementsByTagName('span')[0];//遮罩层
+		function hidden () {
+			Span.style.display='none';//遮罩层
+			box2.style.display='none';//大盒子
+		}
+		//鼠标移入
+		box1.onmouseover=function () {
+			//显示
+			Span.style.display='block';//遮罩层
+			box2.style.display='block';//大盒子
+			box1.onmousemove=function (e) {
+				var oEvent=e||event;
+				var left=oEvent.clientX-Span.offsetWidth/2;
+				var top=oEvent.clientY-Span.offsetHeight/2;
+				//限制移动范围左上右下
+				if(left<0){
+					left=0;
+				}
+				if(top<0){
+					top=0;
+				}
+				MaxWidth=box1.offsetWidth-Span.offsetWidth;
+				MaxHeght=box1.offsetHeight-Span.offsetHeight;
+				if (left>MaxWidth) {
+					left=MaxWidth;
+				}
+				if(top>MaxHeght){
+					top=MaxHeght;
+				}
+				Span.style.left=left+'px';
+				Span.style.top=top+'px';
+				//图片是等比缩放
+				//x①:x②=y①:y②
+				//小盒子(遮罩层):大盒子(放大镜)=小图片:大图片 
+				//比值1：2
+				box2.firstElementChild.style.left=-left*(box2.offsetWidth/Span.offsetWidth)+'px';
+				box2.firstElementChild.style.top=-top*2+'px';
+			}
+		}
+		box1.onmouseout=function () {
+			hidden();
+		}
+	</script>
+</html>

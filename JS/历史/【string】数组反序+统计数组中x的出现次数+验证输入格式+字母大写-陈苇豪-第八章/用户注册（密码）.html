@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="" method="post">
+			<p>用户名：<input type="text"id="text" /></p>
+			<p>密码：<input type="password"id="password" /></p>
+			<input type="submit" value="注册"/ onclick="sub()">
+		</form>	
+	</body>
+	<script type="text/javascript">
+		function sub(){
+			var text=document.getElementById('text').value;
+			var password=document.getElementById('password').value;
+			if(text.length<6){
+				alert('用户名过短！');
+				return;
+			}
+			if(password.length<6){
+				alert('密码长度不能小于6位！');
+				return;
+			}else{
+				alert('注册成功！');
+				return;
+			}
+		}
+	</script>
+</html>

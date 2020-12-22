@@ -1,0 +1,146 @@
+.middle1{
+				width: 1500px;
+				height: 340px;
+				border: 1px solid black;
+			}
+			.middle1>.one{
+				width: 1500px;
+				height: 35px;
+				float: left;
+				border: 1px solid black;
+			}
+			.middle1>.one>p{
+				height: 35px;
+				line-height: 35px;
+				font-size: 20px;
+			}
+			.middle1>.one>p>img{
+				margin-top: 10px;
+				margin-right: 20px;
+				float: right;
+			}
+			
+			
+			.middle1>.two{
+				width: 1500px;
+				height: 300px;
+				float: left;
+			}
+			.middle1>.two>.ul1{
+				width: 300px;
+				height: 300px;
+				float: left;
+				padding-left: 25px;
+			}
+			.middle1>.two>.ul1>li{
+				width: 300px;
+				height: 73px;
+				line-height: 73px;
+				text-align: center;
+			}
+			.middle1>.two>.ul1>li>a{
+				color: blue;
+				font-size: 20px;
+			}
+			
+			.middle1>.two>.ul2{
+				width: 70px;
+				height: 300px;
+				float: left;
+				margin-left: 75px;
+				padding-left: 25px;
+			}
+			.middle1>.two>.ul2>li{
+				width: 70px;
+				height: 73px;
+				color: deeppink;
+				line-height: 73px;
+				text-align: center;
+			}
+			
+			.middle1>.two>.ul3{
+				width: 70px;
+				height: 300px;
+				float: left;
+				margin-left: 30px;
+				padding-left: 25px;
+			}
+			.middle1>.two>.ul3>li{
+				width: 70px;
+				height: 73px;
+				line-height: 73px;
+				text-align: center;
+			}
+			.middle1>.two>.ul4{
+				width: 70px;
+				height: 300px;
+				float: left;
+				margin-left: 30px;
+				padding-left: 25px;
+			}
+			.middle1>.two>.ul4>li{
+				width: 70px;
+				height: 76px;
+				line-height: 73px;
+				text-align: center;
+				color: green;
+			}
+			
+			.middle1>.two>.ul5{
+				width: 300px;
+				height: 300px;
+				float: left;
+				padding-left: 25px;
+			}
+			.middle1>.two>.ul5>li{
+				width: 316px;
+				height: 73px;
+				line-height: 73px;
+				text-align: center;
+			}
+			.middle1>.two>.ul5>li>a{
+				color: blue;
+				font-size: 20px;
+			}
+			
+			.middle1>.two>.ul6{
+				width: 70px;
+				height: 300px;
+				float: left;
+				margin-left: 65px;
+				padding-left: 25px;
+			}
+			.middle1>.two>.ul6>li{
+				width: 70px;
+				height: 73px;
+				color: deeppink;
+				line-height: 73px;
+				text-align: center;
+			}
+			
+			.middle1>.two>.ul7{
+				width: 70px;
+				height: 300px;
+				float: left;
+				margin-left: 36px;
+				padding-left: 25px;
+			}
+			.middle1>.two>.ul7>li{
+				width: 70px;
+				height: 73px;
+				line-height: 73px;
+				text-align: center;
+			}
+			.middle1>.two>.ul8{
+				width: 70px;
+				height: 300px;
+				float: left;
+				padding-left: 25px;
+			}
+			.middle1>.two>.ul8>li{
+				width: 70px;
+				height: 76px;
+				line-height: 73px;
+				text-align: center;
+				color: green;
+			}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			span{
+				color: red;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="" method="post" id="myForm">
+			<p>email:<input type="text" name="email" id="email" value="" placeholder="请输入正确的电子邮箱"/><span id="span">邮箱不能为空</span></p>
+			<p>密码:<input type="password" name="" id="pas" value="" /></p>
+			<input type="submit" value="登录"/>
+		</form>
+	</body>
+	<script type="text/javascript">
+		//非空和符号验证
+		var myForm=document.getElementById('myForm');
+		var email=document.getElementById('email');
+		var span=document.getElementById('span');
+//		
+		email.onfocus=function(){
+			email.value='';
+			
+		}
+		email.onblur=function(){
+//			email.style.borderColor='#A9A9A9';
+//			var mail=email.value;
+//			if(mail==''){
+////				alert('邮箱不能为空');
+//				span.style.display='inline-block';
+//				
+//				
+//			}
+		}
+		//邮箱必须包含 @  和 .
+		myForm.onsubmit=function(){
+			var mail=email.value;
+			//不能为空
+			if(mail==''){
+//				alert('邮箱不能为空');
+				span.style.display='inline-block';
+				return false;
+			}
+			//格式必须包含@    indexOf
+			if(mail.indexOf('@')==-1){
+				alert('格式不正确，必须包含@');
+				return false;
+			}
+			//格式必须包含.
+			if(mail.indexOf('.')==-1){
+				alert('格式不正确，必须包含.');
+				return false;
+			}
+			
+			
+			return true;
+		}
+	</script>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			img{
+				width: 70%;
+			}
+			ul{
+				list-style: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="di">
+			
+		</div>
+		<ul>
+			<li></li>
+		</ul>
+	</body>
+	<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function () {
+			var arrimg=new Array('卡莲&符华.jpg','希儿.png','幽兰黛尔.png','神乐.jpg','薇尔莉特.jpg');
+			
+			var number=Math.floor(Math.random()*5);
+			var img='img/'+arrimg[number];
+			
+			$('li').append('<img src="'+img+'"/>');
+		})
+	</script>
+</html>

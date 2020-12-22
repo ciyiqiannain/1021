@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			span{
+				cursor: pointer;
+			}
+			div{
+				border: 1px solid red;
+			}
+			ul{
+				/*display: none;*/
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<h2>常见问题 <span>×</span></h2>
+			<ul>
+				
+			</ul>
+		</div>
+	</body>
+	<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		//事件的对象   一定要选择正确
+		$(function(){
+			$('h2').click(function(){
+				$('ul').html('<li>1111111111111</li><li>1111111111111</li><li>1111111111111</li>');
+			})
+			$('span').click(function(event){
+//				alert('a');
+				event.stopPropagation();
+				$('ul').html('');
+			})
+		})
+	</script>
+</html>

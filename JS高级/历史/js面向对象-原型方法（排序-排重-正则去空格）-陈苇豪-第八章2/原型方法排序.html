@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var arr=[15,6,49,46,51,89,4,6,51,6,8,4,5,96];
+		Array.prototype.paixu=function () {
+			for (var i=0;i<this.length;i++) {
+				for (var j=0;j<=i;j++) {//从小到大
+					if (this[i]<this[j]) {
+						x=this[i];
+						this[i]=this[j];
+						
+						this[j]=x;
+					}
+				}
+			}
+			return this;
+		}
+		console.log(arr.paixu());
+		
+//		var arr=[15,6,49,46,51,89,4,6,51,6,8,4,5,96];
+//		Array.prototype.paixu=function () {
+//			for (var i=0;i<this.length;i++) {
+//				for (var j=0;j<=i;j++) {
+//					if (this[i]>this[j]) {//从大到小
+//						x=this[i];
+//						this[i]=this[j];
+//						
+//						this[j]=x;
+//					}
+//				}
+//			}
+//			return this;
+//		}
+//		console.log(arr.paixu());
+	</script>
+</html>

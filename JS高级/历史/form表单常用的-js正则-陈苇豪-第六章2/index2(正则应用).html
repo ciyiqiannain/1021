@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="" method="post">
+			<p>
+				会员名：<input type="text" name="" id="hyming" value="" />
+				<span></span>
+			</p>
+			<p>
+				登录密码：<input type="password" name="" id="pas" value="" />
+				<span></span>
+			</p>
+			<p>
+				确认密码：<input type="password name="" id="pass" value="" />
+				<span></span>
+			</p>
+			<input type="submit" value="提交"/>
+		</form>
+	</body>
+	<script type="text/javascript">
+		var hyming=document.getElementById('hyming');
+		var sps=document.getElementsByTagName('span');
+		var pas=document.getElementById('pas');
+		var pass=document.getElementById('pass');
+		
+		hyming.onfocus=function () {
+			sps[0].innerHTML='6-12个字符';
+			sps[0].style.display='inline-block';
+		}
+		hyming.onblur=function () {
+			var reg=/^[a-zA-Z0-9]{6,12}/;                       //var reg=/^[a-zA-Z0-9]{6,12}/
+			var hyminghValue=hyming.value;
+			if (hyminghValue=='') {
+				sps[0].innerHTML='不能为空';
+				return false;
+			}
+			if(reg.test(hyminghValue)==false){                   //reg.test(hyminghValue)==false
+				sps[0].innerHTML='长度不满足需求';
+				return false;
+			}
+		}
+		pas.onfocus=function () {
+			sps[1].innerHTML='至少包含6个字符';
+			sps[1].style.display='inline-block';
+		}
+		pas.onblur=function () {
+			var pasValue=pas.value;
+			if (pasValue.length<6) {
+				sps[1].innerHTML='格式错误';
+				return false;
+			}
+		}
+		pass.onblur=function () {
+			var pasValue=pas.value;
+			var passValue=pass.value;
+			if (pasValue != passValue) {
+				sps[2].innerHTML='两次密码不一样';
+				return false;
+			}
+			if (pasValue == passValue) {
+				sps[2].innerHTML='';
+				return false;
+			}
+		}
+	</script>
+</html>

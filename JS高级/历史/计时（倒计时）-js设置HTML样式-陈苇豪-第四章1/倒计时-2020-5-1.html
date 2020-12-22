@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h1 id="time"></h1>
+	</body>
+	<script type="text/javascript">
+		var h=document.getElementById('time');
+	
+		time=setInterval(function () {
+			//		得到时间->得到（目标）5-1时间戳-->根据时间戳拿到--日-时-分-秒-->组合为倒计时
+			var date=new Date();
+			var day=date.getDate();
+			var hours=date.getHours();
+			var minutes=date.getMinutes();
+			var seconds=date.getSeconds();
+			//现在的时间戳
+			var date=new Date().getTime();//var date=new Date();可以达到默认获取时间戳的效果，此处与上面 15 不影响
+//			document.write(date.getTime()+'<br/>');
+			//2020-05-01
+			var date1=new Date(2020,04,01);
+//			document.write(date1.getTime()+'<br/>');
+			//差
+			var time=date1-date;
+//			document.write(time+'<br/>');
+			
+			var seconds1=parseInt(time/1000%60);//秒
+			var minutes1=parseInt(time/1000/60%60);//分
+			var hours1=parseInt(time/1000/60/60%24);//时
+			var day1=parseInt(time/1000/60/60/24);//日
+			
+			h.innerHTML='距五一还有'+day1+'天'+hours1+':'+minutes1+':'+seconds1;
+		},1000)
+//		setInterval(time,1000);
+	</script>
+</html>

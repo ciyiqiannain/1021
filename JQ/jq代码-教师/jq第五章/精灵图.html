@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>规则的精灵图</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul{
+				width: 100%;
+				height: 25px;
+				border: 1px solid black;
+				margin: 100px auto;
+			}
+			li{
+				width: 25px;
+				height: 25px;
+				border: 1px solid red;
+				float: left;
+				margin-left: 20px;
+				list-style: none;
+				background: url(img/icon_lifeserv.png) no-repeat;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</body>
+	<script src="js/jquery3.5.0jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			//each遍历    循环
+			$('li').each(function(i,e){
+				console.log(i);//代表的是  每个li的下标
+				console.log($(e));//代表的是循环一次选择第一个li
+				$(e).css('background-position-y',-i*25+'px');
+			})
+			
+			$('li').hover(function(){
+				$(this).stop().animate({'background-position-x':-25+'px'},300);
+//				$(this).css('background-position-x',-25+'px');
+			},function(){
+				$(this).stop().animate({'background-position-x':-0+'px'},300);
+//				$(this).css('background-position-x',-0+'px');
+			})
+		})
+	</script>
+</html>

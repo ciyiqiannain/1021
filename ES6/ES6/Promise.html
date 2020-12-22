@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="js/jquery-3.5.1.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function () {
+//		常规规则
+//			const p1 = new Promise(function(resolve,reject){
+//			    resolve('success1');
+//			    reject('success2');
+//			});
+//			p1.then(function (date) {
+//				console.log(date);
+//			});
+
+//			const p1 = new Promise(function(resolve,reject){
+//			    resolve('success1');
+//			    reject('success2');
+//			}).then(function (date) {
+//				console.log(date);
+//			})
+//		单个用法
+//			const p2 = new Promise(function (resolve,reject) {
+////				resolve('success1');
+////				reject('success2');
+//				$.ajax({
+//					url:"json/json1.json",
+//					dataType:"json",
+//					success:function (date) {
+//						resolve(date);
+//					},
+//					error:function (err) {
+//						reject(err);
+//					}
+//				})
+//			})
+//			p2.then(function (date) {
+//				alert('成功');
+//			},function () {
+//				alert('失败');
+//			})
+//		多个用法
+//			function ajaxs (url) {
+//				return new Promise(function (resolve,reject) {
+//					$.ajax({
+//						url: url,
+//						dataType:'json',
+//						success:function (date) {
+//							resolve(date);
+//						},
+//						error:function (err) {
+//							reject(err);
+//						},
+//					});
+//				});
+//			}
+//		    Promise.all([
+//		    	ajaxs('json/anime.json'),
+//		    	ajaxs('json/books.json')
+//		    	]).then(
+//		    	function (arr) {
+////		    		let arr = [arr1,arr2]//无效
+//		    		let [anime, books] = arr;
+//		    		console.log(anime.title);
+//		    		console.log(books.title);
+//		    	},
+//		    	function () {
+//		    		console.log('至少一个失败了');
+//		    	}
+//		    );
+
+////		      动画
+//		     ajaxs('json/anime.json').then(
+//		       function (data) {
+//		         alert(data.title);
+//		       },
+//		       function (err) {
+//		         alert(err.status);
+//		       }
+//		     );
+////		    书籍
+//		     ajaxs('json/books.json').then(
+//		       function (data) {
+//		         alert(data.title);
+//		       },
+//		       function (err) {
+//		         alert(err.status);
+//		       }
+//		     );
+//		JQ.Promise用法
+			Promise.all([
+				$.ajax({type:"get",url:"json/anime.json",dataType:"json"}),
+				$.ajax({type:"get",url:"json/books.json",dataType:"json"}),
+				$.ajax({type:"get",url:"json/json1.json",dataType:"json"}),
+			]).then(function (arr) {
+				let [anime,books,json1] = arr;
+				console.log(anime.title);
+				console.log(books.title);
+				
+				console.log(json1.title);
+				console.log(json1.name);
+				console.log(json1.age);
+			},function (err) {
+				console.log('至少一个失败了');
+			})
+		})
+	</script>
+</html>

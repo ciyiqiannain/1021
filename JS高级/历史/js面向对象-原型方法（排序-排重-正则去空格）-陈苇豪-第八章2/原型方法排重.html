@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var arr=[5,32,05,4,0,4,81,6,5];
+		
+		Array.prototype.paichong=function () {
+			var txt=[];
+			for (var i=0;i<this.length;i++) {
+				if (txt.indexOf(this[i])==-1) {
+					txt.push(this[i]);
+				}
+			}
+			return txt;
+		}
+		console.log(arr.paichong());
+	</script>
+</html>

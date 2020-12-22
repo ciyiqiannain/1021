@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding:0;
+			}
+			#box>div{
+				float: left;
+			}
+			#small{
+				width: 300px;
+				height: 225px;
+				border: 1px solid black;
+				position: relative;
+			}
+			#small>img{
+				width: 300px;
+				height: 225px;
+			}
+			#mark{
+				width: 100px;
+				height: 100px;
+				background: rgba(0,0,0,0.3);
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 999;
+				display: none;
+			}
+			#big{
+				width: 300px;
+				height: 300px;
+				border: 1px solid black;
+				overflow: hidden;
+				display: none;
+				position: relative;
+			}
+			#bimg{
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div id="small">
+				<img src="img/smallpic.jpg"/>
+				<span id="mark"></span>
+			</div>
+			<div id="big">
+				<img src="img/bigpic.jpg" id="bimg"/>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var small=document.getElementById('small');
+		var mark=document.getElementById('mark');
+		var bimg=document.getElementById('bimg');
+		
+		//鼠标放到小盒子上   遮罩层显示    大盒子显示  
+		small.onmouseover=function(e){
+			var oEvent=e || event;
+			mark.style.display='block';
+			big.style.display='block';
+			//鼠标距浏览器距离	oEvent.clientX
+			//小图片距浏览器距离 small.offsetLeft
+			//mark一半的宽度 (mark.offsetWidth)/2
+			var left=oEvent.clientX-small.offsetLeft-(mark.offsetWidth)/2;
+			var top=oEvent.clientY-small.offsetTop-(mark.offsetHeight)/2;
+			var maxW=small.offsetWidth-mark.offsetWidth;
+			var maxH=small.offsetHeight-mark.offsetHeight;
+			if(left<0)left=0;
+			if(top<0)top=0;
+			if(left>maxW)left=maxW;
+			if(top>maxH)top=maxH;
+			mark.style.left=left+'px';
+			mark.style.top=top+'px';
+			bimg.style.left=-left*((bimg.offsetWidth-big.offsetWidth)/(small.offsetWidth-mark.offsetWidth))+'px';
+			bimg.style.top=-top*((bimg.offsetHeight-big.offsetHeight)/(small.offsetHeight-mark.offsetHeight))+'px';			
+		}
+		
+		small.onmouseout=function(){
+			//遮罩层隐藏    大盒子隐藏
+			mark.style.display='none';
+			big.style.display='none';
+		}
+	</script>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p id="p"></p>
+		<button onclick="load()">显示</button>
+		
+	</body>
+	<script type="text/javascript">
+		var p=document.getElementById('p');
+		function load(){
+			//1.创建ajax
+			//对Ajax做的浏览器兼容
+			if(window.XMLHttpRequest){
+				// IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+				var oAjax=new XMLHttpRequest();
+				console.log(oAjax);
+			}else{
+				// IE6, IE5 浏览器执行代码
+				var oAjax=new ActiveXObject('Microsoft.XMLHTTP');
+				console.log(oAjax);
+			}
+			//2.连接到服务器
+			oAjax.open('GET','txt/ajax.txt',true);
+			//3.发送请求
+			oAjax.send();
+			console.log(oAjax.status);
+			//4.得到返回的数据
+			oAjax.onreadystatechange=function(){
+				console.log(oAjax.readyState);
+				console.log(oAjax.status);
+				if(oAjax.readyState==4 && oAjax.status==200){
+					console.log('请求成功：'+oAjax.responseText);
+					p.innerHTML=oAjax.responseText;
+					
+				}else{
+					console.log('请求失败'+oAjax.status);
+					p.innerHTML=oAjax.status
+				}
+			}
+		}
+	</script>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<style type="text/css">
+			*{
+				font-size: 0.1rem;
+			}
+			.img_master{
+				position: fixed;
+				right: 0%;
+				bottom: 0%;
+			}
+			.SX{
+				background: black;
+				width: 27px;
+				height: 27px;
+				overflow: hidden;
+				background-image: url(img/bg1.png);
+				border-radius: 15px;
+				position: fixed;
+				display: none;
+			}
+			.SX_p1{
+				background-position: 120px -18px;
+				right: 5%;
+				bottom: 25%;
+			}
+			.SX_p2{
+				background-position: 98px -18px;
+				right: 22%;
+				bottom: 22%;
+			}
+			.SX_p3{
+				background-position: 75px -18px;
+				right: 36%;
+				bottom: 14%;
+			}
+			.SX_p4{
+				background-position: 55px -18px;
+				right: 43%;
+				bottom: 3%;
+			}
+		</style>
+	</head>
+	<body>
+		<img src="img/menu.png" class="img_master"/>
+		<p class="SX SX_p1"></p>
+		<p class="SX SX_p2"></p>
+		<p class="SX SX_p3"></p>
+		<p class="SX SX_p4"></p>
+		
+	</body>
+	<script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		Zepto(function () {
+			$('.img_master').tap(function () {
+				$('.SX').toggle();
+			})
+		})
+	</script>
+</html>

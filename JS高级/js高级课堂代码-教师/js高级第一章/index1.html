@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p id="p">这是一所学校1</p>
+		<p>这是一所学校2</p>
+		<p>这是一所学校3</p>
+		<p class="p">这是一所学校4</p>
+		<p class="p">这是一所学校5</p>
+		<p class="p">这是一所学校6</p>
+		<p class="p">这是一所学校7</p>
+	</body>
+	<script type="text/javascript">
+		console.log(document.getElementById('p'));
+		//document.getElementsByTagName拿到的是个数组
+		console.log(document.getElementsByTagName('p')[3]);
+		//document.getElementsByClassName拿到class为p的数组
+		console.log(document.getElementsByClassName('p')[3]);
+	</script>
+</html>

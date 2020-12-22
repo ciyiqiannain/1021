@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>课工场论坛列表</title>
+    <link href="css/bbs.css" rel="stylesheet">
+</head>
+<body>
+	<div class="bbs">
+	    <header><span>我要发帖</span></header>
+	    <section>
+	        <ul></ul>
+	    </section>
+	    <div class="post">
+	        <input class="title" placeholder="请输入标题（1-50个字符）">
+	        所属版块：<select class="sel"><option>请选择版块</option><option>电子书籍</option><option>新课来了</option><option>新手报到</option><option>职业规划</option></select>
+	        <textarea class="content"></textarea>
+	        <input class="btn" value="发布">
+	    </div>
+	</div>
+	<!--<img src="img/tou01.jpg"/>-->
+	<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function () {
+			$('.bbs>header>span').click(function () {
+				$('.post').show();
+			})
+			$('.btn').click(function () {
+				var title=$('.title').val();
+				var op=$('.sel').val();
+				var tarea=$('.content').val();
+				
+				var arr=new Array('tou01.jpg','tou02.jpg','tou03.jpg','tou04.jpg');
+				var number=Math.floor(Math.random()*4);
+				var img='img/'+arr[number];
+				var img2='<img src=" '+img+' "/>';
+				
+				var date=new Date();
+				var year=date.getFullYear();
+				var mouth=date.getMonth()+1;
+				var day=date.getDate();
+				$('ul').append(img2+title+'&nbsp;&nbsp;&nbsp;'+op+'<br />'+tarea+'<br />'+'发表时间：'+year+'年'+mouth+'月'+day+'日'+'<br />');
+				
+				$('.post').hide();
+			})
+		})
+	</script>
+</body>
+</html>

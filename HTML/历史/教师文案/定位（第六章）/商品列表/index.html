@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 600px;
+				height: 600px;
+				border:1px solid black ;
+			}
+			h2{
+				width: 600px;
+				height: 50px;
+				line-height: 50px;
+			}
+			li{
+				list-style: none;
+				width: 180px;
+				height: 230px;
+				border:1px solid black ;
+				float: left;
+				margin-left: 5px;
+				margin-top: 10px;
+			}
+			li>p>img{
+				width: 180px;
+			}
+			.col{
+				color: blue;
+			}
+			/*重要！*/
+			.li{
+				position: relative;
+			}
+			.li>img{
+				position: absolute;
+				top: 0px;
+				right: 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<h2>商品列表</h2>
+			<ul>
+				<li>
+					<p><img src="img/photo_01.jpg"/></p>
+					<p class="col">戛洒睡觉吧奥斯卡</p>
+					<p>一口价：49.00</p>
+				</li>
+				<li>
+					<p><img src="img/photo_02.jpg"/></p>
+					<p class="col">戛洒睡觉吧奥斯卡</p>
+					<p>一口价：49.00</p>
+					
+				</li>
+				<li class="li">
+					<p><img src="img/photo_03.jpg"/></p>
+					<p class="col">戛洒睡觉吧奥斯卡</p>
+					<p>一口价：49.00</p>
+					<img src="img/xsq.png" alt="" />
+				</li>
+				<li>
+					<p><img src="img/photo_04.jpg"/></p>
+					<p class="col">戛洒睡觉吧奥斯卡</p>
+					<p>一口价：49.00</p>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

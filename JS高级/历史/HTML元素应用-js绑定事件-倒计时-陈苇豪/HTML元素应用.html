@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#box{
+				width: 1000px;
+				height: 1000px;
+				border: 1px solid black;
+				margin: 0 auto;
+			}
+			#p{
+				width: 700px;
+				height: 300px;
+				border: 1px solid black;
+				margin-left: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<p id="p"></p>
+			<button onclick="bu()">返回顶部</button>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var p=document.getElementById('p');
+		var box=document.getElementById('box');
+		
+		//offsetLeft对象的左测到浏览器的距离
+		console.log(p.offsetLeft);
+		console.log(box.offsetLeft);
+		
+		//offsetTopt指对象到浏览器顶部的距离
+		console.log(p.offsetTop);
+		console.log(box.offsetTop);
+		
+		//offsetHeight返回对象的高度，含边框
+		//offsetWidth返回对象的宽度，含边框
+		console.log(p.offsetHeight);
+		console.log(p.offsetWidth);
+		
+		//返回最近的父级元素
+		console.log(p.offsetParent);
+		
+		//clientWidth返回元素的可见宽度，不包含边框
+		//clientHeight返回元素的可见高度，不包含边框
+		console.log(p.clientWidth);
+		console.log(p.clientHeight);
+		
+		function bu() {
+			//标准浏览器指认document.documentElement.scrollTop = 0
+			//但是，无论是document.body.scrollTop = 0还是document.documentElement.scrollTop = 0
+			//都存在浏览器无法识别的情况
+			
+			//两者存在兼容性，所以一般通写
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		}
+	</script>
+</html>

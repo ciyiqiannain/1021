@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#box{
+				width: 100px;
+				height: 100px;
+				background-color: blue;
+				position: absolute;
+				cursor: move;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+	</body>
+	<script type="text/javascript">
+		var box=document.getElementById('box');
+		
+		console.log(box.offsetWidth);
+		console.log(box.offsetHeight);
+		
+		console.log(box.offsetLeft);
+		console.log(box.offsetTop);
+		
+		console.log(document.documentElement.clientWidth);
+		console.log(document.documentElement.clientHeight);
+		
+		//浏览器的宽，高
+		var dwidth=document.documentElement.clientWidth;
+		var dheight=document.documentElement.clientHeight;
+		
+		box.onmousedown=function (e) {
+			var oEvent=e || event;
+			
+			console.log(oEvent.clientX);
+			var x=oEvent.clientX-box.offsetLeft;
+			console.log(oEvent.clientY);
+			var y=oEvent.clientY-box.offsetTop;
+			
+			document.onmousemove=function (e) {
+				var oEvent=e || event;
+				//页面，client
+//				var x=oEvent.clientX;
+//				var y=oEvent.clientY;
+				var left=oEvent.clientX-x;
+				var top=oEvent.clientY-y;
+				
+				var maxwidth=dwidth-box.offsetWidth;
+				var maxHeight=dwidth-box.offsetHeight;
+				
+				if (left<0)left=0;
+				if (top<0)top=0;
+				if (left>maxwidth)left=maxwidth;
+				if (top>maxHeight)top=maxHeight;
+				box.style.left=left+'px';
+				box.style.top=top+'px';
+			}
+		}
+		
+		box.onmouseup=function () {
+			document.onmousemove=null;
+		}
+	</script>
+</html>

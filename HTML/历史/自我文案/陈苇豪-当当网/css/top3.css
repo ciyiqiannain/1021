@@ -1,0 +1,20 @@
+.top3>ul{
+				background-color: RGB(245, 122, 52);
+				float: left;
+			}
+			.top3>ul>li{
+				float: left;
+				color: white;
+				margin-right: 34px;
+				padding-right: 33px;
+				border-right:1px solid black ;
+				padding-top: 5px;
+				padding-bottom: 5px;
+			}
+			.top3>ul>.li-1{
+				margin-left: 53px;
+			}
+			.top3>ul>.li-2{
+				border: none;
+				margin-right: 9px;
+			}

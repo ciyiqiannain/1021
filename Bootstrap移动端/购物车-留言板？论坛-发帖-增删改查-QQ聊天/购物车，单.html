@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head
+	<body>
+		
+		<p class="p">音阙</p>
+		单价：<p id="d">10</p>
+		件：<button onclick="jian()">-</button>
+			<span id="z"> 1 </span>
+			<button onclick="jia()">+</button>
+		结：<p id="j"></p>
+		
+		购物车，留言板，增删改查,QQ聊天
+		
+	</body>
+	<script type="text/javascript">
+		var p=document.getElementsByClassName('p')[0];
+		p.innerHTML='诗听';
+		
+		var d=document.getElementById('d').innerHTML;
+		var j=document.getElementById('j').innerHTML;
+		
+		function jian () {
+			var num=document.getElementById('z').innerHTML;
+			var z=parseInt(num);
+			if (document.getElementById('z').innerHTML == 1) {
+				alert('XXXX');
+				return;
+			} else{
+				document.getElementById('z').innerHTML=z-1;
+//				document.getElementById('j').innerHTML=document.getElementById('d').innerHTML*document.getElementById('z').innerHTML;
+				zj();
+			}
+		}
+		
+		function jia () {
+			var num1=document.getElementById('z').innerHTML;
+			var z=parseInt(num1);
+			document.getElementById('z').innerHTML=z+1;
+//			document.getElementById('j').innerHTML=document.getElementById('d').innerHTML*document.getElementById('z').innerHTML;
+			zj();
+		}
+		function zj () {
+			document.getElementById('j').innerHTML=document.getElementById('d').innerHTML*document.getElementById('z').innerHTML;
+		}
+	</script>
+</html>

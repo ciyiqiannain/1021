@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			li{
+				list-style: none;
+				float: left;
+			}
+			#box{
+				width: 400px;
+				height: 200px;
+				border: 1px solid red;
+				margin:100px auto ;
+				position: relative;
+				overflow: hidden;
+			}
+			#pic{
+				width: 400%;
+				height: 200px;
+				position: absolute;
+			}
+			#pic>li{
+				width: 400px;
+				height: 200px;
+			}
+			#pic>li>img{
+				width: 400px;
+				height: 200px;
+			}
+			
+			#num{
+				width: 108px;
+				height: 25px;
+				position: absolute;
+				bottom: 10px;
+				left: 150px;
+			}
+			#num>li{
+				width: 25px;
+				height: 25px;
+				line-height: 25px;
+				text-align: center;
+				font-size: 18px;
+				border-radius: 50%;
+				color: red;
+				border: 1px solid red;
+			}
+			#num>li:hover{
+				background: black;
+				color: white;
+			}
+			
+			.active{
+				background: black;
+				color: white;
+			}
+			
+			#jian{
+				width: 100%;
+				height: 50px;
+				position: absolute;
+				top: 75px;
+			}
+			#jian>li{
+				width: 50px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				font-size: 28px;
+				cursor: pointer;
+				color: blue;
+			}
+			#jian>li:hover{
+				background: red;
+			}
+			#right{
+				float: right;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<ul id="pic"> 
+				<li><img src="img/1.jpg"/></li>
+				<li><img src="img/2.jpg"/></li>
+				<li><img src="img/3.jpg"/></li>
+				<li><img src="img/4.jpg"/></li>
+			</ul>
+			<ul id="num">
+				<li class="active">1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+			</ul>
+			<ul id="jian">
+				<li id="left"><</li>
+				<li id="right">></li>
+			</ul>
+		</div>
+	</body>
+	<script src="js/jquery3.5.0jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			var width=$('#pic>li>img').width();
+			var index=0;
+			console.log(width);
+			var move=null;
+			move=function(){
+				$('#pic').animate({'left':-width*index+'px'},300);
+				$('#num>li').eq(index).addClass('active').siblings().removeClass('active');
+			}
+			var timer=null;
+			//定时器
+			timer=setInterval(function(){
+				index++;
+				index = index > 3 ? 0 : index;
+				move();
+			},3000);
+			//大盒子hove事件
+			$('#box').hover(function(){
+				clearInterval(timer);
+			},function(){
+				timer=setInterval(function(){
+					index++;
+					index = index > 3 ? 0 : index;
+					move();
+				},3000);
+			})
+			//数字
+			$('#num>li').hover(function(){
+				//获取对应的下标值
+				index=$(this).index();
+				console.log(index);
+				move();
+			})
+			//左箭头
+			$('#left').click(function(){
+				index--;
+				index=index<0?3:index;
+				move();
+			})
+			//右箭头
+			$('#right').click(function(){
+				index++;
+				index = index > 3 ? 0 : index;
+				move();
+			})
+		})
+	</script>
+</html>

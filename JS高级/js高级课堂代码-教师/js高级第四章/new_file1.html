@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">按钮</button>
+	</body>
+	<script type="text/javascript">
+		//鼠标左右键和滚轮判断
+		var btn=document.getElementById('btn');
+		btn.onmousedown=function(e){
+			console.log(e);
+			console.log(e.button);
+			if(e.button==0){
+				console.log('点击的是鼠标左键');
+			}else if(e.button==1){
+				console.log('点击的是鼠标滚轮');
+			}else if(e.button==2){
+				console.log('点击的是鼠标右键');
+			}
+		}
+	</script>
+</html>

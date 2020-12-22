@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				margin: 100px 0px 0px 100px;
+				width: 300px;
+				height: 187px;
+				position: relative;
+			}
+			#small{
+				width: 300px;
+				height: 187px;
+			}
+			#small>img{
+				width: 300px;
+				height: 187px;
+			}
+			#small>span{
+				width: 150px;
+				height: 96.5px;
+				background: black;
+				opacity: 0.5;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				display: none;
+				cursor: pointer;
+			}
+			#big{
+				width: 400px;
+				height: 250px;
+				overflow: hidden;
+				display: none;
+				position: absolute;
+			}
+			#big>img{
+				width: 800px;
+				height: 500px;
+				position: absolute;
+			}
+			
+			ul{
+				width: 500px;
+				list-style: none;
+				position: absolute;
+				top: -62px;
+				z-index: 3;
+			}
+			ul>li{
+				float: left;
+				width: 100px;
+			}
+			ul>li>img{
+				width: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div id="small">
+				<img src="images/薇尔莉特.jpg"/>
+				<span></span>
+			</div>
+			<div id="big">
+				<img src="images/薇尔莉特.jpg"/>
+			</div>
+			<ul>
+				<li><img src="images/薇尔莉特.jpg"/></li>
+				<li><img src="images/卡莲&符华.jpg"/></li>
+				<li><img src="images/希儿.png"/></li>
+				<li><img src="images/幽兰黛尔.png"/></li>
+				<li><img src="images/神乐.jpg"/></li>
+			</ul>
+		</div>
+	</body>
+	<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function () {
+			$('ul>li>img').click(function () {
+				//attr() 方法设置或返回被选元素的属性和值
+				var img=$(this).attr('src');
+				$('#small>img').attr('src',img);
+				$('#big>img').attr('src',img);
+			})
+			$('#small').hover(function () {
+				$('span').show()
+				$('#big').show()
+				
+				$('#small').mousemove(function (e) {
+	//				console.log('X:'+e.clientX+'Y:'+e.clientY);
+					var Minleft=e.clientX-($('#small').offset().left+$('span').width()/2);
+					var Mintop=e.clientY-($('#small').offset().top+$('span').height()/2);
+					if (Minleft<0) {
+						Minleft=0;
+					}
+					if (Mintop<0) {
+						Mintop=0;
+					}
+					var Maxleft=$('#small').width()-$('span').width();
+					var Maxtop=$('#small').height()-$('span').height();
+					if(Minleft>Maxleft){
+						Minleft=Maxleft;
+					}
+					if(Mintop>Maxtop){
+						Mintop=Maxtop;
+					}
+					
+					$('span').css('left',Minleft+'px')
+					$('span').css('top',Mintop+'px')
+								//-(small-Left) 									  //big-Maxleft
+					var bigleft=-($('span').offset().left-$('#small').offset().left)*($('#big>img').width()-$('#big').width())/Maxleft;
+					var bigtop=-($('span').offset().top-$('#small').offset().top)*($('#big>img').height()-$('#big').height())/Maxtop;
+					$('#big>img').css('left',bigleft+'px');
+					$('#big>img').css('top',bigtop+'px');
+				})
+				
+			},function () {
+				$('span').hide()
+				$('#big').hide()
+			})
+		})
+	</script>
+</html>

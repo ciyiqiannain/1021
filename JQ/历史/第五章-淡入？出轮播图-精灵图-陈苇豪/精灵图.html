@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul{
+				width: 410px;
+				height: 25px;
+				border: 1px solid black;
+				list-style: none;
+				margin: 50px auto;
+				
+			}
+			ul>li{
+				width: 25px;
+				height: 25px;
+				margin-left: 5px;
+				border: 1px solid lightblue;
+				background: url(img/icon_lifeserv.png) no-repeat;
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</body>
+	<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function () {
+			//each遍历    循环，即for循环
+			$('li').each(function (i,e) {
+				console.log(i);//每个li的下标
+				console.log(e);//代表的是循环一次选择第一个li
+				$(e).css('background-position-y',-i*25+'px')
+			})
+			$('li').hover(function () {
+				$(this).stop().animate({'background-position-x':-25+'px'},300)
+//				 $(this).css('background-position-x',-25+'px');
+			},function () {
+				$(this).stop().animate({'background-position-x':0+'px'},300)
+//				$(this).css('background-position-x',0+'px');
+			})
+		})
+	</script>
+</html>

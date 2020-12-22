@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			h1{
+				margin: 0 auto;
+				width: 250px;
+				height: 50px;
+				text-align: center;
+			}
+			ul{
+				margin: 0 auto;
+				list-style: none;
+				width: 250px;
+				height: 150px;
+				background-color: black;
+				border-radius: 75px;
+				position: relative;
+			}
+			li{
+				width: 250px;
+				height: 150px;
+				line-height: 150px;
+				text-align: center;
+				border-radius: 75px;
+				font-size: 36px;
+				color: yellow;
+				position: absolute;
+				display: none;
+			}
+			.clo{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>点名</h1>
+		<ul id="ul">
+			<li class="clo">折戟沉沙</li>
+			<li>明月长终</li>
+			<li>王侯将相</li>
+			<li>风色幻想</li>
+			<li>清风揽月</li>
+			<li>清风揽雪</li>
+		</ul>
+	</body>
+	<script type="text/javascript">
+		var lis=document.getElementsByTagName('li')
+		var ul=document.getElementById('ul')
+		var num=0;
+		var timer=null;
+		
+		function fun () {
+			for (var i=0;i<lis.length;i++) {
+				lis[i].style.display='none';
+				lis.className='';
+			}
+			num++;
+			
+			if (num==lis.length) {
+				num=0;
+			}
+			
+			lis[num].style.display='block';
+			lis.className='clo';
+		}
+		
+//		var timer=setInterval(fun,100);
+
+		//移入
+		ul.onmouseover=function () {
+			timer=setInterval(fun,100);
+		}
+		//移出
+		ul.onmouseout=function () {
+			clearInterval(timer);
+		}
+	</script>
+</html>

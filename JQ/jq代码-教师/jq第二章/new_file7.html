@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" name="" id="" value="请输入你要查询的问题" />
+	</body>
+	<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('input').focus(function(){
+				$(this).val('');
+			})
+			$('input').blur(function(){
+				if($(this).val()==''){
+					$(this).val('请输入你要查询的问题');
+				}
+			})
+		})
+	</script>
+</html>

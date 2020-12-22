@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h1 id="h"></h1>
+	</body>
+	<script type="text/javascript">
+		var h=document.getElementById('h');
+		
+		function time(){
+			//1.得到现在的标准时间
+			var date=new Date();
+			//现在的时间戳(毫秒数)
+			console.log(date.getTime());
+			var time1=date.getTime();
+			
+			var date1=new Date(2020,05,06);
+			
+			console.log(date1.getTime());
+			var time2=date1.getTime();
+			//得到现在到五一的时间戳差
+			var time=time2-time1;
+			console.log(time);
+			//天
+			var day=parseInt(time/1000/86400);
+			console.log(day);
+			//时
+			var hours=parseInt(time/1000/3600%24);
+			console.log(hours);
+			//分
+			var minu=parseInt(time/1000/60%60);
+								//秒       分钟   
+			console.log(minu);
+			//秒
+			var secu=parseInt(time/1000%60);
+			console.log(secu);
+			
+			h.innerHTML='五一倒计时：'+day+'天'+hours+'时'+minu+'分'+secu+'秒';
+		}
+		//定时器
+		setInterval(time,1000);
+		
+	</script>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul{
+				width: 100px;
+				height: 500px;
+				list-style: none;
+				display: none;
+				position: absolute;
+			}
+			li{
+				height: 50px;
+				line-height: 50px;
+			}
+			li:hover{
+				background-color: yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<ul id="ul">
+			<li>11111</li>
+			<li>22222</li>
+			<li>33333</li>
+			<li>44444</li>
+			<li>55555</li>
+		</ul>
+	</body>
+	<script type="text/javascript">
+		var ul=document.getElementById('ul');
+		
+		document.oncontextmenu=function (e) {
+			var oEvent=e||event;
+			
+			ul.style.display='block';
+			ul.style.left=oEvent.clientX+'px';
+			ul.style.top=oEvent.clientY+'px';
+			
+			//阻止默认行为
+			return false;
+		}
+		document.onclick=function () {
+			ul.style.display='none';
+		}
+	</script>
+</html>

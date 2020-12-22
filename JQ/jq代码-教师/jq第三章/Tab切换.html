@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			div{
+				width: 100px;
+				height: 100px;
+				background: pink;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			
+		</div>
+		<button>解除</button>
+	</body>
+	<script src="js/jquery3.5.0jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		//这个点      希望大家   多多 留意       绑定事件   和移除事件
+		$(function(){
+			$('div').bind({
+				mouseover:function(){
+					$(this).css('background','red');
+				},
+				mouseout:function(){
+					$(this).css('background','pink');
+				}
+			})
+			$('button').click(function(){
+				console.log('解除事件绑定');
+				$('div').unbind();
+			})
+		})
+	</script>
+</html>

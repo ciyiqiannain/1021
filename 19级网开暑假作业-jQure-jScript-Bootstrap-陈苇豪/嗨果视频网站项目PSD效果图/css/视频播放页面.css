@@ -1,0 +1,171 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.box{
+	width: 1519px;
+	height: 3687px;
+}
+/*-------------------nav--------------------*/
+nav{
+	width: 100%;
+	height: 70px;
+	background: black;
+}
+nav>ul{
+	width: 90%;
+	height: 70px;
+	margin: 0 auto;
+}
+nav>ul>li{
+	float: left;
+	height: 70px;
+	line-height: 70px;
+	color: white;
+	margin: 0px 5px;
+}
+nav>ul>li>a{
+	color: white;
+}
+nav>ul>li>img{
+	vertical-align: middle;
+}
+nav>ul>.li{
+	width: 27%;
+}
+nav>ul>.li>button{
+	width: 100%;
+	height: 30px;
+	background: RGB(66, 68, 81);
+	border: none;
+	margin-top: 20px;
+	position: relative;
+}
+nav>ul>.li3{
+	width: 7%;
+}
+nav>ul>.li3>button{
+	width: 100%;
+	height: 30px;
+	background: -webkit-linear-gradient(left,green,yellow);
+	border: none;
+	margin-top: 20px;
+	color: white;
+	position: relative;
+}
+.sp1{
+	position: absolute;
+	top: 6px;
+	right: 5px;
+}
+.sp2{
+	position: absolute;
+	top: 5px;
+	left: 3px;
+}
+.li2{
+	float: right;
+}
+.li2>ul{
+	float: left;
+	margin: 0px 5px;
+}
+.li2>ul>li{
+	color: white;
+	height: 24px;
+	line-height: 10px;
+	text-align: center;
+	font-size: 12px;
+	cursor: pointer;
+}
+.li2>ul>li:first-of-type{
+	margin-top: 20px;
+}
+.li2>ul:last-of-type>li{
+	margin-top: 10px;
+}
+/*------------------------one--------------------------*/
+.one{
+	width: 100%;
+	height: 651px;
+	background: black;
+}
+.one>.diver{
+	margin: 0 auto;
+	width: 90%;
+	height: 700px;
+}
+.one>.diver>ul:nth-child(1){
+	width: 100%;
+	height: 78%;
+}
+.one>.diver>ul>li{
+	float: left;
+}
+.one>.diver>ul>li:nth-child(1){
+	margin-left: 5%;
+	width: 65%;
+}
+.one>.diver>ul>li:nth-child(1)>img{
+	width: 100%;
+}
+.one>.diver>ul>li:nth-child(2){
+	width: 27%;
+}
+.one>.diver>ul:nth-child(2){
+	width: 100%;
+	height: 15%;
+}
+.one>.diver>ul:nth-child(2)>li:nth-child(2){
+	width: 24%;
+	height: 98px;
+	background: RGB(200, 200, 200);
+}
+/*------------------------one--------------------------*/
+.two{
+	width: 100%;
+	height: 2735px;
+}
+.two>div{
+	float: left;
+}
+.two>.left{
+	width: 66%;
+	margin-left: 2%;
+}
+.two>.left>p:nth-child(n+2){
+	margin-left: 9%;
+}
+.two>.left>ul{
+	width: 90%;
+	height: 150px;
+	margin-left: 8%;
+}
+.two>.left>ul>li{
+	float: left;
+	width: 14%;
+	height: 150px;
+}
+.two>.left>ul>li>img{
+	width: 100%;
+	height: 150px;
+}
+.two>.right{
+	width: 30%;
+}
+.p1{
+	margin-top: 16%;
+}
+.three{
+	width: 100%;
+	height: 227px;
+}
+.three>p{
+	text-align: center;
+}

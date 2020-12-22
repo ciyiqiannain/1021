@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul{
+				list-style: none;
+			}
+			li{
+				width: 300px;
+				float: left;
+			}
+			ul>li>img{
+				width: 300px;
+			}
+		</style>
+	</head>
+	<body>
+		<ul id="ul">
+			<!--<li><img src="img/img3.jpg"/></li>-->
+		</ul>
+	</body>
+	<script type="text/javascript">
+		var ul=document.getElementById('ul');
+		var imgs=[
+		{'src':'img/img1.jpg'},
+		{'src':'img/img2.jpg'},
+		{'src':'img/img3.jpg'},
+		{'src':'img/img4.jpg'},
+		{'src':'img/img5.jpg'},
+		]
+		var text='';
+		console.log(imgs[0].src);
+		for (var i=0;i<imgs.length;i++) {
+			text+='<li>';
+			text+='<img src='+imgs[i].src+'/>';
+			text+='</li>';
+		}
+		ul.innerHTML=text;
+	</script>
+</html>

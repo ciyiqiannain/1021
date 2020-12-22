@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+/*//		查找字母出现的次数
+		var a=['Asada','adad','hEdt','gtdrsdv','vefvs','Evsa',];
+		var b=0;
+		for (var i=0;i<a.length;i++) {
+			if (a[i].indexOf('d') != -1) {
+				b++;
+			}
+		}
+		document.write(b);*/
+		
+/*//		数组重排
+		var i=[5,6,1,2,9,8,7,4,6,1,1,6,5,4];
+		var j=[];
+		for (var a=0;a<i.length;a++) {
+			if (j.indexOf(i[a]) == -1) {
+				j.push(i[a]);
+			}
+		}
+		document.write(j);*/
+		
+//		获取5天后日期
+		var date=new Date();
+		var year=date.getFullYear();
+		var month=date.getMonth()+1;
+		
+		var day=date.getDate()+5;
+		var date2=new Date(year,month,day);               //---------------!!!-------------------
+		var day2=date2.getDate();
+		
+		var week=date.getDay();
+		document.write('当前日期5天后是'+year+'年'+month+'月'+day2+'日星期'+week);
+	</script>
+</html>

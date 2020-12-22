@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>原生ajax</title>
+	</head>
+	<body>
+		<p id="p"></p>
+	</body>
+	<script type="text/javascript">
+		var p=document.getElementById('p');
+		
+		var oAjax=new XMLHttpRequest();
+		console.log(oAjax);
+		
+		oAjax.open('GET','txt/new_file.txt',true);
+		
+		oAjax.send();
+		
+		oAjax.onreadystatechange=function(){
+			if(oAjax.readyState==4 && oAjax.status==200){
+				console.log('请求成功');
+				p.innerHTML=oAjax.responseText;
+			}else{
+				console.log('请求失败：'+oAjax.status);
+			}
+		}
+	</script>
+</html>

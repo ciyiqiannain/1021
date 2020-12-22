@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul{
+				width: 200px;
+				height: 300px;
+				border: 1px solid black;
+			}
+			li{
+				width: 150;
+				height: 50px;
+				margin-left: 50px;
+				position: relative;
+				cursor: pointer;
+			}
+			li>div{
+				position: absolute;
+				left: 150px;
+				top: 0px;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>进口食品、生鲜
+				<div><img src="img/1.jpg"/></div>
+			</li>
+			<li>进口食品、生鲜
+				<div><img src="img/2.jpg"/></div>
+			</li>
+			<li>进口食品、生鲜
+				<div><img src="img/3.jpg"/></div>
+			</li>
+			<li>进口食品、生鲜
+				<div><img src="img/4.jpg"/></div>
+			</li>
+		</ul>
+	</body>
+	<script src="js/jquery3.5.0jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('li').hover(function(){
+				
+				$(this).css({'background':'pink'});
+				$(this).stop().animate({'left':30},250);
+				$(this).children('div').show().stop().animate({'right':30},250);
+			},function(){
+				$(this).css({'background':'white'});
+				$(this).stop().animate({'left':0},250);
+				$(this).children('div').hide().stop().animate({'right':0},250);
+			})
+		})
+	</script>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#box{
+				width: 600px;
+				height: 300px;
+				border: 1px solid black;
+				margin: 0 auto;
+			}
+			ul{
+				list-style: none;
+			}
+			#left{
+				width: 100px;
+				height: 300px;
+				float: left;
+			}
+			#left>li{
+				height: 50px;
+				line-height: 50px;
+			}
+			#left>li:hover{
+				background: pink;
+				cursor: pointer;
+			}
+			#right{
+				width: 500px;
+				height: 300px;
+				float: left;
+				display: none;
+			}
+			#right>li{
+				width: 500px;
+				height: 300px;
+				background: blue;
+				/*display: none;*/
+				color: white;
+				font-size: 38px;
+			}
+			/*#right>li:nth-child(1){
+				display: block;
+			}*/
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<ul id="left">
+				<li>第一个页面</li>
+				<li>第二个页面</li>
+				<li>第三个页面</li>					
+			</ul>
+			<ul id="right">
+				<li>家电1</li>
+				<li>服装2</li>
+				<li>手机3</li>
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript">
+		//分别获取 左右两个盒子里面的li
+		var left=document.getElementById('left');
+		var right=document.getElementById('right');
+		var lis1=document.getElementById('left').children;
+		var lis2=document.getElementById('right').children;
+		
+		left.onmouseover=function(){
+			right.style.display='block';
+		}
+		left.onmouseout=function(){
+			right.style.display='none';
+		}
+		for (var i=0;i<lis1.length;i++) {
+			lis1[i].num=i;
+			lis1[i].onmouseover=function(){
+				console.log(this.num);
+				for (var j=0;j<lis2.length;j++) {
+					//让右侧所有的li全部隐藏完毕
+					lis2[j].style.display='none';
+				}
+				//再让对应左侧的li下标     显示右侧的li元素
+				lis2[this.num].style.display='block';
+			}
+		}
+	</script>
+</html>

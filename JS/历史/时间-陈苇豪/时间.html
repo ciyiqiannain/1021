@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		
+	</body>
+	<script type="text/javascript">
+		var date=new Date;
+		var year=date.getFullYear();
+		var month=date.getMonth()+1;
+		var ri=date.getDate();
+		var hours=date.getHours();
+		var minutes=date.getMinutes();
+		var seconds=date.getSeconds();
+		if (hours<10) {
+			hours = '0'+hours;
+		}
+		if (minutes<10) {
+			minutes = '0'+minutes;
+		}
+		if (seconds<10) {
+			seconds = '0'+seconds;
+		}
+		document.write('现在是时间是'+year+'年'+month+'月'+ri+'日'+hours+'时'+minutes+'分'+seconds+'秒');
+	</script>
+</html>

@@ -1,0 +1,83 @@
+.top1{
+				width: 1024px;
+				height: 150px;
+				background-image: url(../img/h_bg.jpg);
+			}
+			.top1>ul{
+				margin-top: 10px;
+				margin-right: 50px;
+				float: right;
+			}
+			.top1>ul>li{
+				float: left;
+				margin: 0px 3px;
+				font-size: 14px;
+			}
+			.top1>ul>li>.span1{
+				vertical-align: middle;
+				display: inline-block;
+				width: 27px;
+				height: 23px;
+				background-image: url(../img/icon.gif);
+				background-position: 0px -4px
+			}
+			.top1>ul>li>.span2{
+				vertical-align: middle;
+				display: inline-block;
+				width: 27px;
+				height: 23px;
+				background-image: url(../img/icon.gif);
+				background-position: -43px -4px
+			}
+			.top1>ul>li>.span3{
+				vertical-align: middle;
+				display: inline-block;
+				width: 27px;
+				height: 23px;
+				background-image: url(../img/icon.gif);
+				background-position: -87px -2px
+			}
+			.top1>ul>li>.span4{
+				vertical-align: middle;
+				display: inline-block;
+				width: 27px;
+				height: 23px;
+				background-image: url(../img/icon.gif);
+				background-position: -128px -1px
+			}
+			.top1>ul>li>input{
+				background-color: white;
+			}
+			.top1>marquee{
+				font-size: 14px;
+				margin-top: 40px;
+				margin-left: 450px;
+			}
+			.top1>.ul2{
+				margin-left: 50px;
+				float: left;
+			}
+			.top1>.ul2>li{
+				float: left;
+			}
+			.top1>.ul2>.li1{
+				margin-right: 38px;
+			}
+			.top1>.ul2>.li2{
+				margin-right: 24px;
+			}
+			.top1>.ul2>.li3{
+				margin-right: 24px;
+			}
+			.top1>.ul2>.li4{
+				margin-right: 37px;
+			}
+			.top1>.ul2>.li5{
+				margin-right: 42px;
+			}
+			.top1>.ul2>.li6{
+				margin-right: 26px;
+			}
+			.top1>.ul2>.li7{
+				margin-right: 23px;
+			}

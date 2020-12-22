@@ -1,0 +1,25 @@
+.top{
+				width: 1200px;
+				height: 105px;
+				/*background-color:  red;*/
+			}
+			.top>.left{
+				float: left;
+				margin-top: 55px;
+				margin-left: 135px;
+			}
+			.top>.right{
+				float: right;
+			}
+			.top>.right>ul>li{
+				margin-right: 2px;
+				margin-left: 2px;
+				margin-top: 55px;
+				padding-right: 20px;
+				padding-left: 7px;
+				border-right:1px solid black ;
+				float: left;
+			}
+			.top>.right>ul>.li{
+				border: none;
+			}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button class="btn">全选</button>
+		<button class="btn1">全不选</button>
+		<button class="btn2">反选</button>
+		<input type="checkbox" checked="checked"  name="" id="" value="" />
+		<input type="checkbox" name="" id="" value="" />
+		<input type="checkbox" name="" id="" value="" />
+		<input type="checkbox" name="" id="" value="" />
+		<input type="checkbox" name="" id="" value="" />
+		<input type="checkbox" name="" id="" value="" />
+	</body>
+	<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		//------------------------实现全选、取消全选、反选的功能
+		$(function () {
+			$('.btn').click(function () {
+				$('input').each(function () {
+//					$(this).prop('checked',!$(this).prop('checked'));//反选
+					$(this).prop('checked',true);//全选
+//					$(this).prop('checked',false);//全不选
+				})
+				//prop() 方法设置或返回被选元素的属性和值。
+			})
+			$('.btn1').click(function () {
+				$('input').each(function () {
+					$(this).prop('checked',false);//全不选
+				})
+			})
+			$('.btn2').click(function () {
+				$('input').each(function () {
+					$(this).prop('checked',!$(this).prop('checked'));//反选
+				})
+			})
+		})
+	</script>
+</html>

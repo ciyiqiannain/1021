@@ -1,0 +1,145 @@
+.middle2{
+				widows: 1500px;
+				height: 795px;
+				border: 1px solid black;
+			}
+			.middle2>.top{
+				width: 1500px;
+				height: 70px;
+				line-height: 70px;
+				border: 1px solid black;
+			}
+			
+			
+			.middle2>.two{
+				width: 1500px;
+				height: 600px;
+				border: 1px solid black;
+			}
+			.middle2>.two>.ul1{
+				width: 591px;
+				height: 598px;
+				float: left;
+			}
+			.middle2>.two>.ul1>li{
+				height: 75px;
+				line-height: 75px;
+				text-align: left;
+				font-size: 20px;
+			}
+			.middle2>.two>.ul1>li>a{
+				color: blue;
+				font-size: 20px;
+			}
+			
+			.middle2>.two>.ul2{
+				width: 70px;
+				height: 598px;
+				float: left;
+				margin-left: 130px;
+			}
+			.middle2>.two>.ul2>li{
+				width: 70px;
+				height: 75px;
+				line-height: 75px;
+				text-align: center;
+			}
+			
+			.middle2>.two>.ul3{
+				width: 70px;
+				height: 598px;
+				float: left;
+				margin-left: 130px;
+			}
+			.middle2>.two>.ul3>li{
+				width: 70px;
+				height: 75px;
+				line-height: 75px;
+				text-align: center;
+			}
+			
+			.middle2>.two>.ul4{
+				width: 132px;
+				height: 598px;
+				float: left;
+				margin-left: 80px;
+			}
+			.middle2>.two>.ul4>li{
+				width: 130px;
+				height: 75px;
+				line-height: 75px;
+				text-align: center;
+			}
+			
+			.middle2>.two>.ul5{
+				width: 100px;
+				height: 598px;
+				float: left;
+			}
+			.middle2>.two>.ul5>li{
+				width: 130px;
+				height: 75px;
+				line-height: 75px;
+				text-align: center;
+			}
+			.middle2>.two>.ul5>li>span{
+				display: inline-block;
+				width: 60px;
+				height: 30px;
+				line-height: 30px;
+				border: 1px solid black;
+				background-color: white
+			}
+			
+			.middle2>.two>.ul6{
+				width: 132px;
+				height: 598px;
+				float: left;
+			}
+			.middle2>.two>.ul6>li{
+				width: 130px;
+				height: 75px;
+				line-height: 75px;
+				text-align: center;
+			}
+			.middle2>.two>.ul6>li>span{
+				display: inline-block;
+				width: 60px;
+				height: 30px;
+				line-height: 30px;
+				color: green;
+			}
+			.li-color{
+				width: 1500px;
+				background-color: RGB(255, 234, 203);
+			}
+			.li-color2{
+				width: 1500px;
+				background-color: RGB(205, 219, 184);
+			}
+			.middle2>.down{
+				width: 1500px;
+				height: 120px;
+				background-color: RGB(205, 219, 184);
+			}
+			.middle2>.down>ul{
+				width: 195px;
+				height: 75px;
+				float: left;
+				margin-top: 40px;
+				margin-left: 975px;
+			}
+			.middle2>.down>ul>li{
+				width: 195px;
+				height: 35px;
+			}
+			.middle2>.down>p{
+				float: left;
+				margin-top: 40px;
+			}
+			.middle2>.down>img{
+				float: left;
+				width: 125px;
+				margin-left: 18px;
+				margin-top: 30px;
+			}

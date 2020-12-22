@@ -1,0 +1,17 @@
+{
+	"arr":[
+		{"music":"出山","singer":"花粥"},
+		{"music":"家有女友","singer":"美波"},
+		{"music":"βios","singer":"小林未郁"},
+		{"music":"寂静之声","singer":"贵族乐团"},
+		{"music":"归去来兮","singer":"花粥"}
+	],
+	"video":[
+		{"src":"video/出山（翻自 花粥） - 祖娅纳惜.mp3"},
+		{"src":"video/カワキヲアメク - 美波.mp3"},
+		{"src":"video/βios - 小林未郁.mp3"},
+		{"src":"video/寂静之声 - 贵族乐团.mp3"},
+		{"src":"video/归去来兮（翻自 花粥） - 黑猫.mp3"}
+	]
+	
+}

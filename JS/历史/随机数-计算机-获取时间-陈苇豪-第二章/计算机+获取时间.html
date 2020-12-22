@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var date=new Date();
+		var year=date.getFullYear();
+		var month=date.getMonth()+1;
+		var day=date.getDate();
+		var week=date.getDay();
+		var week1;
+		
+		switch (month){
+			case 1:
+				month='一';
+				break;
+			case 2:
+				month='二';
+				break;
+			case 3:
+				month='三';
+				break;
+			case 4:
+				month='四';
+				break;
+		}
+		switch (week){
+			case 1:
+				week1='一';
+				break;
+			case 2:
+				week1='二';
+				break;
+			case 3:
+				week1='三';
+				break;
+			case 4:
+				week1='四';
+				break;
+			case 5:
+				week1='五';
+				break;
+		}
+		document.write(year+'年'+month+'月'+day+'日星期'+week1);
+		
+//		----------------------------------------------------------计算机
+		/*var num1=parseFloat(prompt('第一个数'));
+		var fuhao=prompt('运算符');
+		var num2=parseFloat(prompt('第二个数'));
+		
+		switch (fuhao){
+			case '+':
+				alert(num1+'+'+num2+'='+(num1+num2));
+				break;
+			case '-':
+				alert(num1+'-'+num2+'='+(num1-num2));
+				break;
+			case '*':
+				alert(num1+'*'+num2+'='+num1*num2);
+				break;
+			case '/':
+				alert(num1+'/'+num2+'='+num1/num2);
+				break;
+			case '%':
+				alert(num1+'%'+num2+'='+num1%num2);
+				break;
+			default:
+				alert('信息不对')
+				break;
+		}*/
+		
+		/*var num=prompt('请输入数字');
+		if ((num%3==0 || num%7==0) && (num%2==1)) {
+			alert(num+'能被7或3整除')
+		} else{
+			alert(num+'不能被7或3整除')
+		}*/
+	</script>
+</html>

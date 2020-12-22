@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="div">
+			<ul id="ul">
+				<li>1111</li>
+				<li id="li">2222</li>
+				<li>3333</li>
+				<li>4444</li>
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var div=document.getElementById('div');
+		var ul=document.getElementById('ul');
+		var li=document.getElementById('li');
+		console.log(ul.firstElementChild);
+		console.log(ul.lastElementChild);
+		ul.lastElementChild.innerHTML='666';
+		console.log(li.nextElementSibling);
+		console.log(li.previousElementSibling);
+	</script>
+</html>

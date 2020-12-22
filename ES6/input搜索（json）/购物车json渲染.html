@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<body>
+		<div id="box">
+			<ul>
+				<li>
+					<img src=""/>
+				</li>
+				<li>
+					<p></p>
+					<p></p>
+					<p><span>6</span>￥/瓶</p>
+				</li>
+				<li>
+					<button>-</button>
+					<span>1</span>
+					<button>+</button>
+				</li>
+				<li>小计：<span>0</span></li>
+			</ul>
+			<ul>
+				<li>
+					<img src=""/>
+				</li>
+				<li>
+					<p></p>
+					<p></p>
+					<p><span>30</span>￥/罐</p>
+				</li>
+				<li>
+					<button>-</button>
+					<span>1</span>
+					<button>+</button>
+				</li>
+				<li>小计：<span>0</span></li>
+			</ul>
+			<ul>
+				<li>
+					<img src=""/>
+				</li>
+				<li>
+					<p></p>
+					<p></p>
+					<p><span>10</span>￥/盒</p>
+				</li>
+				<li>
+					<button>-</button>
+					<span>1</span>
+					<button>+</button>
+				</li>
+				<li>小计：<span>0</span></li>
+			</ul>
+			<h1>总价：<span>0</span></h1>
+		</div>
+	</body>
+	<script src="js/jquery-3.5.1.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/runner.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function () {
+			runner(function *(){
+				let data1=yield $.ajax({url:"json/json1.json",dataType:"json"});
+				console.log(data1)
+				
+				setTimeout(()=>{console.log(data1.imgs[0].img)},2000);
+				setTimeout(()=>{console.log(data1.imgs[1].img)},2000);
+				setTimeout(()=>{console.log(data1.imgs[2].img)},2000);
+				
+//				$('ul>li:first-of-type').
+				
+				for (i=0;i<$('img').length;i++) {
+					//图片
+					$('img').eq(i).attr('src',data1.imgs[i].img);
+					//第一个p
+					$('ul').eq(i).find('p').eq(0).html(data1.names[i].name)
+					//第二个p
+					$('ul').eq(i).find('p').eq(1).html(data1.titles[i].title)
+					//第三个p
+					$('ul').eq(i).find('p>span').html(data1.ages[i].age)
+				}
+				
+				$('button').click(function () {
+					if ($(this).html()=='+') {
+						let $span=$(this).siblings('span').html();
+						let $num=Number($span)+1;
+						$(this).siblings('span').html( $num );
+						
+						let $age=$(this).parent().siblings().find('p>span').html()
+						$(this).parent().siblings().children('span').html( $num*$age )
+						
+						let $zong=0;
+						for (i=0;i<$('ul').length;i++) {
+							var $xiaoji = $('ul').eq(i).find('li:last-of-type>span').html();
+							$zong += Number($xiaoji);
+						}
+						$('h1>span').html($zong)
+						
+					}else if ($(this).html()=='-') {
+						let $span=$(this).siblings('span').html();
+						let $num=Number($span)-1;
+						$(this).siblings('span').html( $num );
+						
+						let $age=$(this).parent().siblings().find('p>span').html()
+						$(this).parent().siblings().children('span').html( $num*$age )
+						
+						let $zong=0;
+						for (i=0;i<$('ul').length;i++) {
+							var $xiaoji = $('ul').eq(i).find('li:last-of-type>span').html();
+							$zong += Number($xiaoji);
+						}
+						$('h1>span').html($zong)
+						
+						if ($num == 0) {
+							$(this).parent().parent().remove();
+						}
+					}
+				})
+			})
+		})
+	</script>
+</html>

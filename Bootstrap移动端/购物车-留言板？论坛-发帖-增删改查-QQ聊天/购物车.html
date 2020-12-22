@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>购物车</title>
+	</head>
+	<body>
+		<div class="box">
+			<p>
+				上衣：单价：<span>20</span>
+				数量：<button onclick="btu()">+</button>
+				<span>1</span>
+				<button onclick="bttu()">-</button>
+				小计：<span>20</span>
+			</p>
+			<p>裤子小计：<span>50</span></p>
+			总价：<h4></h4>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var p=document.getElementsByTagName('p')[0];
+		var sdan=document.getElementsByTagName('span')[0];
+		var sshu=document.getElementsByTagName('span')[1];
+		var sxiao=document.getElementsByTagName('span')[2];
+		var kz=document.getElementsByTagName('span')[3];
+		var hhh=document.getElementsByTagName('h4')[0];
+		function btu () {
+			sshu.innerHTML=Number(sshu.innerHTML)+1;
+			as();
+			ww();
+		}
+		function bttu () {
+			if (sshu.innerHTML==1) {
+				alert('x');
+			} else{
+				sshu.innerHTML=Number(sshu.innerHTML)-1;
+				as();
+				ww();
+			}
+		}
+		function as () {
+			sxiao.innerHTML=Number(sshu.innerHTML)*Number(sdan.innerHTML);
+		}
+		function ww () {
+			hhh.innerHTML=Number(sxiao.innerHTML)+Number(kz.innerHTML);	
+		}
+	</script>
+</html>

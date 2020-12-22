@@ -1,0 +1,254 @@
+	.botton2{
+				margin-left: 54px;
+				width: 1033px;
+				height: 650px;
+				/*border: 1px solid black;*/
+				position: relative;
+			}
+			.botton2>.botton2-top{
+				height: 30px;
+				border-bottom: 3px solid yellow;
+				/*border-bottom: 1px solid black;*/
+				margin-top: 5px;
+			}
+			.botton2>.botton2-top>h3{
+				color: yellowgreen;
+				float: left;
+				margin-left: 25px;
+			}
+			.botton2-top-up{
+				display: inline-block;
+				float: right;
+			}
+			.botton2-top-up>li{
+				margin: 0px 3px;
+				padding-right: 3px;
+				/*border-right:1px solid black ;*/
+				float: left;
+			}
+			.botton2-top-up>.botton2-top-up-li{
+				border: none;
+			}
+			.botton2-1{
+				width: 200px;
+				height: 363px;
+				/*border: 1px solid black;*/
+			}
+			.botton2>.botton2-1>table{
+				margin-left: 25px;
+				margin-top: 20px;
+				margin-bottom: 15px;
+			}
+			.botton2>.botton2-1>.botton2-p2{
+				padding-left: 51px;
+				color: pink;
+			}
+			.botton2>.botton2-1>.botton2-p1{
+				padding-left: 15px;
+				color: yellowgreen;
+				font-size: 24px;
+				margin-bottom: 15px;
+			}
+			.botton2>.botton2-1>.botton2-p-img{
+				margin-top: 30px;
+				padding-left: 10px;
+			}
+			.botton2-2{
+				width: 330px;
+				height: 369px;
+				position: absolute;
+				left: 201px;
+				top: 30px;
+			}
+			.botton2-2>img{
+				width: 286px;
+				height: 364px;
+				margin-top: 6px;
+			}
+			.botton2-2>ul{
+				position: absolute;
+				left: 88px;
+				top: 343px;
+			}
+			.botton2-2>ul>li{
+				float: left;
+				padding: 6px 20px;
+				background-color: white;
+				/*border: 1px solid black;*/
+			}
+			.botton2-2>ul>.botton2-2-li{
+				background-color: red;
+			}
+			.botton2-3{
+				width: 190px;
+				height: 369px;
+				position: absolute;
+				left: 487px;
+				top: 30px;
+			}
+			.botton2>.botton2-3>.botton3-p1{
+				padding-left: 12px;
+				font-size: 22px;
+				margin-top: 22px;
+			}
+			.botton2>.botton2-3>.botton3-p2{
+				padding-left: 60px;
+				color: pink;
+			}
+			.botton2>.botton2-3>.botton3-p3{
+				padding-left: 12px;
+				font-size: 25px;
+			}
+			.botton2>.botton2-3>.botton3-p4{
+				padding-left: 59px;
+				color: pink;
+				padding-bottom: 20px;
+			}
+			.botton2-4{
+				width: 190px;
+				height: 364px;
+				/*border: 1px solid black;*/
+				position: absolute;
+				left: 678px;
+				top: 30px;
+				margin-top: 5px;
+			}
+			.botton2-4>.botton4-p1{
+				padding-left: 18px;
+				font-size: 22px;
+				margin-top: 17px;
+			}
+			.botton2-4>.botton4-p2{
+				padding-left: 11px;
+				color: pink;
+				margin-bottom: 5px;
+			}
+			.botton2-5{
+				width: 163px;
+				height: 190px;
+				/*border: 1px solid black;*/
+				position: absolute;
+				left: 869px;
+				top: 30px;
+				margin-top: 5px;
+			}
+			.botton2>.botton2-5>.botton5-p1{
+				padding-left: 18px;
+				font-size: 22px;
+			}
+			.botton2>.botton2-5>.botton5-p2{
+				padding-left: 17px;
+				color: pink;
+				margin-bottom: 29px;
+			}
+			.botton2>.botton2-5>img{
+				width: 162px;
+				height: 110px;
+			}
+			.botton2-6{
+				width: 200px;
+				height: 249px;
+				/*border: 1px solid black;*/
+				position: absolute;
+				left: 0px;
+				top: 400px;
+			}
+			.botton2>.botton2-6>.botton6-p1{
+				padding-left: 29px;
+				font-size: 22px;
+				color: yellowgreen;
+				margin-bottom: 30px;
+			}
+			.botton2>.botton2-6>.botton6-p2{
+				padding-left: 44px;
+				color: pink;
+				margin-bottom: 35px;
+			}
+			.botton2-7{
+				width: 284px;
+				height: 249px;
+				/*border: 1px solid black;*/
+				position: absolute;
+				left: 201px;
+				top: 400px;
+			}
+			.botton2>.botton2-7>ul{
+				float: left;
+			}
+			.botton2>.botton2-7>ul>li>.botton7-p1{
+				padding-left: 15px;
+				font-size: 16px;
+				margin-top: 68px;
+			}
+			.botton2>.botton2-7>ul>li>.botton7-p2{
+				padding-left: 47px;
+				color: pink;
+			}
+			.botton2>.botton2-7>ul>li>.botton7-p3{
+				background-color: red;
+				color: white;
+				width: 130px;
+				margin-left: 14px;
+				margin-top: 20px;
+			}
+			.botton2>.botton2-7>img{
+				margin-top: 43px;
+			}
+			.botton2-8{
+				width: 191px;
+				height: 249px;
+				/*border: 1px solid black;*/
+				position: absolute;
+				left: 486px;
+				top: 400px;
+			}
+			.botton2>.botton2-8>.botton8-p1{
+				padding-left: 18px;
+				font-size: 16px;
+				margin: 20px 0px;
+			}
+			.botton2>.botton2-8>.botton8-p2{
+				padding-left: 38px;
+				color: pink;
+				margin-bottom: 20px;
+			}
+			.botton2-9{
+				width: 190px;
+				height: 249px;
+				/*border: 1px solid black;*/
+				position: absolute;
+				left: 678px;
+				top: 400px;
+			}
+			.botton2>.botton2-9>.botton9-p1{
+				padding-left: 50px;
+				font-size: 16px;
+				margin: 20px 0px;
+			}
+			.botton2>.botton2-9>.botton9-p2{
+				padding-left: 30px;
+				color: pink;
+				margin-bottom: 20px;
+			}
+			.botton2-10{
+				width: 163px;
+				height: 423px;
+				/*border: 1px solid black;*/
+				position: absolute;
+				left: 869px;
+				top: 226px;
+			}
+			.botton2>.botton2-10>.botton10-p1{
+				padding-left: 36px;
+				font-size: 16px;
+				margin: 20px 0px;
+			}
+			.botton2>.botton2-10>.botton10-p2{
+				padding-left: 16px;
+				color: pink;
+				margin-bottom: 20px;
+			}
+			.botton2>.botton2-10>img{
+				width: 163px;
+				height: 313px;
+			}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn1">开始</button>
+		<button id="btn2">停止</button>
+		<p><span id="span">10</span></p>
+	</body>
+	<script type="text/javascript">
+		var btn1=document.getElementById('btn1');
+		var btn2=document.getElementById('btn2');
+		var span=document.getElementById('span');
+		var shu=0;
+		var timer=null;
+		btn1.onclick=function(){	
+			shu=shu+1;
+			console.log(shu);
+			if(shu==1){
+				timer=setInterval("fun()",1000);
+			}
+		}
+		btn2.onclick=function(){
+			clearInterval(timer);
+			timer=null;
+			alert('倒计时停止');
+		}
+		function fun(){
+			var num=span.innerText;
+			num=num-1;
+			span.innerText=num;
+			if(num==0){					
+				clearInterval(timer);
+				alert('倒计时结束');
+			}			
+		}
+	</script>
+</html>

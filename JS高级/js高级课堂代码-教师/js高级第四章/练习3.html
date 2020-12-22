@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			ul{
+				list-style: none;
+			}
+			li{
+				width: 30px;
+				height: 30px;
+				line-height: 30px;
+				text-align: center;
+				border: 1px solid black;
+				float: left;
+				margin-left: 5px;
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="btn">自动生成10个li</button>
+		<ul id="ul">
+			
+		</ul>
+	</body>
+	<script type="text/javascript">
+		var btn=document.getElementById('btn');
+		var ul=document.getElementById('ul');
+		
+		btn.onclick=function(){
+			btn.disabled=true;
+			var num=0;
+			for (var i=0;i<10;i++) {
+				//创建标签节点
+				var li=document.createElement('li');
+				//创建文本节点
+				var nums=document.createTextNode(num);
+				var shu=parseInt(Math.random()*9);
+				li.appendChild(nums);
+				li.style.background='#'+shu+'2'+shu+'40'+shu;
+				ul.appendChild(li);
+				num++;
+				
+			}
+			
+		}
+	</script>
+</html>

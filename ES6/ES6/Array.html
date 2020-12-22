@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+	</body>
+	<script src="js/jquery-3.5.1.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function () {
+//		map（fun(item){}），映射[需return进行返回
+//			let arr=[1,2,3,4]
+//			arr.map(function (item) {
+//				alert(item);
+//				return;
+//			})
+
+//		reduce（fun(item){和，item，下标/次数}），汇总，接收一个函数作为累加器，数组中的每个值（从左到右）开始缩减，最终计算为一个值
+//			let arr=[1,2,3,4]
+//			let all=arr.reduce(function (a,b,c) {
+//				return a+b;//总数
+////				if (c!=arr.length-1) {//平均数
+////					return a+b;
+////				}else{
+////					return (a+b)/arr.length;
+////				}
+//			})
+//			alert(all);
+
+//		filter(fun(item){})，过滤器，返回符合一定条件的元素。
+			let obj=[
+			{'title':'女鞋',price:'10000'},
+			{'title':'女包',price:'20000'},
+			{'title':'男鞋',price:'300'},
+			{'title':'男包',price:'3000'}
+			];
+			let result=obj.filter(function (item) {
+//				return item.price>'9999';
+				if (item.price>9999) {
+					alert(item.title)
+					return item.title;
+				}
+			})
+			console.log(result)
+
+//		forEach(fun(item,index){})，循环/迭代，用于调用数组的每个元素，并将元素传递给回调函数。
+//			let arr=['a',2,3,4];
+//			arr.forEach(function (item,index) {
+//				alert(index+':'+item);
+//				return;
+//			})
+			
+		})
+	</script>
+</html>

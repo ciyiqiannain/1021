@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<form action="" method="post" id="myForm">
+			<p>email:<input type="text" name="email" id="email" value="" /></p>
+			<p>密码:<input type="password" name="" id="pas" value="" /></p>
+			<p>再次输入密码:<input type="password" name="" id="pass" value="" /></p>
+			<p>姓名: <input type="text" id="mingzi" onfocus="fo()" onblur="bl()"/></p>
+			<input type="submit" value="登录"/>
+		</form>
+	</body>
+	<script type="text/javascript">
+		var mingzi=document.getElementById('mingzi');
+		//先清楚事件是什么？
+		function fo(){
+			mingzi.style.borderColor='red';
+			console.log('获取了焦点');
+		}
+		function bl(){
+			var mzvalue=mingzi.value;
+			if(mzvalue==''){
+				alert('名字不能为空');
+			}
+		}
+		//非空和符号验证
+//		var myForm=document.getElementById('myForm');
+//		var email=document.getElementById('email');
+//		var pas=document.getElementById('pas');
+//		var pass=document.getElementById('pass');
+//		var mingzi=document.getElementById('mingzi');
+		//邮箱必须包含 @  和 .
+		myForm.onsubmit=function(){
+			bl();
+//			var mail=email.value;
+//			var pasValue=pas.value;
+//			var passValue=pass.value;
+//			var mingziValue=mingzi.value;
+//			
+//			if(mingziValue==''){
+//				alert('名字不能为空');
+//				return false;
+//			}
+//			for(var i=0;i<mingziValue.length;i++){
+//				var str=mingziValue.substring(i,i+1);
+//				if(isNaN(str)==false){
+//					alert('名字包含数字，请重新输入');
+//					mingzi.value='';
+//					return false;
+//				}
+//			}
+//			if(pasValue==''){
+//				alert('密码不能为空');
+//				return false;
+//			}
+//			if(pasValue.length<6){
+//				alert('密码长度最少6位');
+//				return false;
+//			}
+//			if(passValue==''){
+//				alert('确认密码不能为空');
+//				return false;
+//			}
+//			if(pasValue!=passValue){
+//				alert('两次输入的密码不正确，请重新输入');
+//				pas.value='';
+//				pass.value='';
+//				return false;
+//			}
+			
+			//不能为空
+//			if(mail==''){
+//				alert('邮箱不能为空');
+//				return false;
+//			}
+//			//格式必须包含@    indexOf
+//			if(mail.indexOf('@')==-1){
+//				alert('格式不正确，必须包含@');
+//				return false;
+//			}
+//			//格式必须包含.
+//			if(mail.indexOf('.')==-1){
+//				alert('格式不正确，必须包含.');
+//				return false;
+//			}
+			
+			
+			return true;
+		}
+	</script>
+</html>

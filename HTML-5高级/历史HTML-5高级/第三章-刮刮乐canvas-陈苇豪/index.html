@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#box{
+				width: 400px;
+				height: 200px;
+				line-height: 200px;
+				text-align: center;
+				border: 2px solid black;
+				font-family: "楷体";
+			}
+			canvas{
+				/*border: 2px solid black;*/
+				position: absolute;
+				top: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">谢谢惠顾</div>
+		<canvas id="c" width="400" height="200"></canvas>
+	</body>
+	<script type="text/javascript">
+		var box=document.getElementById('box');
+		//设置随机奖励项
+		var arr=['一等奖','二等奖','三等奖','谢谢惠顾'];
+		
+		window.onload=function () {
+			//随机  得到  数组  对应的下标值
+			var num=Math.floor(Math.random()*4);
+			console.log(num)
+			box.innerText=arr[num];
+		}
+		
+		var c=document.getElementById('c');
+		var cxt=c.getContext('2d');
+		//绘制遮罩层
+		cxt.fillStyle='pink';
+		cxt.fillRect(0,0,400,200);
+		
+		c.onmousedown=function () {
+			c.onmousemove=function (e) {
+				var x=e.clientX;
+				var y=e.clientY;
+				cxt.clearRect(x,y,10,10);
+			}
+		}
+		c.onmouseup=function () {
+			c.onmousemove=null;
+		}
+	</script>
+</html>

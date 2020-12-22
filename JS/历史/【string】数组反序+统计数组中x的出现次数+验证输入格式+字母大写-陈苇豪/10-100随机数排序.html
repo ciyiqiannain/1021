@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var arr=[];
+		for (var a=0;a<10;a++) {
+			var num=parseInt(Math.random()*90+10);
+			if (arr.indexOf(num)>=0) {
+				a--;
+			} else{
+				arr.push(num);
+			}
+		}
+		document.write(arr.sort()+'<br/>');
+	</script>
+</html>

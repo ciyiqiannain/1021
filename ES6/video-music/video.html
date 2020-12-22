@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<style type="text/css">
+			*{
+				margin: 0;
+				font-size: 0.2rem;
+				list-style: none;
+			}
+			video{
+				touch-action: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<video width="100%" height="" src="video/angle.mp4" controls loop autoplay muted >
+				<source src="myvideo.mp4" type="video/mp4"></source>
+				<source src="myvideo.ogv" type="video/ogg"></source>
+				<source src="myvideo.webm" type="video/webm"></source>
+				<object width="" height="" type="application/x-shockwave-flash" data="myvideo.swf">
+					<param name="movie" value="myvideo.swf" />
+					<param name="flashvars" value="autostart=true&amp;file=myvideo.swf" />
+				</object>
+			</video>
+		</div>
+	</body>
+	<script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/runner.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		Zepto(function () {
+			function ajaxs (url) {
+				return new Promise(function (resolve,reject) {
+					$.ajax({
+						url: url,
+						dataType:'json',
+						success:function (date) {
+							resolve(date);
+						},
+						error:function (err) {
+							reject(err);
+						},
+					});
+				});
+			}
+			var num=0;
+			$('video').swipeDown(function () {
+			    Promise.all([
+			    	ajaxs('json/video2.json'),
+			    	]).then(
+			    	function (arr) {
+			    		let [date] = arr;
+			    		console.log(date)
+			    		
+						//var num=0;本体在外面，这是提醒
+	    				num=num+1;
+	    				$('video').attr('src',date.srcs[num].src)
+	    				console.log(num)
+	    				if (num>=7) {
+	    					num=-1;
+	    				}
+			    	},
+			    	function () {
+			    		console.log('err');
+			    	}
+			    );
+			})
+			$('video').swipeUp(function () {
+			    Promise.all([
+			    	ajaxs('json/video2.json'),
+			    	]).then(
+			    	function (arr) {
+			    		let [date] = arr;
+			    		console.log(date)
+			    		
+	    				num=num-1;
+	    				if (num<=-1) {
+	    					num=7
+	    				}
+	    				$('video').attr('src',date.srcs[num].src)
+	    				console.log(num)
+	    				
+			    	},
+			    	function () {
+			    		console.log('err');
+			    	}
+			    );
+			})
+			
+			
+		})
+	</script>
+</html>

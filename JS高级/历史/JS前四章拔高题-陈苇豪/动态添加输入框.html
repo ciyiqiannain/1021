@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="bt">新增</button>
+		<div id="div">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		var div=document.getElementById('div');
+		var bt=document.getElementById('bt');
+		var p=document.getElementById('p');
+		
+		bt.onclick=function  () {
+			//创建
+			var input=document.createElement('input');
+			//设置
+			input.setAttribute('type','text');
+			input.setAttribute('placeholder','请输入内容');
+			input.style.display='block';
+			input.style.margin='15px';
+			//添加
+			div.appendChild(input);
+		}
+	</script>
+</html>

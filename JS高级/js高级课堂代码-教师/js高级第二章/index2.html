@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="div">
+			<ul id="ul">
+				<li>1111</li>
+				<li id="li">222</li>
+				<li>3333</li>
+				<!---->
+				<li>4444</li>
+			</ul>
+		</div>
+		<input type="text" name="input" id="input" value="" />
+		<button onclick="dian()">点击</button>
+	</body>
+	<script type="text/javascript">
+		var div=document.getElementById('div');
+		var ul=document.getElementById('ul');
+		var li=document.getElementById('li');
+		var put=document.getElementById('input');
+		console.log(li.nodeName);
+//		console.log(div.nodeValue);
+		console.log(li.childNodes[0].nodeValue);
+		
+		function dian(){
+			console.log(li.nodeValue);
+		}
+	</script>
+</html>

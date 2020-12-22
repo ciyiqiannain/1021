@@ -1,0 +1,613 @@
+*{
+		margin: 0;
+		padding: 0;
+	}
+	.box{
+		width: 100%;
+		height: 2000px;
+	}
+	ul{
+		list-style: none;
+	}
+	/*--------------------导航----------------------*/
+	.box>nav{
+		margin: 0 auto;
+		width: 100%;
+		height: 100px;
+		background-color: black;
+		opacity: 0.5;
+		position: fixed;
+		top: 0;
+		z-index: 999;
+	}
+	.box>nav>ul{
+		margin: 0 auto;
+		width: 1300px;
+		height: 100px;
+	}
+	.box>nav>ul>li{
+		float: left;
+		width: 135px;
+		height: 100px;
+		color: white;
+		line-height: 100px;
+		text-align: center;
+	}
+	.box>nav>ul>li:nth-child(1)>img{
+		width: 100%;
+		height: 100%;
+	}
+	.box>nav>ul>li>input{
+		width: 75px;
+		height: 36px;
+		color: yellow;
+		background-color: black;
+		border: 1px solid yellow;
+		border-radius: 50px;
+	}
+	.box>nav>ul>li>input:last-child{
+		width: 100px;
+		height: 36px;
+		color: darkgreen;
+		background-color: yellow;
+	}
+	.box>nav>ul>li:last-of-type{
+		width: 200px;
+	}
+	/*------------------ONE---------------------*/
+	.box>.one{
+		width: 1920px;
+		height: 834px;
+		background-image: url(../img/bg_1.jpg);
+		background-size: 1920px 834px;
+		position: relative;
+		z-index: 1;
+		overflow: hidden;
+	}
+	.box>.one>p:nth-child(1){
+		width: 1300px;
+		height: 656px;
+		position: absolute;
+		left: 234px;
+		top: 197px;
+	}
+	.box>.one>p:nth-child(2){
+		width: 1000px;
+		height: 268px;
+		position: absolute;
+		left: 372px;
+		top: 197px;
+		background-image: url(../img/sprites_index.png);
+	}
+	.box>.one>p:nth-child(3){
+		width: 411px;
+		height: 172px;
+		position: absolute;
+		left: 372px;
+		top: 369px;
+		background-image: url(../img/sprites_index.png);
+		background-position: 411px 992px;
+	}
+	.box>.one>p:nth-child(4){
+		width: 411px;
+		height: 64px;
+		position: absolute;
+		left: 372px;
+		top: 542px;
+		text-align: center;
+	}
+	.box>.one>p:nth-child(4)>input{
+		width: 49%;
+		height: 60px;
+	}
+	.box>.one>p:nth-child(4)>input:nth-child(1){
+		color: yellow;
+		border: 1px solid yellow;
+		border-radius: 50px;
+		background-color: RGB(210, 28, 50);
+		font-size: 20px;
+	}
+	.box>.one>p:nth-child(4)>input:nth-child(2){
+		color: RGB(210, 28, 50);
+		border: 1px solid yellow;
+		border-radius: 50px;
+		background-color: yellow;
+		font-size: 20px;
+	}
+	/*----------------------TWO-----------------------*/
+	.box>.two{
+		width: 1920px;
+		height: 820px;
+		background-image: url(../img/bg_2.jpg);
+		position: relative;
+	}
+	.box>.two>p:nth-child(1){
+		width: 950px;
+		height: 744px;
+		position: absolute;
+		left: 384px;
+		top: 79px;
+		z-index: 2;
+	}
+	.box>.two>p:nth-child(2){
+		width: 120px;
+		height: 118px;
+		position: absolute;
+		left: 273px;
+		top: 430px;
+		background-image: url(../img/sprites_index.png);
+		background-position: 315px -447px;
+	}
+	.box>.two>p:nth-child(3){
+		width: 400px;
+		height: 163px;
+		position: absolute;
+		left: 384px;
+		top: 415px;
+		background-image: url(../img/sprites_index.png);
+		background-position: 0px -272px;
+	}
+	.box>.two>p:nth-child(4){
+		width: 56px;
+		height: 57px;
+		position: absolute;
+		left: 758px;
+		top: 487px;
+		background-image: url(../img/sprites_function_feature.png);
+		background-size: 150px 750px;
+		background-position: 3px -162px;
+	}
+	.box>.two>p:nth-child(5){
+		width: 102px;
+		height: 103px;
+		position: absolute;
+		left: 815px;
+		top: 610px;
+		background-image: url(../img/sprites_function_feature.png);
+		background-position: -115px -438px;
+	}
+	.box>.two>p:nth-child(6){
+		width: 102px;
+		height: 103px;
+		position: absolute;
+		left: 1003px;
+		top: 690px;
+		background-image: url(../img/sprites_function_feature.png);
+		background-position: 1px -548px;
+		z-index: 3;
+	}
+	.box>.two>p:nth-child(7){
+		width: 102px;
+		height: 103px;
+		position: absolute;
+		left: 1182px;
+		top: 690px;
+		background-image: url(../img/sprites_function_feature.png);
+		background-position: 1px -439px;
+		z-index: 3;
+	}
+	.box>.two>p:nth-child(8){
+		width: 102px;
+		height: 103px;
+		position: absolute;
+		left: 1351px;
+		top: 610px;
+		background-image: url(../img/sprites_function_feature.png);
+		background-position: 186px -767px;
+	}
+	.box>.two>p:nth-child(9){
+		width: 103px;
+		height: 103px;
+		position: absolute;
+		left: 1461px;
+		top: 487px;
+		background-image: url(../img/sprites_function_feature.png);
+		background-position: 3px -879px;
+	}
+	.box>.two>p:nth-child(10){
+		width: 103px;
+		height: 103px;
+		position: absolute;
+		left: 1382px;
+		top: 317px;
+		background-image: url(../img/sprites_function_feature.png);
+		background-position: -111px 0px;
+	}
+	.box>.two>p:nth-child(11){
+		width: 103px;
+		height: 103px;
+		position: absolute;
+		left: 1161px;
+		top: 173px;
+		background-image: url(../img/sprites_function_feature.png);
+		background-position: -111px -110px;
+		z-index: 1;
+	}
+	.box>.two>p:nth-child(12){
+		width: 103px;
+		height: 103px;
+		position: absolute;
+		left: 843px;
+		top: 272px;
+		background-image: url(../img/sprites_function_feature.png);
+		background-position: -111px -210px;
+		z-index: 1;
+	}
+	/*----------------------THREE-----------------------*/
+	.box>.three{
+		width: 1920px;
+		height: 820px;
+		background-image: url(../img/bg_3.jpg);
+		position: relative;
+	}
+	.box>.three>p:nth-child(1){
+		width: 1210px;
+		height: 721px;
+		position: absolute;
+		left: 580px;
+		top: -2px;
+	}
+	.box>.three>p:nth-child(2){
+		width: 120px;
+		height: 118px;
+		position: absolute;
+		left: 273px;
+		top: 430px;
+		background-image: url(../img/sprites_index.png);
+		background-position: 315px -563px;
+	}
+	.box>.three>p:nth-child(3){
+		width: 400px;
+		height: 163px;
+		position: absolute;
+		left: 384px;
+		top: 415px;
+		background-image: url(../img/sprites_index.png);
+		background-position: 0px -446px;
+	}
+	.box>.three>p:nth-child(4){
+		width: 300px;
+		height: 300px;
+		position: absolute;
+		left: 812px;
+		top: 501px;
+		background-image: url(../img/sprites_game_feature.png);
+		background-position: 0px 0px;
+		z-index: 2;
+	}
+	.box>.three>p:nth-child(5){
+		width: 132px;
+		height: 75px;
+		position: absolute;
+		left: 1770px;
+		top: 584px;
+		background-image: url(../img/sprites_game_feature2.png);
+		background-position: 0px 0px;
+		z-index: 1;
+	}
+	.box>.three>p:nth-child(6){
+		width: 149px;
+		height: 121px;
+		position: absolute;
+		left: 1758px;
+		top: 532px;
+		background-image: url(../img/sprites_game_feature2.png);
+		background-position: -17px -120px;
+	}
+	.box>.three>p:nth-child(7){
+		width: 218px;
+		height: 250px;
+		position: absolute;
+		left: 730px;
+		top: 402px;
+		background-image: url(../img/sprites_game_feature2.png);
+		background-position: -198px -43px;
+	}
+	.box>.three>p:nth-child(8){
+		width: 178px;
+		height: 365px;
+		position: absolute;
+		left: 829px;
+		top: 301px;
+		background-image: url(../img/sprites_game_feature2.png);
+		background-position: -421px 0px;
+		z-index: 1;
+	}
+	.box>.three>p:nth-child(9){
+		width: 220px;
+		height: 346px;
+		position: absolute;
+		left: 867px;
+		top: 186px;
+		background-image: url(../img/sprites_game_feature.png);
+		background-position: 333px -248px;
+		z-index: 1;
+	}
+	.box>.three>p:nth-child(10){
+		width: 235px;
+		height: 305px;
+		position: absolute;
+		left: 1008px;
+		top: 223px;
+		background-image: url(../img/sprites_game_feature.png);
+		background-position: -105px -330px;
+	}
+	.box>.three>p:nth-child(11){
+		width: 178px;
+		height: 166px;
+		position: absolute;
+		left: 1092px;
+		top: 493px;
+		background-image: url(../img/sprites_game_feature.png);
+		background-position: -419px -39px;
+	}
+	.box>.three>p:nth-child(12){
+		width: 1173px;
+		height: 604px;
+		position: absolute;
+		left: 574px;
+		top: 202px;
+		background-image: url(../img/sprites_decoration2.png);
+	}
+	/*----------------------FIVE-----------------------*/
+	.box>.five{
+		width: 1920px;
+		height: 818px;
+		background-image: url(../img/bg_4.jpg);
+		position: relative;
+	}
+	.box>.five>p:nth-child(1){
+		width: 1250px;
+		height: 703px;
+		background-image: url(../img/figure_4.png);
+		position: relative;
+		left: 500px;
+		top: 99px;
+		transform: rotate(5deg);
+	}
+	.box>.five>p:nth-child(2){
+		width: 120px;
+		height: 118px;
+		position: absolute;
+		left: 273px;
+		top: 430px;
+		background-image: url(../img/sprites_index.png);
+		background-position: 315px -688px;
+	}
+	.box>.five>p:nth-child(3){
+		width: 400px;
+		height: 163px;
+		position: absolute;
+		left: 384px;
+		top: 415px;
+		background-image: url(../img/sprites_index.png);
+		background-position: 0px -627px;
+	}
+	.box>.five>p:nth-child(4){
+		width: 105px;
+		height: 79px;
+		position: absolute;
+		left: 936px;
+		top: 477px;
+		background-image: url(../img/sprites_life_feature.png);
+		background-position: -24px -334px;
+	}
+	.box>.five>p:nth-child(5){
+		width: 150px;
+		height: 83px;
+		position: absolute;
+		left: 1136px;
+		top: 639px;
+		background-image: url(../img/sprites_life_feature.png);
+		background-position: 2px -785px;
+	}
+	.box>.five>p:nth-child(6){
+		width: 150px;
+		height: 151px;
+		position: absolute;
+		left: 1430px;
+		top: 648px;
+		background-image: url(../img/sprites_life_feature.png);
+		background-position: 2px -902px;
+	}
+	.box>.five>p:nth-child(7){
+		width: 89px;
+		height: 100px;
+		position: absolute;
+		left: 1679px;
+		top: 584px;
+		background-image: url(../img/sprites_life_feature.png);
+		background-position: -34px -1080px;
+	}
+	.box>.five>p:nth-child(8){
+		width: 150px;
+		height: 102px;
+		position: absolute;
+		left: 1697px;
+		top: 336px;
+		background-image: url(../img/sprites_life_feature.png);
+		background-position: 0px -622px;
+	}
+	.box>.five>p:nth-child(9){
+		width: 106px;
+		height: 145px;
+		position: absolute;
+		left: 1571px;
+		top: 136px;
+		background-image: url(../img/sprites_life_feature.png);
+		background-position: -19px -453px;
+	}
+	.box>.five>p:nth-child(10){
+		width: 58px;
+		height: 84px;
+		position: absolute;
+		left: 1268px;
+		top: 112px;
+		background-image: url(../img/sprites_life_feature.png);
+		background-position: -47px -187px;
+	}
+	.box>.five>p:nth-child(11){
+		width: 80px;
+		height: 117px;
+		position: absolute;
+		left: 1074px;
+		top: 127px;
+		background-image: url(../img/sprites_life_feature.png);
+		background-position: -30px -12px;
+	}
+	/*----------------------FOUR-----------------------*/
+	.box>.four{
+		width: 1920px;
+		height: 749px;
+		background-image: url(../img/bg_5.jpg);
+		position: relative;
+	}
+	.box>.four>p:nth-child(1){
+		width: 570px;
+		height: 689px;
+		background-image: url(../img/figure_5.png);
+		position: absolute;
+		left: 989px;
+		top: 60px;
+	}
+	.box>.four>p:nth-child(2){
+		width: 120px;
+		height: 118px;
+		position: absolute;
+		left: 273px;
+		top: 430px;
+		background-image: url(../img/sprites_index.png);
+		background-position: 315px -806px;
+	}
+	.box>.four>p:nth-child(3){
+		width: 400px;
+		height: 163px;
+		position: absolute;
+		left: 384px;
+		top: 415px;
+		background-image: url(../img/sprites_index.png);
+		background-position: 0px -820px;
+	}
+	.box>.four>p:nth-child(4){
+		width: 125px;
+		height: 132px;
+		position: absolute;
+		left: 753px;
+		top: 576px;
+		background-image: url(../img/sprites_makeup_feature.png);
+		background-position: 0px -269px;
+	}
+	.box>.four>p:nth-child(5){
+		width: 145px;
+		height: 186px;
+		position: absolute;
+		left: 871px;
+		top: 510px;
+		background-image: url(../img/sprites_makeup_feature.png);
+		background-position: 0px -418px;
+	}
+	.box>.four>p:nth-child(6){
+		width: 167px;
+		height: 75px;
+		position: absolute;
+		left: 1039px;
+		top: 420px;
+		background-image: url(../img/sprites_makeup_feature.png);
+		background-position: 0px -635px;
+	}
+	.box>.four>p:nth-child(7){
+		width: 93px;
+		height: 102px;
+		position: absolute;
+		left: 1372px;
+		top: 248px;
+		background-image: url(../img/sprites_makeup_feature.png);
+		background-position: 0px 0px;
+	}
+	.box>.four>p:nth-child(8){
+		width: 280px;
+		height: 82px;
+		position: absolute;
+		left: 1261px;
+		top: 499px;
+		background-image: url(../img/sprites_makeup_feature.png);
+		background-position: 0px 258px;
+	}
+	.box>.four>p:nth-child(9){
+		width: 116px;
+		height: 127px;
+		position: absolute;
+		left: 1473px;
+		top: 602px;
+		background-image: url(../img/sprites_makeup_feature.png);
+		background-position: -14px -125px;
+	}
+	/*----------------------DOWN-----------------------*/
+	.box>.down{
+		width: 1920px;
+		height: 500px;
+		background-color: RGB(48, 47, 55);
+		position: relative;
+	}
+	.box>.down>p{
+		width: 100px;
+		height: 115px;
+		position: absolute;
+		background-image: url(../img/sprites_footer.png);
+		color: RGB(215, 98, 116);
+		line-height: 200px;
+		text-align: center;
+	}
+	.box>.down>p:nth-child(1){
+		left: 495px;
+		top: 75px;
+		background-position: 0px 0px;
+	}
+	.box>.down>p:nth-child(2){
+		left: 626px;
+		top: 75px;
+		background-position: 0px -100px;
+	}
+	.box>.down>p:nth-child(3){
+		left: 760px;
+		top: 75px;
+		background-position: 0px -200px;
+	}
+	.box>.down>p:nth-child(4){
+		left: 895px;
+		top: 75px;
+		background-position: 0px -300px;
+	}
+	.box>.down>p:nth-child(5){
+		left: 1024px;
+		top: 75px;
+		background-position: 0px -400px;
+	}
+	.box>.down>p:nth-child(6){
+		left: 1160px;
+		top: 75px;
+		background-position: 0px -500px;
+	}
+	.box>.down>p:nth-child(7){
+		left: 1277px;
+		top: 75px;
+		background-position: 0px -600px;
+	}
+	.box>.down>p:nth-child(8){
+		width: 1920px;
+		height: 100px;
+		line-height: 100px;
+		top: 275px;
+		background-image: none;
+	}
+	.box>.down>p:nth-child(9){
+		width: 1920px;
+		height: 100px;
+		line-height: 100px;
+		top: 315px;
+		background-image: none;
+	}
+	
+	
+	
+	

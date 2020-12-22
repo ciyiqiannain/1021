@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			div{
+				height: 52px;
+				width: 302px;
+				/*overflow: hidden;*/
+				/*position: relative;*/
+				margin: 0 auto;
+			}
+			li{
+				height: 50px;
+				line-height: 50px;
+				width: 300px;
+				border: 1px solid black;
+				/*position: absolute;*/
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div">
+			<ul id="ul">
+				<li>1.每时每刻给你新机会</li>
+				<li>2.每时每刻给我新机会</li>
+				<li>3.每时每刻给他新机会</li>
+				<li>4.每时每刻给她新机会</li>
+				<li>5.每时每刻给它新机会</li>
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript">
+			var div=document.getElementById('div');
+			var uls=document.getElementById('ul');
+			console.log(uls)
+			var lis=document.getElementsByTagName('li');
+			var num=0;
+			var timer=null;
+			function fun(){
+				
+				uls.style.marginTop=num+'px';
+				num-=52;
+				if(num<-208){
+					num=0;
+				}
+			
+			}
+			timer=setInterval(fun,1000);
+			div.onmouseover=function(){
+				clearInterval(timer);
+			}
+			div.onmouseout=function(){
+				timer=setInterval(fun,1000);
+			}
+	</script>
+</html>

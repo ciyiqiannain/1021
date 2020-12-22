@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/new_file.css"/>
+	</head>
+	<body>
+		<header>
+			<div class="left">
+				
+			</div>
+			<div class="right">
+				<button onclick="clo()">关闭</button>
+			</div>
+		</header>
+		<div class="box">
+			<div class="box1">
+				单价：￥<p id="dan">12.5</p>
+				
+				<button onclick="jian()">-</button>
+				<span id="span">1</span>
+				<button onclick="jia()">+</button>
+				
+				总价：￥<p id="zong">12.5</p>
+				<button id="b1">删除</button>
+			</div>
+			<div class="box2">
+				单价：￥<p id="dd">31.3</p>
+				
+				<button onclick="jj()">-</button>
+				<span id="spa">1</span>
+				<button onclick="ja()">+</button>
+				
+				
+				总价：￥<p id="zz">31.3</p>
+				<button id="b2">删除</button>
+			</div>
+			<div class="box3">
+				<p id="suan"></p>
+				<button onclick="jie()">结算</button>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		function clo() {
+			window.close();
+		}
+		//--------------------------
+		var dan=document.getElementById('dan').innerHTML;
+		var zong=document.getElementById('zong').innerHTML;
+		
+		function jian(){
+			var num=document.getElementById('span').innerHTML;
+			var span=parseInt(num);
+			if (document.getElementById('span').innerHTML == 1) {
+				alert('不能再减了，再减就没了!>-_->');
+				return;
+			} else{
+				document.getElementById('span').innerHTML=span-1;
+				document.getElementById('zong').innerHTML=document.getElementById('dan').innerHTML*document.getElementById('span').innerHTML;
+			}
+		}
+		function jia(){
+			var num1=document.getElementById('span').innerHTML;
+			var span=parseInt(num1);
+			document.getElementById('span').innerHTML=span+1;
+			document.getElementById('zong').innerHTML=document.getElementById('dan').innerHTML*document.getElementById('span').innerHTML;
+		}
+		//---------------------------
+		var dd=document.getElementById('dd').innerHTML;
+		var zz=document.getElementById('zz').innerHTML;
+		function jj(){
+			var num2=document.getElementById('spa').innerHTML;
+			var spa=parseInt(num2);
+			if (document.getElementById('spa').innerHTML == 1) {
+				alert('不能再减了，再减就没了!>-_->');
+				return;
+			} else{
+				document.getElementById('spa').innerHTML=spa-1;
+				document.getElementById('zz').innerHTML=document.getElementById('dd').innerHTML*document.getElementById('spa').innerHTML;
+			}
+		}
+		function ja(){
+			var num3=document.getElementById('spa').innerHTML;
+			var spa=parseInt(num3);
+			document.getElementById('spa').innerHTML=spa+1;
+			document.getElementById('zz').innerHTML=document.getElementById('dd').innerHTML*document.getElementById('spa').innerHTML;
+		}
+		
+		var suan=document.getElementById('suan');
+		function jie(){
+			suan.innerHTML=parseFloat(document.getElementById('zong').innerHTML)+parseFloat(document.getElementById('zz').innerHTML);
+		}
+		
+		//-----------------parentNode父节点
+		var b2=document.getElementById('b2');
+		var b1=document.getElementById('b1');
+		
+		b2.onclick=function() {
+			var fa=b2.parentNode.parentNode;
+			fa.removeChild(b2.parentNode);
+		}
+		b1.onclick=function() {
+			var fa=b1.parentNode.parentNode;
+			fa.removeChild(b1.parentNode);
+		}
+	</script>
+</html>

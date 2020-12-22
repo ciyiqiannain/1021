@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button>添加</button>
+		<ul>
+			<li>11111</li>
+			<li>22222</li>
+			<li>33333</li>			
+		</ul>
+		<div>
+			
+		</div>
+	</body>
+	<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('button').click(function(){
+				//遍历    
+				$('li').each(function(){
+					var str=$(this).text()+'</br>';
+					$('div').append(str);
+				})
+			})
+		})
+	</script>
+</html>

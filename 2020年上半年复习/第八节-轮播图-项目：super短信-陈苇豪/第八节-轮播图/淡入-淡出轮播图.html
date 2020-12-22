@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0px;
+				padding: 0px;
+				list-style: none;
+			}
+			ul{
+				margin: 0 auto;
+				width: 700px;
+				height: 450px;
+				position: relative;
+				overflow: hidden;
+			}
+			li{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+			}
+			li>img{
+				width: 100%;
+				height: 100%;
+			}
+			p{
+				width: 700px;
+				height: 450px;
+				line-height: 450px;
+				text-align: center;
+				font-size: 36px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 2;
+				opacity: 0.3;
+				cursor: pointer;
+				display: none;
+			}
+			.left{
+				width: 50px;
+				height: 450px;
+				background: pink;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			.right{
+				width: 50px;
+				height: 450px;
+				background: pink;
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+			dl{
+				width: 300px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				position: absolute;
+				bottom: 25px;
+				left: 200px;
+				z-index: 3;
+				opacity: 0.5;
+			}
+			dd{
+				float: left;
+				width: 50px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				background: pink;
+				color: black;
+				border-radius: 25px;
+				margin: 0px 5px;
+				cursor: pointer;
+			}
+			.cg{
+				background: black;
+				color: white;
+			}
+			.cl{
+				z-index: 1;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li class="cl"><img src="img/卡莲&符华.jpg"/></li>
+			<li><img src="img/希儿.png"/></li>
+			<li><img src="img/幽兰黛尔.png"/></li>
+			<li><img src="img/神乐.jpg"/></li>
+			<li><img src="img/薇尔莉特.jpg"/></li>
+			<dl>
+				<dd class="cg">1</dd>
+				<dd>2</dd>
+				<dd>3</dd>
+				<dd>4</dd>
+				<dd>5</dd>
+			</dl>
+			<p>
+				<span class="left"> < </span>
+				<span class="right"> > </span>
+			</p>
+		</ul>
+	</body>
+	<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		//-----------------------------------------淡入-淡出---------------------------
+		$(function () {
+			var index=0;
+			var move=null;
+			
+			move=function () {
+				$('li').eq(index).addClass('cl').siblings('li').removeClass('cl');
+				$('dd').eq(index).addClass('cg').siblings('dd').removeClass('cg');
+			}
+			
+			var timer=setInterval(function () {
+				index++;
+				index=index>4?0:index;
+				move();
+			},2000)
+			
+			$('ul').hover(function () {
+				clearInterval(timer);
+				$('p').show();
+			},function () {
+				timer=setInterval(function () {
+					index++;
+					index=index>4?0:index;
+					move()
+				},2000)
+				$('p').hide();
+			})
+			
+			$('dl>dd').hover(function () {
+					clearInterval(timer);
+					index=$(this).index();
+					move();
+			})
+			
+			$('.left').click(function () {
+				index--;
+				index=index<0?4:index;
+				move();
+			})
+			$('.right').click(function () {
+				index++;
+				index=index>4?0:index;
+				move();
+			})
+		})
+	</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.a{
+				border: 1px dashed red;
+			}
+			.b{
+				background: pink;
+			}
+		</style>
+	</head>
+	<body>
+		<button>切换</button>
+		<p class="a">星期八</p>
+	</body>
+	<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('button').click(function(){
+				console.log($('p').hasClass('a'));
+				if($('p').hasClass('a')){
+					$('p').addClass('b');
+				}
+				if(!$('p').hasClass('a')){
+					$('p').removeClass('b');
+				}
+			})
+		})
+	</script>
+</html>

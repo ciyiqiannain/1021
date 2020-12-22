@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--属性-->
+		<img id="img"/>
+		<button onclick="san()">删除属性</button>
+	</body>
+	<script type="text/javascript">
+		var img = document.getElementById('img');
+		console.log(img);
+		//设置属性值
+		img.setAttribute('src','img/2.jpg');
+		img.setAttribute('title','banner图片');
+		//获取属性
+		console.log(img.getAttribute('src'));
+		console.log(img.getAttribute('title'));
+		
+		function san(){
+			//删除属性
+//			img.removeAttribute('title');
+			img.removeAttribute('src');
+//			img.setAttribute('src','img/4.jpg');
+		}
+		
+		//增删改查
+	</script>
+</html>

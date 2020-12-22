@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p>
+			<span>123</span>
+			<span>456</span>
+		</p>
+		
+		<!--<p>今天周四</p>-->
+		<input type="text" value="hahah" />
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js" ></script>
+		<script type="text/javascript">
+//			innerHTML="1234"   VALUE
+//          html()可以解析标签      text()不能解析标签  只能默认文本
+//          val()是获取或者更改  input里面的文本
+			$(function(){
+				$("p>span:first").html("<p>456</p>")
+				$("p>span:last").text("<p>456</p>")
+				$("input").val("123")
+				
+			})
+		</script>
+	</body>
+</html>

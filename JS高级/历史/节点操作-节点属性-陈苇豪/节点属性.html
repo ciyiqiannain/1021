@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="div">
+			<ul id="ul">
+				<li>11</li>
+				<li>22</li>
+				<li id="li">33</li>
+				<li>44</li>
+				<li>55</li>
+			</ul>
+		</div>
+		
+	</body>
+	<script type="text/javascript">
+		var div=document.getElementById('div');
+		var ul=document.getElementById('ul');
+		var li=document.getElementById('li');
+		console.log(ul.parentNode);//返回节点的父节点
+		console.log(ul.childNodes);//返回子节点集合，childNodes[]
+		console.log(ul.firstChild);//返回节点的第一个子节点，最普遍的用法是访问该元素的文本节点
+		console.log(ul.lastChild);//返回节点的最后一个子节点
+		console.log(ul.nextSibling);//下一个节点
+		console.log(ul.previousSibling);//上一个节点
+	</script>
+</html>

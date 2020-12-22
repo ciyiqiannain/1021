@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p>
+			选择你喜欢的书
+			<input type="radio" name="sex" id="" value="我和狗狗在一起" onclick="add()"/>我和狗狗在一起
+			<input type="radio" name="sex" id="" value="雾霾来了怎么办" onclick="add()" />雾霾来了怎么办
+		</p>
+		<img id="img"/>
+		<p id="p"></p>
+	</body>
+	<script type="text/javascript">
+		var inputs=document.getElementsByTagName('input');
+		console.log(inputs);
+		var img=document.getElementById('img');	
+		var p=document.getElementById('p');	
+		
+		function add(){
+			if(inputs[0].checked==true){
+				img.setAttribute('src','img/dog.jpg');
+				//只有input标签使用value;
+				p.innerHTML=inputs[0].value;
+			}else{
+				img.setAttribute('src','img/mai.jpg');
+				p.innerHTML=inputs[1].value;
+			}
+		}
+	</script>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>幸运转盘</title>
+		<style type="text/css">
+			*{
+				margin: 0 auto;
+				padding: 0;
+			}
+			ul{
+				width: 520px;
+				height: 520px;
+				/*border: 1px solid black;*/
+			}
+			ul>li{
+				list-style: none;
+				width: 150px;
+				height: 150px;
+				background: yellow;
+				float: left;
+				margin-left: 17px;
+				margin-top: 17px;
+				line-height: 150px;
+				text-align: center;
+			}
+			.col{
+				background: whitesmoke;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li><button id="bt1">开始</button>&nbsp;&nbsp;&nbsp;<button id="bt2">结束</button></li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+		</ul>
+	</body>
+	<script type="text/javascript">
+		var lis=document.getElementsByTagName('li');
+		var bt1=document.getElementById('bt1');
+		var bu2=document.getElementById('bt2');
+		var arr=[0,1,2,5,8,7,6,3];
+		var time=null;
+		var num=0;
+		
+		bt1.onclick=function(){
+			//disabled，禁用
+			bt1.disabled=true;
+			
+			time=setInterval(function(){
+				lis[arr[num]].className='';
+				num++;
+				if (num>7) {
+					num=0;
+				}
+				lis[arr[num]].className='col';
+			},50);
+			
+			bt2.onclick=function(){
+				bt1.disabled=false;
+				clearInterval(time);
+			}
+		}
+	</script>
+</html>

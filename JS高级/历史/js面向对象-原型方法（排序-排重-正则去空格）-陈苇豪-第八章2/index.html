@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		
+	</body>
+	<script type="text/javascript">
+		function User(name,age,word,add){
+			this.name=name;
+			this.age=age;
+			this.word=word;
+			this.add=add;
+		}
+		User.prototype.show=function(){
+			document.write('姓名：'+this.name+'<br/>'+'年龄：'+this.age+'<br/>'+'工作：'+this.word+'<br/>'+'住址：'+this.add+'<br/>');
+		}
+		var user1=new User('李四','18','中国内地演员歌手','中国北京海淀区');
+		user1.show();
+	</script>
+</html>

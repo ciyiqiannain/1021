@@ -1,0 +1,73 @@
+.center1{
+				width: 1200px;
+				height: 230px;
+				position: relative;
+			}
+			.center1>img{
+				float: left;
+			}
+			.center1>.img{
+				margin-left: 553px;
+			}
+			.center1>{
+				margin-left: 0px;
+			}
+			.center1>.form{
+				width: 553px;
+				height: 340px;
+				float: left;
+				display: inline-block;
+				border: 1px solid black;
+				position: absolute;
+				left: 571px;
+				top: 0px;
+			}
+			.center1>.form>.top{
+				height: 30px;
+			}
+			.center1>.form>.top>h2>span{
+				display: inline-block;
+				width: 30px;
+				height: 30px;
+				background-image: url(../img/login_icon_bg_01.gif);
+				background-position: -302px -31px;
+				vertical-align: middle;
+			}
+			.center1>.form>.form{
+				widows: 553px;
+				height: 130px;
+				line-height: 30px;
+				text-align: center;
+				margin-top: 50px;
+			}
+			.center1>.form>.form>p>span{
+				width: 100px;
+				display: inline-block;
+				text-align: right;
+			}
+			.center1>.form>.form>.p{
+				width: 77px;
+				height: 26px;
+				border: 1px solid black;
+				background-image: url(../img/login_icon_bg_01.gif);
+				background-position: 0px -30px;
+				margin-left: 239px;
+			}
+			.center1>.form>.bottom{
+				width: 481px;
+				height: 76px;
+				font-size:24px ;
+				margin-left: 30px;
+				background-color: white;
+				border: 1px solid black;
+				/*text-align: center;*/
+				background: -webkit-linear-gradient(top,RGB(247, 235, 200),white);
+			}
+			.center1>.form>.bottom>.p{
+				width: 144px;
+				height: 30px;
+				background-image: url(../img/login_icon_bg_01.gif);
+				background-position: 0px 0px;
+				margin-left: 223px;
+				margin-top: 18px;
+			}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h1 id="time"></h1>
+	</body>
+	<script type="text/javascript">
+		var h=document.getElementById('time');
+	
+		time=setInterval(function () {
+			
+			//现在的时间戳
+			var date=new Date();//var date=new Date();可以达到默认获取时间戳的效果
+			
+//			var date=new Date().getTime();//！！！现在的时间戳，正确书写格式！！！
+
+			//2001-01-23,过去的时间戳
+			var date1=new Date(2000,11,23);
+//			document.write(date1.getTime()+'<br/>');
+			//差
+			var time=date-date1;
+//			document.write(time+'<br/>');
+			
+			var day1=parseInt(time/1000/60/60/24);//日
+			
+			h.innerHTML='现在距2001-01-23，有'+day1+'天';
+		},1000)
+//		setInterval(time,1000);
+	</script>
+</html>

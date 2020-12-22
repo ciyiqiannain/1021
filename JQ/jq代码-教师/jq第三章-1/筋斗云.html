@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul{
+				width: 500px;
+				height: 40px;
+				background: pink;
+				list-style: none;
+				
+			}
+			li{
+				width: 100px;
+				height: 40px;
+				line-height: 40px;
+				text-align: center;
+				cursor: pointer;
+				float: left;
+				position: relative;
+			}
+			#first{
+				position: relative;
+				background: red;
+			}
+		</style>
+		
+		
+	</head>
+	<body>
+		<span></span>
+		<ul>
+			<li id="first"></li>
+			<li>首页</li>
+			<li>详情页</li>
+			<li>商品介绍</li>
+			<li>企业文化</li>
+		</ul>
+	</body>
+	<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('li').hover(function(){
+				var index=$(this).index();
+				var width=$('#first').width();
+				console.log(width);
+				$('#first').stop().animate({left:(index*width)+'px'},300);
+			},function(){
+				$('#first').stop().animate({left:0+'px'},30);
+			})
+		})
+	</script>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			canvas{
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="c" width="500" height="500"></canvas>
+	</body>
+	<script type="text/javascript">
+		var c=document.getElementById('c')
+		var cxt=c.getContext('2d')
+		//渐变矩形
+		var g1=cxt.createRadialGradient(110,250,10,110,250,100);//var g=cxt.createRadialGradient(起始x,起始y,r1开始渐变,终止x,终止y,r2渐变结束);
+		g1.addColorStop(0,'blue');
+		g1.addColorStop(0.5,'green');
+		g1.addColorStop(1,'red');
+		
+		cxt.beginPath();
+		cxt.fillStyle=g1;
+		cxt.fillRect(10,200,200,100);
+		cxt.closePath();
+		
+		//渐变圆
+		var g2=cxt.createRadialGradient(340,250,10,340,250,100);
+		g2.addColorStop(0,'red');
+		g2.addColorStop(0.5,'green');
+		g2.addColorStop(1,'blue');
+		
+		cxt.beginPath();
+		cxt.fillStyle=g2;
+		cxt.arc(340,250,100,0,Math.PI*2,false);
+		cxt.fill()
+		cxt.closePath()
+	</script>
+</html>

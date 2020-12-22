@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.color{
+				background: pink;
+			}
+		</style>
+	</head>
+	<body>
+		<p id="p">今天星期一</p>
+		<button onclick="fun1()">添加样式</button>
+		<button onclick="fun2()">取消样式</button>
+	</body>
+	<script type="text/javascript">
+		var p=document.getElementById('p');
+		function fun1(){			
+			p.className='color';
+		}
+		function fun2(){
+			
+			p.className='';
+		}
+	</script>
+</html>

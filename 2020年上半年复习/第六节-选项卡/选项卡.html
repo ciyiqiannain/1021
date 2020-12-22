@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul{
+				list-style: none;
+				margin: 0 auto;
+			}
+			.one{
+				width: 300px;
+			}
+			.one>li{
+				float: left;
+				width: 98px;
+				border: 1px solid black;
+				text-align: center;
+				cursor: pointer;
+			}
+			.two{
+				width: 300px;
+			}
+			.two>li{
+				float: left;
+				/*display: none;*/
+				height: 100px;
+				background: black;
+				color: white;
+			}
+			.two>li:nth-child(n+2){
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="one">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+		</ul>
+		<ul class="two">
+			<li>你全力做到的最好，可能还不如别人的随便搞搞。</li>
+			<li>失败并不可怕，可怕的是你还相信这句话。</li>
+			<li>问题之所以是问题，是因为你主观的认为它是问题。</li>
+		</ul>
+	</body>
+	<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function () {
+			
+//			$('.two>li:eq(0)').show();
+			
+			$('.one>li').click(function () {
+				$('.two>li').eq($(this).index()).show();
+				$('.two>li').eq($(this).index()).siblings().hide();
+			})
+		})
+	</script>
+</html>

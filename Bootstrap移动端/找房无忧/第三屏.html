@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>第三屏</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				font-size: 0.1rem;
+				list-style: none;
+			}
+			header{
+				width: 100%;
+				height: 0.4rem;
+				background-color: #C9CDD2;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				position: relative;
+			}
+			header>input{
+				width: 75%;
+				padding: 2% 10% 2% 2%;
+			}
+			header>img{
+				width: 6%;
+				position: absolute;
+				top: 24%;
+				right: 8%;
+			}
+			.third_one{
+				width: 100%;
+				height: 0.3rem;
+				position: relative;
+			}
+			.third_one>ul{
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				align-content: center;
+			}
+			.third_one>ul>li{
+				width: 25%;
+				text-align: center;
+				box-shadow: 0px 0px 30px violet;
+			}
+			
+			.second_two{
+				width: 100%;
+			}
+			.second_two>ul{
+				width: 100%;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-around;
+				align-items: center;
+			}
+			.second_two>ul>li{
+				width: 90%;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin: 2% 0%;
+			}
+			.second_two>ul>li>.div_img{
+				width: 35%;
+			}
+			.second_two>ul>li>.div_img>img{
+				width: 100%;
+			}
+			.second_two>ul>li>.div_li{
+				width: 60%;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.second_two>ul>li>.div_li>p{
+				width: 90%;
+			}
+			.second_two>ul>li>.div_li>p:nth-child(1){
+				font-size: 0.2rem;
+			}
+			.second_two>ul>li>.div_li>p:nth-child(n+3){
+				color: pink;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.second_two>ul>li>.div_li>p:nth-child(3)>span{
+				color: #FD8B01;
+			}
+			
+			.qvyv_down{
+				width: 100%;
+				background-color: white;
+				position: absolute;
+				top: 57%;
+				left: 0%;
+				display: none;
+			}
+			.qvyv_down>ul{
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				align-items: stretch;
+			}
+			.qvyv_down>ul>li{
+				width: 25%;
+				text-align: center;
+			}
+			.qvyv_down>ul>li>ul>li{
+				padding: 5% 0%;
+				border: 1px solid paleturquoise;
+			}
+			.jiage_down{
+				width: 100%;
+				background-color: white;
+				display: none;
+				position: absolute;
+				top: 57%;
+				left: 0%;
+			}
+			.jiage_down>ul{
+				width: 100%;
+			}
+			.jiage_down>ul>li{
+				padding: 3% 0%;
+				border: 1px solid paleturquoise;
+			}
+			.fangxing_down{
+				width: 100%;
+				background-color: white;
+				display: none;
+				position: absolute;
+				top: 57%;
+				left: 0%;
+			}
+			.fangxing_down>ul{
+				width: 100%;
+			}
+			.fangxing_down>ul>li{
+				padding: 3% 0%;
+				border: 1px solid paleturquoise;
+			}
+			.fangxing_yes{
+				text-align: center;
+				background-color: #FD8B01;
+			}
+			.gengduo_down{
+				width: 100%;
+				background-color: white;
+				position: absolute;
+				top: 57%;
+				left: 0%;
+				display: none;
+			}
+			.gengduo_down>ul>li{
+				margin: 2% 0%;
+			}
+			.gengduo_down>ul>li>p{
+				margin: 0 auto;
+				width: 90%;
+				font-size: 0.2rem;
+				font-weight: 600;
+			}
+			.gengduo_down>ul>li>div>ul{
+				margin: 0 auto;
+				width: 90%;
+				display: flex;
+				flex-flow: row wrap;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.gengduo_down>ul>li>div>ul>li{
+				width: 24%;
+				text-align: center;
+				border: 1px solid paleturquoise;
+				margin: 1% 0%;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<input type="text" name="" id="" placeholder="请输入小区或商圈名称" />
+			<img src="image/index/seach.jpg"/>
+		</header>
+		<div class="third_one">
+			<ul class="now">
+				<li>区域 ↓ </li>
+				<li>价格 ↓ </li>
+				<li>房型 ↓ </li>
+				<li>更多 ↓ </li>
+			</ul>
+			<div class="qvyv_down">
+				<ul>
+					<li>
+						<ul>
+							<li>区域</li>
+							<li>地铁</li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li>附近</li>
+							<li>不限</li>
+							<li>朝阳</li>
+							<li>海淀</li>
+							<li>昌平</li>
+							<li>丰台</li>
+							<li>石景山</li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li>不限</li>
+							<li>安贞</li>
+							<li>奥林匹克公园</li>
+							<li>百子湾</li>
+							<li>北工大</li>
+							<li>北苑</li>
+							<li>CBD</li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li>不限</li>
+							<li>安贞</li>
+							<li>奥林匹克公园</li>
+							<li>百子湾</li>
+							<li>北工大</li>
+							<li>北苑</li>
+							<li>CBD</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="jiage_down">
+				<ul>
+					<li>不限</li>
+					<li>100万以下</li>
+					<li>100万-150万</li>
+					<li>150万-200万</li>
+					<li>200万-250万</li>
+					<li>250万-300万</li>
+					<li>自定义价格</li>
+				</ul>
+			</div>
+			<div class="fangxing_down">
+				<ul>
+					<li>不限</li>
+					<li>1室</li>
+					<li>2室</li>
+					<li>3室</li>
+					<li>4室</li>
+					<li>5室</li>
+					<li class="fangxing_yes">确定</li>
+				</ul>
+			</div>
+			<div class="gengduo_down">
+				<ul>
+					<li>
+						<p>区域</p>
+						<div>
+							<ul>
+								<li>南</li>
+								<li>南北</li>
+								<li>东</li>
+								<li>西</li>
+								<li>北</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<p>面积（平方）</p>
+						<div>
+							<ul>
+								<li>50以下</li>
+								<li>50-70</li>
+								<li>70-90</li>
+								<li>90-110</li>
+								<li>110-130</li>
+								<li>130-150</li>
+								<li>200以上</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<p>标签</p>
+						<div>
+							<ul>
+								<li>学区房</li>
+								<li>地铁房</li>
+								<li>不限购</li>
+								<li>满两年</li>
+								<li>满五唯一</li>
+								<li>降价</li>
+								<li>新上</li>
+								<li>独家</li>
+								<li>有钥匙</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<p>楼龄</p>
+						<div>
+							<ul>
+								<li>5年以内</li>
+								<li>10年以内</li>
+								<li>10-20年</li>
+								<li>20年以上</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<p>楼层</p>
+						<div>
+							<ul>
+								<li>低楼层</li>
+								<li>中楼层</li>
+								<li>高楼层</li>
+								<li>清空条件</li>
+								<li>确定</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="second_two">
+			<ul>
+				<li>
+					<div class="div_img">
+						<img src="image/SecondHandList/img1.png"/>
+					</div>
+					<div class="div_li">
+						<p>西便门外大街2室1厅89平</p>
+						<p>南北 高楼层</p>
+						<p>签约价格:13244元/平<span>905万</span></p>
+						<p>签约日期:2015年11月10日</p>
+					</div>
+				</li>
+				<li>
+					<div class="div_img">
+						<img src="image/SecondHandList/img2.png"/>
+					</div>
+					<div class="div_li">
+						<p>花涧溪二期 2室2厅 90平</p>
+						<p>南北 高楼层/6层</p>
+						<p>签约价格:13244元/平<span>1322万</span></p>
+						<p>签约日期:2015年11月10日</p>
+					</div>
+				</li>
+				<li>
+					<div class="div_img">
+						<img src="image/SecondHandList/img3.png"/>
+					</div>
+					<div class="div_li">
+						<p>西便门外大街2室1厅89平</p>
+						<p>南北 高楼层</p>
+						<p>签约价格:13244元/平<span>905万</span></p>
+						<p>签约日期:2015年11月10日</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		
+	</body>
+	<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function () {
+			$('.now>li').eq(0).click(function () {
+				$('.qvyv_down').toggle(300);
+			})
+			$('.now>li').eq(1).click(function () {
+				$('.jiage_down').toggle(300);
+			})
+			
+			$('.now>li').eq(2).click(function () {
+				$('.fangxing_down').toggle(300);
+			})
+			$('.fangxing_yes').click(function () {
+				$('.fangxing_down').toggle(300);
+			})
+			
+			$('.now>li').eq(3).click(function () {
+				$('.gengduo_down').toggle(300);
+			})
+		})
+	</script>
+</html>

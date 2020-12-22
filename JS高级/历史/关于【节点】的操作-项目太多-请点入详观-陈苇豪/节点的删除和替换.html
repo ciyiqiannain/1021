@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		.box1{
+			position: absolute;
+			top: 150px;
+			left: 378px;
+			}
+		.box1>button{
+				width: 25px;
+				height: 25px;
+		}
+		.box1>button:nth-child(2){
+				margin-left: 27px;
+		}
+		.box1>button:nth-child(4){
+				margin-right: 38px;
+		}
+		.box1>p{
+			display: inline-block;
+		}
+		.box1>button:last-of-type{
+			margin-left: 20px;
+			width: 50px;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="div">
+			<p id="p1">1111</p>
+			<p id="p2">2222</p>
+			<button id="bu">2替换1</button>
+			<button id="clo">删除2</button>
+		</div>
+		<div class="box1">
+			单价：￥<p>12.5</p>
+			
+			<button>-</button>
+			<span>1</span>
+			<button>+</button>
+			
+			总价：￥<p>12.5</p>
+			<button id="b1">删除</button>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var p1=document.getElementById('p1')
+		var p2=document.getElementById('p2')
+		var bu=document.getElementById('bu')
+		var div=document.getElementById('div')
+		
+		//父节点.replaceChild(newNode,oldNode)指new替换C中的old
+		//C.replaceChild(new,old)指new替换C中的old
+		//替换
+		bu.onclick=function () {
+			div.replaceChild(p2,p1);
+		}
+		
+		//父节点.removeChild(子节点)
+		//C.removeChild(B)删除C节点中的B节点
+		//删除
+		clo.onclick=function  () {
+			div.removeChild(p2);
+		}
+		var b1=document.getElementById('b1');
+		b1.onclick=function() {
+			var fa=b1.parentNode.parentNode;        //parentNode父节点
+			fa.removeChild(b1.parentNode);
+		}
+	</script>
+</html>

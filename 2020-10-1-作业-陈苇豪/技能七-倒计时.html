@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p></p>
+		<p></p>
+	</body>
+	<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		setInterval(function () {
+			var date=new Date();
+			var year=date.getFullYear();
+			var month=date.getMonth()+1;
+			var ri=date.getDate();
+			var hours=date.getHours();
+			var minutes=date.getMinutes();
+			var seconds=date.getSeconds();
+			
+			var date=new Date().getTime();//当前时间戳
+			
+			var date2=new Date(2050,08,01);
+			
+			var time=date2-date;
+			
+			var ri2=parseInt(time/1000/60/60/24);//日
+			var hours2=parseInt(time/1000/60/60%24);//时
+			var minutes2=parseInt(time/1000/60%60);//分
+			var seconds2=parseInt(time/1000%60);//秒
+			
+			var p1=document.getElementsByTagName('p')[0];
+			var p2=document.getElementsByTagName('p')[1];
+			p1.innerHTML='现在时间是'+year+'年'+month+'月'+ri+'日'+hours+'时'+minutes+'分'+seconds+'秒';
+			p2.innerHTML='2050-9-1倒计时：'+ri2+'日'+hours2+'时'+minutes2+'分'+seconds2+'秒';
+			
+		},1000)
+	</script>
+</html>

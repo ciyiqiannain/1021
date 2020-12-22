@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			img{
+				width: 500px;
+				height: 400px;
+				margin: 200px auto;
+			}
+			button{
+				position: absolute;
+				left: 225px;
+				top: 400px;
+				width: 75px;
+			}
+			h1{
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<img src="img/tx1.png" id="img"/>
+		<button onclick="button()">点击</button>
+		<h1 onclick="h1()">点击</h1>
+	</body>
+	<script type="text/javascript">
+		function button(){
+			var num=parseInt(Math.random()*10);
+			var img=document.getElementById('img');
+			if (num>=7) {
+				alert('一等奖');
+			} else{
+				alert('未中奖');
+			}
+		}
+		
+		function h1() {
+			document.write('改变文本内容');
+		}
+	</script>
+</html>

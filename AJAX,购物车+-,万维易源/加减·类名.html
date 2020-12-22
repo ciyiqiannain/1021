@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<style type="text/css">
+			ul{
+				display: flex;
+			}
+			ul>li{
+				margin: 1%;
+				border: 1px solid rgb(0,0,0,0.3);
+				font-size: 24px;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li class="jian"> - </li>
+			<li class="num"> 0 </li>
+			<li class="jia"> + </li>
+		</ul>
+		<ul>
+			<li class="jian"> - </li>
+			<li class="num"> 0 </li>
+			<li class="jia"> + </li>
+		</ul>
+		<ul>
+			<li class="jian"> - </li>
+			<li class="num"> 0 </li>
+			<li class="jia"> + </li>
+		</ul>
+	</body>
+	<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function () {
+//			var $jian=$('.jian').html();
+//			var $num=$('.num').html();
+//			var $jia=$('.jia').html();
+			$('.jia').click(function () {
+				var $par=$(this).parent().addClass('th').siblings().removeClass('th');
+				var $ss=$('.th').find('.num').html();
+				$('.th>.num').html(Number($ss)+1)
+			})
+			$('.jian').click(function () {
+				var $par=$(this).parent().addClass('th').siblings().removeClass('th');
+				var $ss=$('.th').find('.num').html();
+				$('.th>.num').html(Number($ss)-1)
+			})
+		})
+	</script>
+</html>

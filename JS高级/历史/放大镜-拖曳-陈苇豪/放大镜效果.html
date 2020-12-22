@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#box>div{
+				float: left;
+			}
+			#small{
+				width: 500px;
+				height: 281px;
+				position: relative;
+			}
+			#small>img{
+				width: 500px;
+				height: 281px;
+			}
+			#sp{
+				width: 180px;
+				height: 100px;
+				background: rgba(0,0,0,0.5);
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 999;
+				display: none;
+				cursor: move;
+			}
+			#big{
+				width: 800px;
+				height: 445px;
+				display: none;
+				overflow: hidden;
+				position: relative;
+			}
+			#bgimg{
+				width: 1200px;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div id="small">
+				<img src="img/25.jpg"/>
+				<span id="sp"></span>
+			</div>
+			<div id="big">
+				<img src="img/25.jpg" id="bgimg"/>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var small=document.getElementById('small');
+		var sp=document.getElementById('sp');
+		var big=document.getElementById('big');
+		var bgimg=document.getElementById('bgimg');
+		
+		document.onmousemove=function () {
+			sp.style.display='block';
+			big.style.display='block';
+			
+			small.onmousemove=function (e) {
+//				var oEvent=e || event;
+				var left=e.clientX-(sp.offsetWidth/2);
+				var top=e.clientY-(sp.offsetHeight/2);
+				
+				var maxWidth=small.offsetWidth-sp.offsetWidth;
+				var maxHeight=small.offsetHeight-sp.offsetHeight;
+				
+				if (left<0)left=0;
+				if (top<0)top=0;
+				if (left>maxWidth)left=maxWidth;
+				if (top>maxHeight)top=maxHeight;
+				
+				sp.style.left=left+'px';
+				sp.style.top=top+'px';
+				
+				
+				bgimg.style.left=-(left*(bgimg.offsetWidth-big.offsetWidth))/maxWidth+'px';
+				bgimg.style.top=-(top*(bgimg.offsetHeight-big.offsetHeight))/maxHeight+'px';
+			}
+		}
+		
+		document.onmouseout=function () {
+			sp.style.display='none';
+			big.style.display='none';
+		}
+	</script>
+</html>

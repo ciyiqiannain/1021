@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#p{
+				border: 1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<button onclick="jian()">-</button>
+		<span id="span">1</span>
+		<button onclick='jia()'>+</button>
+		<p>
+			单价：￥<span id="dan">12.5</span>
+			
+		</p>
+		<p>
+			<!--总价=单价*数量-->
+			总价：￥<span id="zong">12.5</span>
+		</p>
+		
+		<p>一共：￥<span id="gong">12.5</span></p>
+		<button onclick="jie()">结算</button>
+		<p id="p"></p>
+	</body>
+	<script type="text/javascript">
+		//第一步    看自己获取的是什么
+		var dan=document.getElementById('dan');
+		var zong=document.getElementById('zong');
+		var gong=document.getElementById('gong');
+		var p=document.getElementById('p');
+		function jia(){
+//			alert('a');
+			var span=document.getElementById('span');
+			span.innerHTML=parseInt(span.innerHTML)+1;
+			
+			document.getElementById('zong').innerHTML=dan.innerHTML*span.innerHTML;
+			document.getElementById('gong').innerHTML=dan.innerHTML*span.innerHTML;
+			
+		}
+		function jian(){
+			var span=document.getElementById('span');
+			if(span.innerHTML == 1){
+				alert('不能再减了');
+			}else{
+				span.innerHTML=parseInt(span.innerHTML)-1;
+				document.getElementById('zong').innerHTML=dan.innerHTML*span.innerHTML;
+				document.getElementById('gong').innerHTML=dan.innerHTML*span.innerHTML;
+			}
+		}
+		
+		function jie(){
+			p.innerHTML='本次购买的商品信息：<br>苹果:￥'+document.getElementById('zong').innerHTML
+		}
+	</script>
+</html>

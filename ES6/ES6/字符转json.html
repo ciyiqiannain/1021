@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<!--<link rel="stylesheet" type="text/css" href="css/reset.css"/>-->		
+		<style type="text/css">
+			
+		</style>
+	</head>
+	<body>
+		<div>
+			
+		</div>
+	</body>
+	<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+//		Json
+
+//Json.Stringify()，json转字符串
+//Json.parse()，字符串转json
+//encodeURIComponent，把字符串作为 URI 组件进行编码。
+		
+//		json对象
+//		      json转字符串:Json.Stringify()
+//		      字符串转json:Json.parse()
+//    	Json的标准写法
+//			1.	只能用双引号
+//			2.	所有的名字都必须用引号引起来
+//		Json简写:
+//			不用写：不用写function
+		$(function () {
+			let obj={'a':12,'b':34};
+			let str='http://international.v1.hitokoto.cn?c=a'+JSON.stringify(obj);
+			let str1='http://international.v1.hitokoto.cn?c=a'+encodeURIComponent(JSON.stringify(obj));
+			document.write(str+'<br />')
+			document.write(str1+'<br />')
+			
+			
+//			let json={
+//				a:12,
+//				show:function () {
+//					alert(this.a)
+//				}
+//			}
+			//Json简写:
+//			不用写：和  function
+			let json={
+				a:12,
+				show() {
+					alert(this.a)
+				}
+			}
+			json.show()
+		})
+	</script>
+</html>

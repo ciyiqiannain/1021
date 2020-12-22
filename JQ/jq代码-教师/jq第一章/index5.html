@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#p2{
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<p>点击按钮隐藏</p>
+		<p id="p2">已经隐藏的元素</p>
+		<button id="btn1">显示<span>隐藏</span>的元素</button>
+		<button id="btn2">隐藏显示的元素</button>
+	</body>
+	<script src="js/3.4.1jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('#btn1').click(function(){
+				//找到隐藏的p元素 设置为显示状态
+				$('p:hidden').show();
+			})
+			$('#btn2').on('click',function(){
+				$('p:visible').hide();
+			})
+			$('#btn1>span').css('color','red');
+		})
+	</script>
+</html>

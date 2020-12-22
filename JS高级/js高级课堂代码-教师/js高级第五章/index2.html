@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				background: orange;
+			}
+			ul{
+				width: 150px;
+				height: 200px;
+				background: pink;
+				list-style: none;
+				display: none;
+				position: absolute;
+				z-index: 999;
+			}
+			li{
+				padding-left: 20px;
+				height: 50px;
+				line-height: 50px;
+				
+			}
+			li:hover{
+				border-left: 3px solid red;
+				background: blueviolet;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			定位   ：relative；相对定位   相对于本身
+				   absolute：绝对定位   决定于谁（它的父元素是否有定位，如果没有一直向上找
+					直到找到有定位的祖先元素）；
+					
+					后续向定位  必须用到absolute
+					
+			对定位的理解还是不够  。
+			
+			大型网站的时候  你就明白了  
+			能不用定位就不用定位 
+		-->
+		<ul id="ul">
+			<li>计算机基础</li>
+			<li>ps切图</li>
+			<li>html+css</li>
+			<li>js基础</li>
+		</ul>
+	</body>
+	<script type="text/javascript">
+		var ul=document.getElementById('ul');
+		document.oncontextmenu=function(e){
+			
+			var oEvent=e||event;
+			
+			ul.style.display='block';
+			
+			//想让ul盒子在鼠标点击的地方出现   必须给ul盒子定位(绝对定位)
+			ul.style.left=oEvent.clientX+'px';
+			ul.style.top=oEvent.clientY+'px';
+			
+			//如果你想要阻止默认事件，并改变其内容，必须把改变内容的代码放到阻止默认行为之前
+			return false; //阻止默认行为			
+		}
+		document.onclick=function(){
+			ul.style.display='none';
+		}
+	</script>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			div{
+				width: 100px;
+				height: 100px;
+				/*margin-left: 20px;
+				margin-top: 100px;*/
+				background: red;
+				cursor: move;	
+				position: absolute;		
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div"></div>
+		<script type="text/javascript">
+			/*
+			需求说明：使用鼠标事件对象以及 DOM 属性完成拖拽案例，
+			要求如下： 1、鼠标按在红色方块上可以随意的在浏览器内拖拽红色方块 
+			2、红色方块不可以超出上下左右浏览器的边界 
+			3、鼠标松开红色方块时，红色方块被拖拽到了哪里便停在哪里即可
+			* */
+			
+			//参考点  在浏览器点的左上角  （0,0）点 
+			var div=document.getElementById('div');
+			//得到盒子的宽和高
+//			console.log(div.offsetWidth);
+//			console.log(div.offsetHeight);
+			
+			//得到盒子到浏览器的距离（左上角是0,0点）			
+//			console.log(div.offsetLeft);
+//			console.log(div.offsetTop);
+			//鼠标按下事件
+			div.onmousedown=function(e){		
+				var oEvent=e || event;
+				//鼠标点击时候的坐标
+				var x=oEvent.clientX-div.offsetLeft;
+				var y=oEvent.clientY-div.offsetTop;				
+				//浏览器窗口的宽和高
+				//得到鼠标点击的点在浏览器的坐标
+				console.log(oEvent.clientX);
+				console.log(oEvent.clientY);
+				//得到浏览器的宽和高
+				var dWidth=document.documentElement.clientWidth;
+				var dHeight=document.documentElement.clientHeight;
+				console.log('浏览器的宽'+document.documentElement.clientWidth);
+				console.log('浏览器的高'+document.documentElement.clientHeight);
+				document.onmousemove=function(e){
+					var oEvent=e || event;
+					//移动时候的坐标				
+					var maxWidth=dWidth-div.offsetWidth;
+					var maxHeight=dHeight-div.offsetHeight;					
+					var left=oEvent.clientX-x;					
+					var top=oEvent.clientY-y;
+					if(left<0){
+						left=0;
+					}
+					if(top<0){
+						top=0;
+					};
+					if(left>maxWidth){
+						left=maxWidth;
+					}
+					if(top>maxHeight){
+						top=maxHeight;
+					}
+					div.style.left=left+'px';
+					div.style.top=top+'px';
+				}			
+			}
+			//鼠标松开事件
+			div.onmouseup=function(){
+				document.onmousemove=null;
+			}
+		</script>
+	</body>
+</html>

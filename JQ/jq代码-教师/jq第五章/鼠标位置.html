@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			div>img{
+				width: 200px;
+				height: 200px;
+				border: 1px solid black;
+			}
+			ul{
+				list-style: none;
+				width: 200px;
+				height: 50px;
+			}
+			li{
+				width: 50px;
+				height: 50px;
+				float: left;
+			}
+			li>img{
+				width: 50px;
+				height: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<img src="img/1.jpg"/>
+			<ul>
+				<li><img src="img/1.jpg"/></li>
+				<li><img src="img/2.jpg"/></li>
+				<li><img src="img/3.jpg"/></li>
+			</ul>
+		</div>
+	</body>
+	<script src="js/jquery3.5.0jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('li>img').hover(function(){
+				//如何得到 图片的路径
+				console.log($(this).attr('src'));
+				var a=$(this).attr('src');
+				$('div>img').attr('src',a);
+			})
+		})
+	</script>
+</html>

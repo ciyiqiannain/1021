@@ -1,0 +1,22 @@
+.center2{
+				width: 1200px;
+				height: 164px;
+			}
+			.center2>ul{
+				float: left;
+			}
+			.center2>ul>li{
+				margin-right: 10px;
+				float: left;
+				font-size: 14px;
+			}
+			.center2>ul>li>.ul2{
+				width: 203px;
+			}
+			.center2>ul>li>ul>.li{
+				font-size: 18px;
+				color: green;
+			}
+			.center2>ul>li>ul>li{
+				margin: 16px 0px;
+			}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>删除和替换</title>
+	</head>
+	<body>
+		<div id="div">
+			<ul id="ul">
+				<li>11111</li>
+				<li>22222</li>
+				<li>33333</li>
+			</ul>
+			<button onclick="rem()">删除</button>
+			
+			<p id="p">
+				<img src="img/f01.jpg"/>
+			</p>
+			
+			<button onclick="rep()">替换</button>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var div=document.getElementById('div');
+		var ul=document.getElementById('ul');
+		var p=document.getElementById('p');
+		
+		var lis=document.getElementsByTagName('li');
+		
+		function rem(){
+			p.removeChild(p.childNodes[1]);
+		}
+		function rep(){
+			var img=document.createElement('img');
+			img.setAttribute('src','img/f02.jpg');
+			p.replaceChild(img,p.firstElementChild);
+		}
+	</script>
+</html>

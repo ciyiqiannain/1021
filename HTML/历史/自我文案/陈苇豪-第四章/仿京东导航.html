@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>仿京东导航</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul{
+				list-style: none;
+				border: 1px solid black;
+			}
+			li{
+				display: inline-block;
+				margin-left:20px ;
+				padding: 10px;
+				margin-bottom: 30px;
+				cursor: pointer;
+				border-right: 1px solid black;
+			}
+			a{
+				text-decoration: none;
+				color: black;
+			}
+			div{
+				width: 1500px;
+				height: 100px;
+				background:-webkit-linear-gradient(top,pink,white,white) ;
+			}
+			.g{
+				width:15px ;
+				height: 20px;
+				background: url(img/tel.png);
+				cursor: pointer;
+				display: inline;
+				background-repeat:no-repeat ;
+			}
+			.g:hover{
+				background-position-y: -25px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<ul>
+				<li>你好，请登录</li>
+				<li><a href="#"><strong>免费注册</strong></a></li>
+				<li>我的订单</li>
+				<li>我的京东</li>
+				<li>京东会员</li>
+				<li>企业采购</li>
+				<div class="g">
+				<li>手机京东</li>
+				</div>
+				<li>关注京东</li>
+				<li>客户服务</li>
+				<li>客户服务</li>
+			</ul>
+		</div>
+	</body>
+</html>

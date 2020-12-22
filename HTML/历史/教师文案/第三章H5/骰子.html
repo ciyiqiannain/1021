@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box1{
+				width: 500px;
+				margin: 100px auto;
+				perspective: 1000px;
+			}
+			.box2{
+				transform-style: preserve-3d;
+				width: 100px;
+				height: 100px;
+				border: 1px solid red;
+				padding: 100px;
+				transform: rotateX(-40deg) rotateY(32deg);
+				position: relative;
+				transition: all 3s;
+			}
+			.box2:hover{
+				transform: rotate3d(1.2,1.3,1.4,360deg);
+			}
+			.box2>div{
+				width: 100px;
+				height: 100px;
+				line-height: 100px;
+				text-align: center;
+				font-size: 36px;
+				color: white;
+				background: burlywood;
+				opacity: 0.6;
+				position: absolute;
+				border: 1px solid red;
+			}
+			.one{
+				transform: translateZ(50px);
+			}
+			.two{
+				transform: translateZ(-50px);
+			}
+			.three{
+				transform: rotateY(90deg) translateZ(50px);
+			}
+			.four{
+				transform: rotateY(90deg) translateZ(-50px);
+			}
+			.five{
+				transform: rotateX(90deg) translateZ(-50px);
+			}
+			.six{
+				transform: rotateX(90deg) translateZ(50px);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1">
+			<div class="box2">
+				<div class="one">1</div>
+				<div class="two">2</div>
+				<div class="three">3</div>
+				<div class="four">4</div>
+				<div class="five">5</div>
+				<div class="six">6</div>
+			</div>
+		</div>
+	</body>
+</html>

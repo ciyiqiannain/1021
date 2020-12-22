@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button onclick="jia()">+</button>
+		<button onclick="jian()">-</button>
+		<p id="p">
+			经过仔细分析之后，我们也发现，一直以来在世界科技领域，
+			美国习惯了一家独大，所以美国只要看到有其他国家的企业有
+			超越自己的趋势，就要进行各种打压。所以看到华为在5G领域
+			取得了全球领先的优势以后，特朗普就率先对华为动手了，可
+			是让人没想到的是，华为在5G移动通讯领域的实力是强大的，就
+			算是面对美国的打击和制裁，华为5G在国际市场上也依旧很受人欢
+			迎，华为不仅没有被打倒，反而特朗普还免费给华为打了广告，让世
+			界更加认识和认可了华为！
+		</p>
+	</body>
+	<script type="text/javascript">
+		var p=document.getElementById('p');
+		var num=18;
+		
+		function  jia () {
+			num=num+2;
+			p.style.fontSize=num+'px';
+			console.log(num);
+		}
+		
+		function  jian () {
+			num=num-2;
+			p.style.fontSize=num+'px';
+			console.log(num);
+		}
+		
+	</script>
+</html>

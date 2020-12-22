@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#img{
+				width: 993px;
+				height: 1799px;
+				margin: 0 auto;
+			}
+			#fix{
+				position: fixed;
+				left: 0px;
+				top: 100px;
+			}
+			#fix>img:nth-child(1){
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				z-index: 999;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="img">
+			<img src="img/contentpic.jpg"/>
+		</div>
+		<div id="fix">
+			<img src="img/close.jpg" onclick="clo()"/>
+			<img src="img/advpic.jpg" id="fix"/>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var fix=document.getElementById('fix');
+		function clo() {
+			fix.style.display='none';
+		}
+	</script>
+</html>

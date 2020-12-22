@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p id='p'>今天天气很好</p>
+		<img src="img/1.jpg" id="img" title="图片"/>
+		<button onclick="bian()">点击改变图片</button>
+	</body>
+	<script type="text/javascript">
+//		document.write('适合踏青');
+		//先找到p标签对象
+//		var p = document.getElementById('p');		
+//		p.innerHTML='适合踏青';
+		var img=document.getElementById('img');
+		console.log(img);
+		function bian(){
+			var img=document.getElementById('img');
+			console.log(img);
+			img.src='img/4.jpg';
+			img.title='不是原来的图片';
+		}
+	</script>
+</html>

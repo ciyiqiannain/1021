@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="chartContainer" style="height: 370px; width: 50%;"></div>
+		<script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
+	</body>
+	<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		window.onload = function () {
+									//Chart图表，Container容器
+		var chart = new CanvasJS.Chart("chartContainer", {
+			theme: "dark1", // "light2", "dark1", "dark2"----------------背景
+			animationEnabled: true, // change to true		//animationEnabled使影像实现，动画
+			title:{
+				text: "Basic Column Chart"
+			},
+			data: [
+			{
+				// Change type to "bar"条图, "area"域图, "spline"线图, "pie"饼图,etc.（这个是？？？）,column柱图
+				type: "spline",
+				dataPoints: [
+					{ label: "apple",  y: 10  },
+					{ label: "orange", y: 15  },
+					{ label: "banana", y: 25  },
+					{ label: "mango",  y: 30  },//50，70，100
+					{ label: "grape",  y: 28  }
+				]
+			}
+			]
+		});
+		chart.render();
+		
+		}
+	</script>
+</html>

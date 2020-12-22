@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.a{
+				color: red;
+			}
+			.b{
+				font-family: "宋体";
+			}
+			.c{
+				font-size: 48px;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="btn1">按钮1</button>
+		<button id="btn2">按钮2</button>
+		<button id="btn3">移除</button>
+		<p>今天天气不错，所以心情就好</p>
+	</body>
+	<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('#btn1').click(function(){
+				$('p').addClass('a');
+			});
+			//添加多个类名的时候     只写一个引号   将对于的类名放到引号里面   用空格隔开
+			$('#btn2').click(function(){
+				$('p').addClass('b c');
+			});
+			$('#btn3').on('click',function(){
+				$('p').removeClass('a b');
+			})
+		})
+	</script>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="js/jquery-3.5.1.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function () {
+//			多个用法
+			function ajaxs (url) {
+				return new Promise(function (resolve,reject) {
+					$.ajax({
+						url: url,
+						dataType:'json',
+						success:function (date) {
+							resolve(date);
+						},
+						error:function (err) {
+							reject(err);
+						},
+					});
+				});
+			}
+		    Promise.all([
+		    	ajaxs('json/anime.json'),
+		    	ajaxs('json/books.json')
+		    	]).then(
+		    	function (arr) {
+//		    		let arr = [arr1,arr2]//无效
+		    		let [anime, books] = arr;
+		    		console.log(anime.title);
+		    		console.log(books.title);
+		    	},
+		    	function () {
+		    		console.log('至少一个失败了');
+		    	}
+		    );
+		})
+	</script>
+</html>

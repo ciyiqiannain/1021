@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 500px;
+				height: 20px;
+				font-size: 16px;
+				line-height: 20px;
+				border: 1px solid darkgray;
+				overflow: hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			1.明明只是活着，哀伤却无处不在……<br />
+			2.你指尖跳动的电光，是我此生不变的信仰<br />
+			3.因为等待的越久，重逢时就越幸福啊。<br />
+			4.你们这些天才止步不前的时候，我会走得更远。<br />
+			5.雨滴降落的速度是每秒十米，我该用怎么样的速度，才能将你挽留？<br />
+			6.即使想放弃，也没法放弃最想要的东西，这就是人<br />
+			7.摘自一言：https://v1.hitokoto.cn/?c=a&amp;encode=text
+		</div>
+	</body>
+	<script type="text/javascript">
+		var Div=document.getElementsByTagName('div');
+		var timer=null;
+		var num=0;
+		console.log(Div[0].innerText);/*获取纯文本，这个便于分割数组 下面注释的
+										innerHTML这个获取到<br/>标签，我不会分*/
+		var Arr=Div[0].innerText.split("\n");//把字符串分割成数组
+		//鼠标移入
+		Div[0].onmouseover=function () {
+			clearInterval(timer);
+		}
+		//鼠标移出
+		Div[0].onmouseout=function () {
+			console.log("onmouseout");
+			timer=setInterval(yiyan,1000);
+		}
+		function yiyan () {
+			console.log(Arr[num]);
+			Div[0].innerText=Arr[num];
+			num++;
+			if (num==7) {
+				num=0;
+			}	
+		}
+		timer=setInterval(yiyan,1000);
+	</script>
+</html>

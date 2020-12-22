@@ -1,0 +1,30 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+div{
+	width: 1200px;
+	margin: 0 auto;
+}
+ul{
+	list-style: none;
+	margin: 0 auto;
+}
+a{
+	text-decoration: none;
+}
+ul>li{
+	float: left;
+	padding: 15px 60px;
+	background-color: blue;
+}
+ul>li:hover{
+	color: white;
+	background-color: black;
+}
+ul>li:hover>a{
+	color: white;
+}
+ul>li>a{
+	color: black;
+}

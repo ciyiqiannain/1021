@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>滑动轮播</title>
+		<link rel="stylesheet" type="text/css" href="css/滑动轮播.css"/>
+	</head>
+	<body>
+		<!--
+			1、滑动  从右向左    每次滑动的距离就是一张图片的宽度
+			2、定时器      进行自动轮播
+			3.当鼠标    触碰到盒子的时候   清除定时器
+			4.左右箭头       显示和隐藏hover事件
+			5。点击对应数字      图片也对应显示
+		-->
+		
+		<div id="box">
+			<ul id="pic">
+				<li><img src="img/1.jpg"/></li>
+				<li><img src="img/2.jpg"/></li>
+				<li><img src="img/3.jpg"/></li>
+				<li><img src="img/4.jpg"/></li>
+				<li><img src="img/5.jpg"/></li>
+			</ul>
+			<ul id="num">
+				<li class="active">1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+			</ul>
+			<p>
+				<span id="left"><</span>
+				<span id="right">></span>
+			</p>
+		</div>
+		
+	</body>
+	<script src="js/jquery3.5.0jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/滑动轮播.js" type="text/javascript" charset="utf-8"></script>
+</html>

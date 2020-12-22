@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div onclick="box()">
+			<button id="btn">按钮</button>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var btn=document.getElementById('btn');
+		function box(){
+			console.log('大盒子');
+		}
+		btn.onclick=function(e){
+			console.log('按钮');
+			e.stopPropagation();
+			e.cancelBubble=true;
+		}
+		document.oncontextmenu=function(e){
+			return false;
+		}
+	</script>
+</html>

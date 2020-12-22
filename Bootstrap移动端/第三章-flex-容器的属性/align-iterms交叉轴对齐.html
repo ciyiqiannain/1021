@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<style type="text/css">
+			*{
+	    		margin: 0;
+	    		padding: 0;
+	    	}
+	    	/*flex-start 默认，左	 flex-end 终		center 中	 stretch 自动填高*/
+	    	div{
+	    		height: 300px;
+	    		border: 1px solid black;
+	    		display: flex;
+	    		/*align-items: flex-start;*/
+	    		/*align-items: flex-end;*/
+	    		/*align-items: center;*/
+	    		align-items: stretch;
+	    		
+	    	}
+	    	div>p{
+	    		width: 100px;
+				border: 1px solid darkviolet;
+				text-align: center;
+				line-height: 100px;
+	    	}
+	    	</style>
+	</head>
+	<body>
+		<div>
+			<p>壹</p>
+			<p>贰</p>
+			<p>叁</p>
+		</div>
+	</body>
+</html>

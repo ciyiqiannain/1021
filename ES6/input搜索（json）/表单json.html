@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="" method="post">
+			<p>账号：<input type="text" name="name" id="name" value="" /></p>
+			<p>密码：<input type="text" name="name" id="pass" value="" /></p>
+			<p>
+				<input type="button" value="注册"/>
+				<input type="submit" value="提交"/>
+			</p>
+		</form>
+	</body>
+	<script src="js/jquery-3.5.1.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/runner.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function () {
+			runner(function *(){
+				let data=yield $.ajax({url:"json/form.json",dataType:"json"});
+				console.log(data)
+				setTimeout(()=>{console.log(data)},2000);
+//					console.log(data.form.name)
+				$('[type=button]').click(function () {
+					data.form.name=$('#name').val();
+					console.log(data.form.name);
+					data.form.pass=$('#pass').val();
+					console.log(data.form.pass);
+					return false;
+				})
+				$('[type=submit]').click(function () {
+					var $reg=/^[a-zA-Z0-9]{6,12}/;
+					if ($reg.test( $('#pass').val() )==false && $reg.test( $('#name').val() )==false) {
+						alert('账号或密码格式错误')
+						return false;
+					}
+					if ($('#name').val()!=data.form.name) {
+						alert('账号有误')
+						return false;
+					}
+					if ($('#pass').val()!=data.form.pass) {
+						alert('密码有误')
+						return false;
+					}
+				})
+			})	
+		})
+	</script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function Person(){
+	        this.foot = 2;
+	        this.head=1;
+	        this.favorColor=["red","yellow"];
+	    }
+	    Person.prototype.sayColor=function(){
+	    	console.log("Hello,我最爱的颜色是："+this.favorColor);
+	    }
+	
+	    function Student(name,no){
+	        //使用构造函数绑定实现了对父类属性的继承
+	        Person.call(this);
+	        this.name=name;
+	        this.no=no;
+	    }
+	
+	     //原型链继承-继承property对象的属性和方法
+	    Student.prototype = new Person();
+	    Student.prototype.constructor = Student;
+	    var stu1 = new Student("张三","s001");
+	    console.log(stu1.foot);
+	    console.log(stu1.head);
+	    console.log(stu1.favorColor);
+	    stu1.sayColor();
+	
+	    var stu2 = new Student("李四","s002");
+	    console.log(stu2.foot);
+	    console.log(stu2.head);
+	    console.log(stu2.favorColor);
+	    stu2.sayColor();
+	</script>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			p{
+				margin: 0 auto;
+				width: 300px;
+				height: 300px;
+				line-height: 300px;
+				text-align: center;
+				background: black;
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<button class="btn1">淡入</button>
+		<button class="btn2">淡出</button>
+		<button class="btn3">切换</button>
+		<p>淡入淡出</p>
+	</body>
+	<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function () {
+			$('.btn1').click(function () {
+				$('p').fadeIn(2000);
+			})
+			$('.btn2').click(function () {
+				$('p').fadeOut(2000);
+			})
+			$('.btn3').click(function () {
+				$('p').fadeToggle(2000);
+			})
+		})
+	</script>
+</html>

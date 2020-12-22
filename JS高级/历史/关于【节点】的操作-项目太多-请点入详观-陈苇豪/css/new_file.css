@@ -1,0 +1,101 @@
+*{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	header{
+		margin: 0 auto;
+		width: 809px;
+		height: 49px;
+	}
+	header>.left{
+		float: left;
+		background-image: url(../img/dd_logo.jpg);
+		width: 250px;
+		height: 49px;
+	}
+	header>.right{
+		float: right;
+	}
+	header>.right>button{
+		margin-top: 15px;
+		width: 65px;
+		height: 25px;
+		border-radius: 10px;
+		border: 0px;
+		color: white;
+		background: red;
+	}
+	.box{
+		margin: 0 auto;
+		background-image: url(../img/shoppingBg.jpg);
+		width: 809px;
+		height: 415px;
+		position: relative;
+	}
+	.box1{
+			position: absolute;
+			top: 150px;
+			left: 378px;
+	}
+	.box1>button{
+			width: 25px;
+			height: 25px;
+	}
+	.box1>button:nth-child(2){
+			margin-left: 27px;
+	}
+	.box1>button:nth-child(4){
+			margin-right: 38px;
+	}
+	.box1>p{
+		display: inline-block;
+	}
+	.box1>button:last-of-type{
+		margin-left: 20px;
+		width: 50px;
+	}
+	.box2{
+			position: absolute;
+			top: 254px;
+			left: 378px;
+	}
+	.box2>button{
+			width: 25px;
+			height: 25px;
+	}
+	.box2>button:nth-child(2){
+			margin-left: 27px;
+	}
+	.box2>button:nth-child(4){
+			margin-right: 38px;
+	}
+	.box2>p{
+		display: inline-block;
+	}
+	.box2>button:last-of-type{
+		margin-left: 20px;
+		width: 50px;
+	}
+	.box3{
+		width: 800px;
+		height: 95px;
+		border:3px solid red;
+		position: relative;
+		top: 323px;
+	}
+	.box3>button{
+		width: 75px;
+		height: 39px;
+		color: white;
+		background: red;
+		border-radius: 35px;
+		position: absolute;
+		left: 700px;
+		top: 30px;
+	}
+	.box3>p{
+		position: absolute;
+		top: 29px;
+		right: 164px;
+	}

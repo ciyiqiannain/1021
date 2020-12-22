@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.active{
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>1111111111111</li>
+			<li>1111111111111</li>
+			<li>1111111111111</li>
+			<li>1111111111111</li>
+			<li>1111111111111</li>
+			<li>1111111111111</li>
+		</ul>
+	</body>
+	<script src="js/jquery3.5.0jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('li').hover(function(){
+				$(this).addClass('active').siblings().removeClass('active');
+			})
+		})
+	</script>
+</html>

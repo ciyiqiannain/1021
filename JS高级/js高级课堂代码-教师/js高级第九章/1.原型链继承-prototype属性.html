@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		
+	</body>
+	<script type="text/javascript">
+		//创建人类
+		function Person(){
+			this.foot=2;
+			this.head=1;
+		}
+		//创建学生类
+		function Student(name,no){
+			this.name=name;
+			this.no=no;
+		}
+		//通过prototype属性实现继承
+    	//Student的prototype属性指向一个Person实例的写法，相当于完全删除了prototype原先的值,赋了一个新值
+		Student.prototype=new Person();  //继承
+		//手工理顺一下继承链
+		Student.prototype.constructor=Student;
+		//每个实例的prototype对象都有一个constrctor属性
+		console.log(Student.prototype.constructor);
+		
+		//继承链紊乱
+		var stu1=new Student('张三','s001');  //实例化对象
+		console.log(stu1.constructor);
+		console.log(stu1.name);
+		console.log(stu1.no);
+		
+		console.log(stu1.foot);
+		console.log(stu1.head);
+	</script>
+</html>

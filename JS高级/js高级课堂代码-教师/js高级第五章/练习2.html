@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul{
+				list-style: none;
+				width: 200px;
+				height: 200px;
+				background: pink;
+				display: none;
+				position: absolute;
+			}
+			li{
+				width: 180px;
+				height: 50px;
+				line-height: 50px;
+				padding-left: 20px;
+			}
+			li:hover{
+				background: blueviolet;
+			}
+		</style>
+	</head>
+	<body>
+		<ul id="ul">
+			<li>html+css</li>
+			<li>js基础</li>
+			<li>js高级</li>
+			<li>jq基础</li>
+		</ul>
+	</body>
+	<script type="text/javascript">
+		var ul=document.getElementById('ul');
+		document.oncontextmenu=function(e){
+			
+			var oEvent=e||event;
+			
+			ul.style.display='block';
+			ul.style.left=oEvent.clientX+'px';
+			ul.style.top=oEvent.clientY+'px';
+			return false;
+		}
+		document.onclick=function(){
+			ul.style.display='none';
+		}
+	</script>
+</html>

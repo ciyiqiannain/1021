@@ -1,0 +1,81 @@
+.middle>.left{
+				width: 198px;
+				height: 607px;
+				margin-top: 38px;
+			}
+			.middle>.left>.left1{
+				width: 198px;
+				height: 148px;
+			}
+			.middle>.left>.left1>h4{
+				padding-top: 4px;
+				padding-bottom: 15px;
+				color: yellowgreen;
+			}
+			.middle>.left>.left1>ul{
+				float: left;
+			}
+			.middle>.left>.left1>ul>li{
+				float: left;
+				margin: 0px 3px;
+			}
+			.middle>.left>.left1>ul>.li{
+				margin-left: 22px;
+			}
+			.middle>.left>.left2{
+				width: 198px;
+				height: 148px;
+			}
+			.middle>.left>.left2>h4{
+				padding-top: 6px;
+				padding-bottom: 12px;
+				color: yellowgreen;
+			}
+			.middle>.left>.left2>ul{
+				float: left;
+			}
+			.middle>.left>.left2>ul>li{
+				float: left;
+				margin: 0px 3px;
+			}
+			.middle>.left>.left2>ul>.li{
+				margin-left: 22px;
+			}
+			.middle>.left>.left3{
+				width: 198px;
+				height: 148px;
+			}
+			.middle>.left>.left3>h4{
+				padding-top: 4px;
+				padding-bottom: 12px;
+				color: yellowgreen;
+			}
+			.middle>.left>.left3>ul{
+				float: left;
+			}
+			.middle>.left>.left3>ul>li{
+				float: left;
+				margin: 0px 3px;
+			}
+			.middle>.left>.left3>ul>.li{
+				margin-left: 22px;
+			}
+			.middle>.left>.left4{
+				width: 198px;
+				height: 148px;
+			}
+			.middle>.left>.left4>h4{
+				padding-top: 4px;
+				padding-bottom: 12px;
+				color: yellowgreen;
+			}
+			.middle>.left>.left4>ul{
+				float: left;
+			}
+			.middle>.left>.left4>ul>li{
+				float: left;
+				margin: 0px 3px;
+			}
+			.middle>.left>.left4>ul>.li{
+				margin-left: 22px;
+			}

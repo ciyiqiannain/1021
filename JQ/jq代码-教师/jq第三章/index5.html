@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		用户名：<input type="text" name="" id="" value="" /><br />
+		密码：<input type="password" name="" id="input1" value="" />
+	</body>
+	
+	<script src="js/jquery3.5.0jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+//		13     这个    13   不一定是数字        有可能是字符串
+//		var  a=13;	
+//		var b='13';	
+//		console.log(a+b);
+
+
+		$(function(){
+			$('#input1').keyup(function(){
+				console.log('松开')
+			})
+			$(document).keyup(function(event){
+				if(event.keyCode===13){
+					alert('点击回车键');
+				}
+			})
+		})
+	</script>
+</html>

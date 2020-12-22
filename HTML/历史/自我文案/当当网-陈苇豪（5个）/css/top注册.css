@@ -1,0 +1,26 @@
+.top{
+				width: 939px;
+				height: 55px;
+				background: -webkit-radial-gradient(top,RGB(247, 235, 200),white);
+				border: 1px solid pink;
+			}
+			.top>.left{
+				float: left;
+				margin-top: 10px;
+				margin-left: 50px;
+			}
+			.top>.right{
+				float: right;
+			}
+			.top>.right>ul>li{
+				margin-right: 2px;
+				margin-left: 2px;
+				margin-top: 32px;
+				padding-right: 20px;
+				padding-left: 7px;
+				border-right:1px solid black ;
+				float: left;
+			}
+			.top>.right>ul>.li{
+				border: none;
+			}

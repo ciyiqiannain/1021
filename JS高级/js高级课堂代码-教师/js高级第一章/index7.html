@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button onclick="xian()">显示</button>
+		<button onclick="qu()">取消</button>
+		<p id="p"></p>
+	</body>
+	<script type="text/javascript">
+//		js里面只有函数有作用域
+		var p=document.getElementById('p');
+		var time=null;
+		function xian(){
+			time=setTimeout(function(){
+				p.innerHTML='今天星期四';
+			},3000);
+		}
+		function qu(){
+			clearTimeout(time);
+		}
+	</script>
+</html>

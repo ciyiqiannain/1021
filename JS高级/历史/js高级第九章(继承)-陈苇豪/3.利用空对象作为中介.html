@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function Person(){
+			
+		}
+		Person.prototype.foot=2;
+		Person.prototype.head=1;
+		
+		function Student(name,no){
+	        this.name=name;
+	        this.no=no;
+	    }
+		//F空对象，几乎不占内存
+		var F=function(){};
+		F.prototype = Person.prototype;
+    	Student.prototype = new F();
+    	
+    	 var stu1 = new Student("张三","s001");
+    	Student.prototype.constructor = Student;
+    	
+    	console.log(stu1.constructor);
+    	console.log(stu1.name);
+    	console.log(stu1.no);
+    	
+    	console.log(stu1.foot);
+		console.log(stu1.head);
+		
+		//F空对象作为中介解决了如下缺点
+    			// 缺点：把父类Person的constructor也同步改掉了
+		 console.log(Person.prototype.constructor);
+	</script>
+</html>

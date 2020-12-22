@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul{
+				list-style: none;
+				width: 102px;
+			}
+			li{
+				width: 100px;
+				text-align: center;
+				border: 1px solid black;
+				background: green;
+				color: white;
+			}
+			li>p{
+				display: none;
+				background: white;
+				border: 1px solid black;
+				color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>1
+				<p>1</p>
+				<p>2</p>
+				<p>3</p>
+			</li>
+			<li>2
+				<p>1</p>
+				<p>2</p>
+				<p>3</p>
+			</li>
+			<li>3
+				<p>1</p>
+				<p>2</p>
+				<p>3</p>
+			</li>
+			<li>4
+				<p>1</p>
+				<p>2</p>
+				<p>3</p>
+			</li>
+			<li>5
+				<p>1</p>
+				<p>2</p>
+				<p>3</p>
+			</li>
+		</ul>
+	</body>
+	<script src="js/1.3.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function () {
+			$('ul>li').toggle(
+				function () {
+					$(this).children('p').slideDown(500);
+					$(this).siblings('li').children('p').slideUp(500);
+				},
+				function () {
+					$(this).children('p').slideUp(500);
+				}
+			)
+		})
+	</script>	
+</html>

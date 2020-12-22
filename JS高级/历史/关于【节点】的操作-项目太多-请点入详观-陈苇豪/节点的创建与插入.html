@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		//appendChild节点
+		
+		//createElement()创建元素节点
+		//createTextNode()创建文本节点
+		var p=document.createElement('p');
+		var w=document.createTextNode('4444');
+		console.log(p);
+		console.log(w);
+		p.appendChild(w);
+		console.log(p);
+		
+		//A.appendChild(B)将B节点添加到A节点的末尾
+		var b=document.createElement('b');
+		p.appendChild(b);
+		
+		//C.appendChild(A,B)把A节点插在B节点前面，且A、B都在C节点里面
+		var c=document.createElement('c');
+		p.insertBefore(c,b);
+		
+		//cloneNode()复制节点，
+		//cloneNode(true)复制节点全部内容，
+		//cloneNode(false)仅复制节点元素，
+		c.appendChild(w);
+		p.appendChild(c.cloneNode(true));
+		p.appendChild(c.cloneNode(false));
+	</script>
+</html>

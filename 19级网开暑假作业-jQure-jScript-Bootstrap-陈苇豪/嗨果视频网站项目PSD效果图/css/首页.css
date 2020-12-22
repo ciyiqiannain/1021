@@ -1,0 +1,212 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.box{
+	width: 1519px;
+	height: 5627px;
+}
+/*-------------------nav--------------------*/
+nav{
+	width: 100%;
+	height: 70px;
+	background: black;
+}
+nav>ul{
+	width: 90%;
+	height: 70px;
+	margin: 0 auto;
+}
+nav>ul>li{
+	float: left;
+	height: 70px;
+	line-height: 70px;
+	color: white;
+	margin: 0px 5px;
+}
+nav>ul>li>a{
+	color: white;
+}
+nav>ul>li>img{
+	vertical-align: middle;
+}
+nav>ul>.li{
+	width: 27%;
+}
+nav>ul>.li>button{
+	width: 100%;
+	height: 30px;
+	background: RGB(66, 68, 81);
+	border: none;
+	margin-top: 20px;
+	position: relative;
+}
+nav>ul>.li3{
+	width: 7%;
+}
+nav>ul>.li3>button{
+	width: 100%;
+	height: 30px;
+	background: -webkit-linear-gradient(left,green,yellow);
+	border: none;
+	margin-top: 20px;
+	color: white;
+	position: relative;
+}
+.sp1{
+	position: absolute;
+	top: 6px;
+	right: 5px;
+}
+.sp2{
+	position: absolute;
+	top: 5px;
+	left: 3px;
+}
+.li2{
+	float: right;
+}
+.li2>ul{
+	float: left;
+	margin: 0px 5px;
+}
+.li2>ul>li{
+	color: white;
+	height: 24px;
+	line-height: 10px;
+	text-align: center;
+	font-size: 12px;
+	cursor: pointer;
+}
+.li2>ul>li:first-of-type{
+	margin-top: 20px;
+}
+.li2>ul:last-of-type>li{
+	margin-top: 10px;
+}
+/*-------------------list--------------------*/
+.list{
+	margin: 0 auto;
+	width: 100%;
+	height: 435px;
+	border: 1px solid black;
+	/*overflow: hidden;*/
+	position: relative;
+}
+.list>#pic{
+	width: 100%;
+	height: 435px;
+}
+.list>#pic>li{
+	width: 100%;
+	height: 435px;
+	position: absolute;
+}
+.list>#pic>li:nth-child(1){
+	z-index: 1;
+}
+.list>#pic>li>img{
+	width: 100%;
+	height: 435px;
+}
+.list>#num{
+	width: 325px;
+	height: 50px;
+	position: absolute;
+	bottom: 45px;
+	left: 40%;
+	z-index: 999;
+}
+.list>#num>li{
+	float: left;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	border-radius: 25px;
+	opacity: 0.5;
+	color: white;
+	margin-left: 15px;
+}
+.list>p{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	position: absolute;
+	top: 40%;
+	z-index: 999;
+}
+.list>p>span{
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 54px;
+	background: #1B6D85;
+	opacity: 0.5;
+}
+.list>p>#left{
+	float: left;
+}
+.list>p>#right{
+	float: right;
+}
+.a{
+	z-index: 1;
+}
+.b{
+	background: blue;
+}
+/*-------------------one--------------------*/
+.one{
+	width: 100%;
+	height: 199px;
+}
+.one>h2{
+	width: 90%;
+	height: 63px;
+	margin: 0 auto;
+}
+.one>h2>img{
+	width: 100%;
+}
+.one>p{
+	width: 90%;
+	margin: 0 auto;
+}
+.one>p>img{
+	width: 100%;
+}
+.two{
+	width: 100%;
+	height: 299px;
+}
+.three{
+	width: 100%;
+	height: 356px;
+}
+.four{
+	margin: 0 auto;
+	width: 90%;
+	height: 70px;
+	background: RGB(189, 189, 189);
+}
+.five{
+	margin: 0 auto;
+	width: 90%;
+	height: 49px;
+}
+.five>p{
+	margin: 0 auto;
+	width: 100%;
+	height: 49px;
+	text-align: center;
+}
+.six{
+	height: 136px;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				margin: 0 auto;
+				width: 500px;
+				height: 300px;
+				overflow: auto;
+				border: 1px solid black;
+			}
+			.txt{
+				margin: 0 auto;
+				width: 500px;
+				height: 100px;
+				border: 1px solid black;
+				position: relative;
+			}
+			.btn{
+				width: 100px;
+				height: 30px;
+				background-color: cornflowerblue;
+				text-align: center;
+				border: none;
+				position: absolute;
+				right: 5px;
+				bottom: 5px;
+			}
+			.sty{
+				background: lightpink;
+				padding: 3px 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+		<div class="txt">
+			<textarea rows="7	" cols="68" class="wenben"></textarea>
+			<button class="btn">确定（s）</button>
+		</div>
+	</body>
+	<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function () {
+			
+			$('.btn').click(function () {
+				var $ttt=$('.wenben').val();
+				
+				var arrui=['音','阙','诗'];
+				var arrimg=['images/head01.jpg','images/head02.jpg','images/head03.jpg'];
+				var number=Math.floor(Math.random()*3);
+				
+				var ui=arrui[number];
+				var img='<img src='+arrimg[number]+'/>';
+				
+				if ($(".wenben").val()=="") {
+					alert('不能为空');
+				} else{
+					$('.box').append(img+ui+'<p>'+$ttt+'</p>')
+					$('.box p').addClass('sty');
+					$('.wenben').val('');
+				}
+				
+				
+			})
+		})
+	</script>
+</html>

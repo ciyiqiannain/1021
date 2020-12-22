@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.div1{
+				margin: 100px auto;
+				width: 100px;
+				height: 100px;
+				background: red;
+				/*transform: translate(100px,200px);*/
+				/*移动*/
+				/*transform: translate(100px);*/
+				/*缩放*/
+				/*transform: scale(2);*/
+				/*倾斜*/
+				transform: skew(91deg);
+				/*旋转*/
+				/*transform: rotate(90deg);*/
+			}
+			img{
+				transition: all 2s;
+			}
+			img:hover{
+				transform: rotate(360deg) scale(2);	
+			}
+		</style>
+	</head>
+	<body>
+		<div class="div1"></div>
+		<img src="img/facebook.png"/>
+	</body>
+</html>

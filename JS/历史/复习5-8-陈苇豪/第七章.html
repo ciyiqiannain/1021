@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		/*//		查找字母出现的次数
+		var a=['Asada','adad','hEdt','gtdrsdv','vefvs','Evsa',];
+		var b=0;
+		for (var i=0;i<a.length;i++) {
+			if (a[i].indexOf('d') != -1 || a[i].indexOf('E') != -1) {
+				b++;
+			}
+		}
+		document.write(b);*/
+		
+		/*//字母大写
+		var a=['csada','adad','hEdt','gtdrsdv','vefvs','evsa'];
+		for (var index in a) {
+			a[index]=a[index].substring(0,1).toUpperCase()+a[index].substring(1);
+		}
+		document.write(a);//Csada,Adad,HEdt,Gtdrsdv,Vefvs,Evsa*/
+		
+		//10-100的10个随机数排序+排重
+		var arr=[];
+		for (var a=0;a<10;a++) {
+			var num=parseInt(Math.random()*90+10);
+			if (arr.indexOf(num)>=0) {
+				a--;
+			} else{
+				arr.push(num);
+			}
+		}
+		document.write(arr.sort()+'<br/>');
+	</script>
+</html>

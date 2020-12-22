@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<style type="text/css">
+			*{
+				font-size: 0.1rem;
+			}
+			.bag{
+				width: 375px;
+				height: 557px;
+				position: relative;
+			}
+			.bag>img{
+				width: 375px;
+				height: 557px;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+			}
+			.img2{
+				z-index: 2;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="bag vimg">
+			<img src="img/bag1.png" class="img1"/>
+			<img src="img/bag2.png" class="img2"/>
+		</div>
+	</body>
+	<script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		Zepto(function () {
+			$('.bag').swipe(function () {
+				$('.img2').toggle();
+			})
+		})
+	</script>
+</html>

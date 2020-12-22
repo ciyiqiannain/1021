@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			h1{
+				background: black;
+				color: white;
+			}
+			p{
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="h1">林徽因简介</h1>
+		<p id="p1">林徽因（1904年6月10日－1955年4月1日），汉族，福建闽县（福州）人，
+			出生于浙江杭州。原名林徽音，其名出自“《诗·大雅·思齐》：大姒嗣徽音，
+			则百斯男”。后因常被人误认为当时一男作家“林微音”，故改名“徽因”。
+			中国著名建筑师、诗人和作家，人民英雄纪念碑和中华人民共和国国徽深化方
+			案的设计者之一、建筑师梁思成的第一任妻子。二十世纪三十年代初，同梁思
+			成一起用现代科学方法研究中国古代建筑，成为这个学术领域的开拓者，后来在
+			这方面获得了巨大的学术成就，为中国古代建筑研究奠定了坚实的科学基础。</p>
+		<h1 id="h2">主要作品</h1>
+		<p id="p2">《你是人间四月天》、《莲灯》、《九十九度中》</p>
+	</body>
+	<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			$('#h1').click(function () {
+				$('#p1').css('display','block');
+			})
+			$('#h2').click(function () {
+				$('#p2').css('display','block');
+			})
+		})
+	</script>
+</html>

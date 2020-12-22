@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				list-style: none;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="text" name="" id="" placeholder="查询对象" />
+		<input type="submit" name="" id="" value="搜索" />
+		<ul>
+			
+		</ul>
+	</body>
+	<script src="js/jquery-3.5.1.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/runner.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function () {
+			runner(function *(){
+				let data=yield $.ajax({url:"json/input.json",dataType:"json"});
+				console.log(data)
+				setTimeout(()=>{console.log(data.teas)},2000);
+				$("[type=submit]").click(function () {
+					$('ul').find('li').remove();
+					
+					if ($("[type=text]").val()=='') {
+						return false;
+					}
+					
+					let $text=$("[type=text]").val()
+					
+//					console.log(data.teas.length)
+					for (let i=0;i<data.teas.length;i++) {
+						if (data.teas[i].tea.indexOf($text) != -1) {
+							$('ul').append("<li>"+data.teas[i].tea+"</li>")
+						}
+					}
+				})
+			})
+		})
+	</script>
+</html>

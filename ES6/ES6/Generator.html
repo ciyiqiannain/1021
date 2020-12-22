@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="js/jquery-3.5.1.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function () {
+//		Generator 有两个区分于普通函数的部分：
+//			1.是在 function 后面，函数名之前有个 * ；
+//			2.函数内部有 yield 表达式。
+
+//			function *sing () {
+//				console.log('1');
+//				yield '1';
+//				console.log('2');
+//				yield '2';
+//				
+//			}
+//			let s=sing();
+//			s.next();
+//			s.next();
+
+			function *sing () {
+				console.log('音阙');
+				let x= yield;
+				if (x == "回廊") {//没法给yield传参，但yield可以输出传参
+					x = "诗听"
+				}
+				console.log(x);
+			}
+			let s=sing();
+			s.next();
+			
+			s.next('诗雨');
+//			s.next('回廊');
+		})
+	</script>
+</html>

@@ -1,0 +1,28 @@
+.botton3>.ul-1{
+				margin-left: 16px;
+			}
+			.botton3>.ul-1>li{
+				margin-right: 15px;
+				padding-right: 15px;
+				border-right: 1px solid black;
+				float: left;
+				color: pink;	
+			}
+			.botton3>ul>.botton3-ul-li1{
+				border: none;
+			}
+			.botton3>.ul-2{
+				margin-left: 160px;
+			}
+			.botton3>.ul-2>li{
+				margin-right: 42px;
+				float: left;
+				color: pink;
+			}
+			.botton3>.ul-2>.botton3-ul-li2{
+				border: none;
+			}
+			.botton3>p{
+				color: pink;
+				margin-left: 388px;
+			}

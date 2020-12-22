@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>QQ简易聊天框</title>
+    <link rel="stylesheet" href="css/chat.css">
+</head>
+<body>
+	<section id="chat">
+	    <div class="chatBody"></div>
+	    <div><img src="img/icon.jpg"></div>
+	    <textarea class="chatText"></textarea>
+	    <div class="btn"><span>关闭(C)</span><span id="send">发送(S)</span></div>
+	</section>
+</body>
+	<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function  () {
+			$('#send').click(function () {
+				var txt=$('.chatText').val();
+				
+				var arrimg=new Array('head01.jpg','head02.jpg','head03.jpg');
+				var arrid=new Array('时尚伊人','暴躁小哥','氛青');
+				var number=Math.floor(Math.random()*3);
+				var img='img/'+arrimg[number];
+				var id=arrid[number];
+				
+				
+				$('.chatBody').append('<img src=" '+img+' "/>'+id+'<br />'+txt+'<br />');
+				$('.chatText').val('');
+			})
+		})
+		$(document).keyup(function (event) {
+			if (event.keyCode == 13) {
+				var txt=$('.chatText').val();
+				
+				var arrimg=new Array('head01.jpg','head02.jpg','head03.jpg');
+				var arrid=new Array('时尚伊人','暴躁小哥','氛青');
+				var number=Math.floor(Math.random()*3);
+				var img='img/'+arrimg[number];
+				var id=arrid[number];
+				
+				
+				$('.chatBody').append('<img src=" '+img+' "/>'+id+'<br />'+txt+'<br />');
+				$('.chatText').val('');
+			}
+		})
+	</script>
+</html>

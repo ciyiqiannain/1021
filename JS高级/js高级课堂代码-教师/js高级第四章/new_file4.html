@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				height: 3000px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		var div=document.getElementById('div');
+//		window.onload=function(){
+//			console.log('页面加载完毕之后加载');
+//		}
+//		window.onresize=function(){
+//			console.log('浏览器窗口发生了变化');
+//		}
+		//onscroll
+		window.onscroll=function(){
+			console.log('触发了滚动条');
+			//得到滚动条到顶部的距离
+			console.log(document.documentElement.scrollTop);
+			if(document.documentElement.scrollTop==100){
+				alert('滚动100了');
+			}
+		}
+	</script>
+</html>

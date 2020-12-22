@@ -1,0 +1,17 @@
+.botton>ul{
+				float: left;
+			}
+			.botton>ul>li{
+				float: left;
+			}
+			.botton>ul>.li-1{
+				border-right: 1px solid black;
+				margin-left: 466px;
+				padding-right: 6px;
+			}
+			.botton>ul>.li-2{
+				padding-left:6px ;
+			}
+			.botton>.p{
+				margin-left: 708px;
+			}

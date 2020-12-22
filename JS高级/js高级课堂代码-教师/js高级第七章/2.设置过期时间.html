@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		
+		var date=new Date();
+		
+		
+		date.setDate(date.getDate()+4);
+		
+//		alert(date);
+		document.cookie="users=blue;expires="+date;		
+		
+		document.cookie="pass=123";
+		
+		alert(document.cookie);
+	</script>
+</html>

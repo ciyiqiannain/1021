@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p id="p"></p>
+	</body>
+	<script type="text/javascript">
+		var p=document.getElementById('p');
+		//对AJAX做的浏览器兼容
+		if (window.XMLHttpRequest) {
+			var oAjax=new XMLHttpRequest();//1.创建Ajax
+		}
+		else{
+			//非 IE5 和IE6
+			var oAjax=new ActiveXObject('Microsoft.XMLHTTP');
+		}
+		
+		oAjax.open('GET','txt/ajax.txt',true);//2.申请（建立）连接
+		oAjax.send();//3.发送请求
+		//4.得到返回的数据，并显示
+		oAjax.onreadystatechange=function () {
+			if (oAjax.status==200 && oAjax.readyState==4) {
+				console.log('请求成功');
+				p.innerHTML=oAjax.responseText;
+				console.log(oAjax);
+			} else{
+				console.log('请求失败'+oAjax.status);
+//				console.log(oAjax);
+			}
+		}
+	</script>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<style type="text/css">
+			ul{
+				display: flex;
+			}
+			ul>li{
+				margin: 1%;
+				border: 1px solid rgb(0,0,0,0.3);
+				font-size: 24px;
+			}
+		</style>
+	</head>
+	<body>
+		<p><button>-</button> <span> 1 </span> <button>+</button></p>
+		<p>27</p>
+		<p><button>-</button> <span> 2 </span> <button>+</button></p>
+		<p>39</p>
+		<p><button>-</button> <span> 3 </span> <button>+</button></p>
+		<p>77</p>
+		
+		<h1></h1>
+	</body>
+	<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function () {
+			$('button').click(function () {
+				if ($(this).html()=='+') {
+					var $span=$(this).siblings('span').html();
+					var $num=Number($span)+1;
+					$(this).siblings('span').html( $num );
+					
+					//p
+					var $goods=$(this).parent().next().html();
+					$('h1').eq(0).html( Number($goods)*$num );
+				}else if ($(this).html()=='-') {
+					var $span=$(this).siblings('span').html();
+					var $num=Number($span)-1;
+					$(this).siblings('span').html( $num );
+					
+					
+					var $goods=$(this).parent().next().html();
+					$('h1').eq(0).html( Number($goods)*$num );
+				}
+			})
+		})
+	</script>
+</html>

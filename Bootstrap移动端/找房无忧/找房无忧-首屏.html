@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>找房无忧-首屏</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				font-size: 0.1rem;
+				list-style: none;
+			}
+			header{
+				width: 100%;
+				background-color: #FD8B01;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				position: fixed;
+				top: 0;
+				z-index: 999;
+			}
+			header>p>img{
+				width: 70%;
+			}
+			header>p>span>img{
+				width: 30%;
+			}
+			.down{
+				width: 100%;
+				background-color: #2f3130;
+				color: white;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-around;
+				align-items: center;
+				position: fixed;
+				bottom: 0rem;
+			}
+			.down>div{
+				margin: 1% 0%;
+			}
+			.down_header{
+				width: 100%;
+				display: flex;
+				flex-wrap: nowrap;
+				justify-content: space-around;
+				align-items: center;
+			}
+			.down_header>p{
+				width: 90%;
+				border-bottom: 1px solid white;
+			}
+			.down_one{
+				width: 90%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.down_one>div{
+				width: 50%;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-items: center;
+			}
+			.down_one>div>p{
+				margin: 0% 3%;
+			}
+			.down_two{
+				width: 90%;
+				text-align: center;
+			}
+			
+			.two{
+				width: 100%;
+				position: relative;
+				margin-top: 0.7rem;
+			}
+			.two>p:nth-child(1){
+				width: 100%;
+			}
+			.two>p:nth-child(1)>img{
+				width: 100%;
+			}
+			.two_input{
+				width: 70%;
+				position: absolute;
+				bottom: 7%;
+				left: 10%;
+			}
+			.two_input>input{
+				width: 100%;
+				padding: 2% 2% 2% 8%;
+			}
+			.two_input>img{
+				width: 6%;
+				position: absolute;
+				left: 1%;
+				top: 15%;
+			}
+			.three{
+				width: 100%;
+				margin-bottom: 32%;
+			}
+			.three_ul{
+				width: 100%;
+				background-color: #FD8B01;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+			}
+			.three_ul>li{
+				width: 25%;
+				text-align: center;
+				color: white;
+			}
+			.three_ul>li>p{
+				width: 100%;
+			}
+			.three_ul>li>p>img{
+				width: 50%;
+			}
+			.three>p{
+				width: 100%;
+			}
+			.three>p>img{
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<p><img src="image/index/logo.jpg"/></p>
+			<p>
+				<span><img src="image/index/my.jpg"/></span>
+				<span><img src="image/index/xiazai.jpg"/></span>
+			</p>
+		</header>
+		<div class="two">
+			<p><img src="image/index/banner.png"/></p>
+			<p class="two_input">
+				<input type="text" name="" id="" value="" />
+				<img src="image/index/seach.jpg"/>
+			</p>
+		</div>
+		<div class="three">
+			<ul class="three_ul">
+				<li>
+					<p><img src="image/index/index_03.png"/></p>
+					<p>二手房</p>
+				</li>
+				<li>
+					<p><img src="image/index/index_05.png"/></p>
+					<p>新房</p>
+				</li>
+				<li>
+					<p><img src="image/index/index_07.png"/></p>
+					<p>租房</p>
+				</li>
+				<li>
+					<p><img src="image/index/index_09.png"/></p>
+					<p>卖房</p>
+				</li>
+			</ul>
+			<p><img src="image/index/banner2.png"/></p>
+		</div>
+		<div class="down">
+			<div class="down_header">
+				<p>北京找房无忧 > <span>首页</span></p>
+			</div>
+			<div class="down_one">
+				<div>
+					<p><img src="image/index/apple.png"/></p>
+					<ul>
+						<li>iPhone</li>
+						<li>客户端</li>
+					</ul>
+				</div>
+				<div>
+					<p><img src="image/index/android.png"/></p>
+					<ul>
+						<li>Android</li>
+						<li>客户端</li>
+					</ul>
+				</div>
+			</div>
+			<div class="down_two">
+				<ul>
+					<li>北京找房无忧房地产经纪公司</li>
+					<li>网络经营许可证京ICP备20160812号</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+</html>

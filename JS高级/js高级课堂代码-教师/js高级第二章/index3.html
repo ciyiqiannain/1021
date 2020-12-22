@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>数量的加减</title>
+		<style type="text/css">
+			span{
+				display: inline-block;
+				width: 30px;
+				height: 30px;
+				line-height: 30px;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<button onclick="jian()">-</button><span id="span">1</span><button onclick="jia()">+</button>
+		单价：￥<span id="qian">12.5</span>
+		总价格：￥<span id="zong">12.5</span>
+	</body>
+	<script type="text/javascript">
+		
+		//只要进行相加的时候  字符串才会进行拼接
+		var qian=document.getElementById('qian').innerHTML;
+		console.log(qian);
+		var zong=document.getElementById('zong').innerHTML;
+		//原生js写的      后续  我们用jq
+		function jian(){
+			//先获取span里面的数量值
+			var num=document.getElementById('span').innerHTML;
+			//将num转换为number类型
+			var span=parseInt(num);
+			
+			if(document.getElementById('span').innerHTML == 1 ){
+				alert('不能再减了，再减就没了');
+			}else{
+				var num1=document.getElementById('span').innerHTML=span-1;
+				document.getElementById('zong').innerHTML=num1*qian;
+			}
+			
+		}
+		function jia(){
+			//先获取span里面的数量值
+			var num=document.getElementById('span').innerHTML;
+			//将num转换为number类型
+			var span=parseInt(num);
+			var num1=document.getElementById('span').innerHTML=span+1;
+			document.getElementById('zong').innerHTML=num1*qian;
+			
+		}
+	</script>
+</html>

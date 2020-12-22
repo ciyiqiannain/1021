@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul{
+				list-style: none;
+			}
+			.box{
+				margin: 0 auto;
+				width: 600px;
+				height: 600px;
+				border: 1px solid black;
+			}
+			#left{
+				float: left;
+				width: 300px;
+				height: 300px;
+			}
+			#left>li{
+				width: 300px;
+				height: 100px;
+				line-height: 100px;
+				text-align: center;
+				cursor: pointer;
+			}
+			#left>li:hover{
+				color: red;
+				background-color: yellow;
+			}
+			#right{
+				float: left;
+				width: 150px;
+				height: 300px;
+				display: none;
+			}
+			#right>li{
+				width: 150px;
+				height: 300px;
+				line-height: 300px;
+				text-align: center;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<ul id="left">
+				<li>第一页</li>
+				<li>第二页</li>
+				<li>第三页</li>
+			</ul>
+			<ul id="right">
+				<li>11111111111111111</li>
+				<li>22222222222222222</li>
+				<li>33333333333333333</li>
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var left=document.getElementById('left');
+		var right=document.getElementById('right');
+		var lis1=document.getElementById('left').children;
+		var lis2=document.getElementById('right').children;
+		
+		left.onmouseover=function(){
+			right.style.display='block';
+		}
+		left.onmouseout=function(){
+			right.style.display='none';
+		}
+		
+		for (var i=0;i<lis1.length;i++) {
+			lis1[i].num=i;
+			lis1[i].onmouseover=function () {
+				for (var j=0;j<lis2.length;j++) {
+					lis2[j].style.display='none';//让右侧所有的li全部隐藏完毕
+				}
+				lis2[this.num].style.display='block';//再让对应左侧的li下标     显示右侧的li元素
+			}
+		}
+	</script>
+</html>

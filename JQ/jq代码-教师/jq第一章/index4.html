@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="news">
+			<h2>京东快报 <a href="" class="a">更多》</a></h2>
+			<ul>
+				<li><a href="" class="b">618 林志玲1</a></li>
+				<li><a href="">618 林志玲2</a></li>
+				<li><a href="">618 林志玲3</a></li>
+				<li><a href="">618 林志玲4</a></li>
+				<li><a href="" class="c">618 林志玲5</a></li>
+			</ul>
+		</div>
+	</body>
+	<script src="js/3.4.1jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('#news a[class]').css('background','red');
+			$('#news a[class!="b"]').css('font-size','38px');
+		})
+	</script>
+</html>

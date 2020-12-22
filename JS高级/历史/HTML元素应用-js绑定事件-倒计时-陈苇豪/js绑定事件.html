@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="bu1">点击1</button>
+		<button id="bu2">点击2</button>
+		<button onclick="bu3()">点击3</button>
+	</body>
+	<script type="text/javascript">
+		var bu1=document.getElementById('bu1');
+		var bu2=document.getElementById('bu2');
+		
+		bu1.onclick=function  () {
+			alert('第一方式');
+		}
+		bu2.addEventListener  ('click',function function_name () {
+			alert('第二');
+		})
+		function bu3 () {
+			alert('第三');
+		}
+	</script>
+</html>

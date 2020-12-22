@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<title></title>
+		<style type="text/css">
+			*{
+				font-size: 0.1rem;
+			}
+			header{
+				width: 100%;
+			}
+			header>img{
+				width: 100%;
+			}
+			.tab{
+				margin: 0 auto;
+				width: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.tab>li{
+				width: 50%;
+				text-align: center;
+				margin: 5% 0%;
+				font-size: 0.2rem;
+			}
+			.tab>.tab_g{
+				color: #c8c8c8;
+			}
+			.tab_col{
+				color: #498e93;
+				border-bottom: 0.03rem solid #47b2a3;
+			}
+			.tab>li:last-of-type{
+				border-right: none;
+			}
+			.tab_div{
+				width: 100%;
+				position: relative;
+			}
+			.tab_div>.login{
+				width: 90%;
+				position: absolute;
+				top: 0%;
+				left: 5%;
+				display: block;
+			}
+			.tab_div>.login>p{
+				width: 100%;
+				height: 0.4rem;
+				position: relative;
+				margin: 5% 0%;
+			}
+			.tab_div>.login>p>input{
+				width: 80%;
+				height: 0.4rem;
+				font-size: 0.15rem;
+				padding: 0% 3% 0% 14%;
+			}
+			.tab_div>.login>p>span{
+				position: absolute;
+				top: 0.1rem;
+				left: 0.1rem;
+			}
+			.tab_div>.login>.lock>span{
+				top: 0.08rem;
+			}
+			.tab_div>.login>p>span>img{
+				width: 80%;
+			}
+			.tab_div>.login>.sign_bt>button{
+				width: 100%;
+				height: 0.4rem;
+				background: #3da3a2;
+				border: none;
+				color: white;
+			}
+			.tab_div>.login>.forget{
+				line-height: 0.4rem;
+				text-align: center;
+			}
+			.tab_div>.login>.forget>a{
+				color: #a6a6a6;
+			}
+			.tab_div>.login>.forget2>a{
+				color: #b0b0b0;
+			}
+			.tab_div>.sign{
+				width: 90%;
+				position: absolute;
+				top: 0%;
+				left: 5%;
+				display: none;
+			}
+			.tab_div>.sign>p{
+				width: 100%;
+				height: 0.4rem;
+				position: relative;
+				margin: 5% 0%;
+			}
+			.tab_div>.sign>p>input{
+				width: 80%;
+				height: 0.4rem;
+				font-size: 0.15rem;
+				padding: 0% 3% 0% 14%;
+			}
+			.tab_div>.sign>p>span{
+				position: absolute;
+				top: 0.1rem;
+				left: 0.1rem;
+			}
+			.tab_div>.sign>.lock>span{
+				top: 0.08rem;
+			}
+			.tab_div>.sign>p>span>img{
+				width: 80%;
+			}
+			.tab_div>.sign>.sign_bt>button{
+				width: 100%;
+				height: 0.4rem;
+				background: #3da3a2;
+				border: none;
+				color: white;
+			}
+			.tab_div>.sign>.forget{
+				line-height: 0.4rem;
+				text-align: center;
+			}
+			.tab_div>.sign>.forget>a{
+				color: #a6a6a6;
+			}
+			.tab_div>.sign>.forget2>a{
+				color: #b0b0b0;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<img src="img/banner.png"/>
+		</header>
+		<ul class="tab">
+			<li class="tab_col">登录</li>
+			<li class="tab_g"> | </li>
+			<li>注册</li>
+		</ul>
+		<div class="tab_div">
+			<div class="login">
+				<p><span><img src="img/idcard.png"/></span><input type="text" name="" id="sfz" placeholder="请输入身份证" /></p>
+				<p class="lock"><span><img src="img/password.png"/></span><input type="text" name="" id="pass" placeholder="请输入密码" /></p>
+				<p class="sign_bt"><button class="enter">登录</button></p>
+				<p class="forget"><a href="#">忘记密码？</a></p>
+			</div>
+			<div class="sign">
+				<p><span><img src="img/name.png"/></span><input type="text" name="" id="name" placeholder="请输入姓名" /></p>
+				<p><span><img src="img/iphone.png"/></span><input type="text" name="" id="phone" placeholder="请输入手机号" /></p>
+				<p><span><img src="img/idcard.png"/></span><input type="text" name="" id="sfz" placeholder="请输入身份证" /></p>
+				<p class="lock"><span><img src="img/password.png"/></span><input type="text" name="" id="sz_pass" placeholder="请设置密码" /></p>
+				<p class="lock"><span><img src="img/password.png"/></span><input type="text" name="" id=" qren_pass" placeholder="请确认密码" /></p>
+				<p class="forget forget2"><a href="#">注册即代表您已同意 《注册与使用协议》 </a></p>
+				<p class="sign_bt"><button class="enroll">注册</button></p>
+			</div>
+		</div>
+	</body>
+	<script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		Zepto(function () {
+			$('.tab>li').eq(0).tap(function () {
+				$('.login').show().siblings('.sign').hide();
+				$(this).addClass('tab_col').siblings('li').removeClass('tab_col');
+			})
+			$('.tab>li').eq(2).tap(function () {
+				$('.sign').show().siblings('.login').hide();
+				$(this).addClass('tab_col').siblings('li').removeClass('tab_col');
+			})
+//			$('#sfz')
+//			$('#pass')
+//			$('#name')
+//			$('#phone')
+//			$('#sz_pass')
+//			$('#qren_pass')
+			
+			$('.enter').tap(function () {
+				var $reg=/(^[1-9]\d{5}(18|19|([23]\d))\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$)|(^[1-9]\d{5}\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d{2}[0-9Xx]$)/;
+				var $reg2=/^[a-zA-Z0-9]{6,12}/;
+				var $sfz=$('.login #sfz').val();
+				var $pass=$('.login #pass').val();
+				if ($sfz == '') {
+					alert('身份证不能为空');
+					return;
+				}
+				if ($pass == '') {
+					alert('密码不能为空');
+					return;
+				}
+				if ($reg.test($sfz)==false) {
+					alert('身份证格式错误')
+					return;
+				}
+				if ($reg2.test($pass)==false) {
+					alert('密码格式错误')
+					return;
+				}
+				if ($reg2.test($pass)==true && $reg.test($sfz)==true) {
+					alert('登录中...')
+					return;
+				}
+			})
+			
+			$('.enroll').tap(function () {
+				var $reg=/(^[1-9]\d{5}(18|19|([23]\d))\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$)|(^[1-9]\d{5}\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d{2}[0-9Xx]$)/;;//sfz
+				var $reg2=/^[a-zA-Z0-9]{6,12}/;//sz_pass
+				var $reg3=/^[\u4E00-\u9FA5\uf900-\ufa2d·s]{2,20}$/;//name
+				var $reg4=/^1([358][0-9]|4[579]|66|7[0135678]|9[89])[0-9]{8}$/;//phone
+				
+				var $name=$('.sign #name').val();
+				var $phone=$('.sign #phone').val();
+				var $sfz=$('.sign #sfz').val();
+				var $sz_pass=$('.sign #sz_pass').val();
+				var $qren=$('#qren_pass').val();
+				
+				if ($sfz == '') {
+					alert('身份证不能为空');
+					return;
+				}
+				if ($sz_pass == '') {
+					alert('设置密码不能为空');
+					return;
+				}
+				if ($qren == '') {
+					alert('确认密码不能为空');
+					return;
+				}
+				if ($name == '') {
+					alert('姓名不能为空');
+					return;
+				}
+				if ($phone == '') {
+					alert('手机号不能为空');
+					return;
+				}
+				
+				
+				if ($reg3.test($name)==false) {
+					alert('姓名格式错误')
+					return;
+				}
+				if ($reg4.test($phone)==false) {
+					alert('手机号格式错误')
+					return;
+				}
+				if ($reg.test($sfz)==false) {
+					alert('身份证格式错误')
+					return;
+				}
+				if ($reg2.test($sz_pass)==false) {
+					alert('设置密码格式错误')
+					return;
+				}
+				if ($reg2.test($qren)==false) {
+					alert('确认密码格式错误');
+					return;
+				}
+				if ($sz_pass != $qren) {
+					alert('设置密码与确认密码不一致')
+					return;
+				}
+				if (
+					$reg3.test($name)==true &&
+					$reg4.test($phone)==true &&
+					$reg.test($sfz)==true &&
+					$reg2.test($sz_pass)==true &&
+					$reg2.test($qren)==true 
+					) {
+						alert('注册中...')
+						return;
+					}
+			})
+		})
+	</script>
+</html>

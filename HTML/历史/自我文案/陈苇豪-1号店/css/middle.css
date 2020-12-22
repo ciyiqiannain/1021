@@ -1,0 +1,106 @@
+.middle{
+				width: 1200px;
+				height: 400px;
+				position: relative;
+			}
+			/*左*/
+			.middle-left{
+				width: 265px;
+				height: 400px;
+				background-color: red;
+			}
+			.middle-left>ul{
+				float: right;
+				color: white;
+			}
+			.middle-left>ul>li{
+				margin: 8px 0px;
+			}
+			.middle>.middle-left>ul>li>.middle-left-img{
+				display: inline-block;
+				width: 20px;
+				height: 20px;
+				background: url(img/indexhead_sprite.png) no-repeat;
+				background-position: -283px -145px;
+			}
+			/*中*/
+			.middle-m{
+				width: 670px;
+				height: 400px;
+				left: 265px;
+				top: 0px;
+				background-color: blue;
+				position: absolute;
+				z-index: 1;
+			}
+			.middle-m-img{
+				width: 670px;
+				height: 400px;
+			}
+			.middle>.middle-m>ul{
+				position: absolute;
+				left: 270px;
+				top: 375px;.
+			}
+			.middle>.middle-m>ul>li{
+				padding: 10px;
+				margin: 0px 5px;
+				float: left;
+				background-color: pink;
+			}
+			.middle>.middle-m>ul>.middle-m-li{
+				background-color: darkred;
+			}
+			/*右*/
+			.middle-right{
+				width: 265px;
+				height: 398px;
+				background-color: red;
+				position: absolute;
+				left: 935px;
+				top: 0px;
+				z-index: 1;
+			}
+			.middle-right-n{
+				width: 175px;
+				height: 398px;
+				background-color: white;
+				/*border: 1px solid black;*/
+			}
+			.middle-right-n>ul{
+				width: 175px;
+				height: 75px;
+				border-bottom: 1px solid pink;
+			}
+			.middle-right-n>ul>li{
+				float: right;
+				margin-right:5px ;
+			}
+			.middle>.middle-right>.middle-right-n>.middle-right-n-ul>li{
+				font-size: 10px;
+				float: none;
+			}
+			.middle>.middle-right>.middle-right-n>.middle-right-n-ul3{
+				height: 25px;
+			}
+			.middle>.middle-right>.middle-right-n>.middle-right-n-ul3>li{
+				border-right: 1px solid pink;
+				margin-right: 4px;
+				height: 25px;
+				background-color: pink;
+				float: left;
+			}
+			.middle>.middle-right>.middle-right-n>.middle-right-n-ul3>li>a{
+				text-decoration: none;
+				color: black;
+			}
+			.middle>.middle-right>.middle-right-n>.middle-right-n-ul3>.middle-a{
+				background-color: white;
+			}
+			.middle-a2{
+				text-decoration: none;
+				background-color: red;
+				color: white;
+				margin-left:55px ;
+				padding: 5px;
+			}

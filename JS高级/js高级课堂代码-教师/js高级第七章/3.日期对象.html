@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var date=new Date();
+		date.setDate(-1);//给一个不靠谱的值，系统会转换成一个靠谱的值
+		alert(date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate());
+		
+		
+		
+		//date.setDate(33);//给一个不靠谱的值，系统会转换成一个靠谱的值
+//		date.setDate(date.getDate()+30);
+//		alert(date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate());
+	</script>
+</html>

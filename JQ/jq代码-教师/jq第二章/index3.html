@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.a{
+				border: 1px dashed red;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<h1>jq操作css</h1>
+			<ul>
+				<li>1111111111</li>
+				<li>1111111111</li>
+				<li>1111111111</li>
+			</ul>
+		</div>
+	</body>
+	<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+//			$('h1').mouseover(function(){
+//				$('ul').addClass('a')
+//			})
+//			$('h1').mouseout(function(){
+//				$('ul').removeClass('a')
+//			})
+
+			$('h1').hover(function(){
+				$('ul').addClass('a')
+			},function(){
+				$('ul').removeClass('a')
+			})
+
+			
+//			$('h1').on('mouseover',function(){
+//				alert('b');
+//			})
+		})
+	</script>
+</html>

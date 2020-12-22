@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS3高级选择器</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 300px;
+				height: 600px;
+				border: 1px solid black;
+				margin: 0 auto;
+			}
+			/*p:first-of-type{
+				font-size: 54px;
+				color: blue;
+			}
+			p:last-of-type{
+				font-size: 72px;
+				color: red;
+			}*/
+			/*p:first-child{
+				color: blue;
+				font-size: 54px;
+			}*/
+			p:nth-child(2n+2){
+				font-size: 54px;
+				color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<h2>旋律</h2>
+			<p>音</p>
+			<p>阙</p>
+			<p>诗</p>
+			<p>听</p>
+		</div>
+	</body>
+</html>

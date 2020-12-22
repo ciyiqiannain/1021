@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#box{
+				width: 1014px;
+				margin: 0 auto;
+				
+			}
+			#box1{
+				width: 322px;
+				height: 217px;
+				position: fixed;
+				top: 100px;
+				left: 100px;
+			}
+			#box1>p{
+				width: 40px;
+				height: 15px;
+				border: 1px solid black;
+				position: absolute;
+				top: 0px;
+				right: 0px;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<img src="img/main1.JPG"/>
+			<img src="img/main2.JPG"/>
+			<img src="img/main3.JPG"/>
+			<div id="box1">
+				<img src="img/adv.jpg"/>
+				<p onclick="rem()" id="p"></p>
+			</div>
+		</div>
+		
+	</body>
+	<script type="text/javascript">
+		var box=document.getElementById('box');
+		var box1=document.getElementById('box1');
+		var p=document.getElementById('p');
+		function rem(){
+			p.parentNode.parentNode.removeChild(p.parentNode);
+		}
+	</script>
+</html>

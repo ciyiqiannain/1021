@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script type="text/javascript" src="runner.js" ></script>
+		<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.5.1.min.js"></script>
+		<!--<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>-->
+		<script type="text/javascript">
+			runner(function *(){
+				let data1=yield $.ajax({url:"json1.json",dataType:"json"});
+				let data2=yield $.ajax({url:"json2.json",dataType:"json"})
+				console.log(data1)
+//				setTimeout(function () {
+//					console.log(data1.responseJSON)
+//				},2000)
+				setTimeout(()=>{console.log(data2.responseJSON)},2000);
+			})
+		</script>
+	</body>
+</html>

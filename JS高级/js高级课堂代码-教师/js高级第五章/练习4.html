@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			button{
+				width: 100px;
+				height: 100px;
+				background: red;
+				color: white;
+				font-size: 38px;
+				position: fixed;
+				right: 50px;
+				bottom: 50px;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<img src="img/bj.png"/>
+			<button id="btn">返回顶部</button>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var btn=document.getElementById('btn');
+		window.onscroll=function(e){
+			var oEvent=e || event;
+			console.log(document.documentElement.scrollTop);
+			var top=document.documentElement.scrollTop;
+			if(top>2500){
+				btn.style.display='block';
+			}else{
+				btn.style.display='none';
+			}
+			btn.onclick=function(){
+				document.documentElement.scrollTop=0;
+			}
+		}
+	</script>
+</html>

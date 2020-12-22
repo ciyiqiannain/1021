@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<p>
+			选择你喜欢的书：
+			<input type="radio" name="a" id="a" onclick="ra()" value="我和狗狗一起活下来"/>我和狗狗一起活下来
+			<input type="radio" name="a" id="a" onclick="rr()" value="灰霾来了怎么办"/>灰霾来了怎么办
+		</p>
+		<div id="div">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		var inputs=document.getElementsByTagName('input');
+		var div=document.getElementById('div');
+		
+		function ra () {
+			//createElement()创建节点
+			//A.appendChild(B)将B节点添加到A节点的末尾
+			var img=document.createElement('img');
+			img.setAttribute('src','img/dog.jpg');
+			div.appendChild(img);
+		}
+		function rr () {
+			var img=document.createElement('img');
+			img.setAttribute('src','img/mai.jpg');
+			div.appendChild(img);
+		}
+	</script>
+</html>

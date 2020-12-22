@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head lang="zh-CN"><!--地域：中国-->
+		<meta charset="utf-8" /><!--中文，辨识-->
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+		<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>-->
+		<style type="text/css">
+			.row{
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				  <div class="col-md-1">.col-md-1</div>
+				  <div class="col-md-1">.col-md-1</div>
+				  <div class="col-md-1">.col-md-1</div>
+				  <div class="col-md-1">.col-md-1</div>
+				  <div class="col-md-1">.col-md-1</div>
+				  <div class="col-md-1">.col-md-1</div>
+				  <div class="col-md-1">.col-md-1</div>
+				  <div class="col-md-1">.col-md-1</div>
+				  <div class="col-md-1">.col-md-1</div>
+				  <div class="col-md-1">.col-md-1</div>
+				  <div class="col-md-1">.col-md-1</div>
+				  <div class="col-md-1">.col-md-1</div>
+			</div>
+			
+			<!--列组合-->
+			<div class="row">
+				  <div class="col-md-8">.col-md-8</div>
+				  <div class="col-md-4">.col-md-4</div>
+			</div>
+			
+			<!--列偏移  向右偏移  col-md-offset-4 -->
+			<div class="row">
+				  <div class="col-md-4">.col-md-4</div>
+				  <div class="col-md-4 col-md-offset-4">.col-md-4 col-md-offset-4</div>
+			</div>
+			
+			<!--列嵌套-->
+			<div class="col-md-9">level 1：col-md-9
+			  	<div class="row">
+			  		<div class="col-lg-6">level 2：col-md-6</div>
+			  		<div class="col-lg-6">level 2：col-md-6</div>
+			  	</div>
+		  	</div>
+		  	<div class="col-md-3">col-md-3</div>
+		 	
+		 	<!--列排序  互换位置-->
+		 	<!--col-md-push-3  左缩进-->
+		 	<!--col-md-pull-9  右缩进-->
+		 	<div class="col-md-9 col-md-push-3">col-md-9 col-md-push-3</div>
+		 	<div class="col-md-3 col-md-pull-9">col-md-3 col-md-pull-9</div>
+		</div>
+	</body>
+	<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+	<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.a{
+				color: green;
+				font-size: 24px;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="bt">切换</button>
+		<p>
+			空山鹿鸣惊野老 ,披衣懒散去。<br />
+			呦呦荒径瘦娇客, 兀自轻薄绿。<br />
+			省识慈风偏岑寂 ,无声与人间抚贫瘠。<br />
+			恍觉时 ,于某日扑面嶙峋春气。<br />
+		</p>
+	</body>
+	<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			$('#bt').click(function () {
+				$('p').toggleClass('a');
+			})
+		})
+	</script>
+</html>

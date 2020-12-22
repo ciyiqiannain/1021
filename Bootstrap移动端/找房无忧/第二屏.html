@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>第二屏</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				font-size: 0.1rem;
+				list-style: none;
+			}
+			header{
+				width: 95%;
+				background-color: #FD8B01;
+				color: white;
+				padding-left: 5%;
+			}
+			header>h3{
+				font-size: 0.2rem;
+			}
+			.second_two{
+				width: 100%;
+			}
+			.second_two>ul{
+				width: 100%;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-around;
+				align-items: center;
+			}
+			.second_two>ul>li{
+				width: 90%;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin: 2% 0%;
+			}
+			.second_two>ul>li>.div_img{
+				width: 35%;
+			}
+			.second_two>ul>li>.div_img>img{
+				width: 100%;
+			}
+			.second_two>ul>li>.div_li{
+				width: 60%;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.second_two>ul>li>.div_li>p{
+				width: 90%;
+			}
+			.second_two>ul>li>.div_li>p:nth-child(1){
+				font-size: 0.2rem;
+			}
+			.second_two>ul>li>.div_li>p:nth-child(n+2){
+				display: flex;
+				justify-content: space-between;
+			}
+			.second_two>ul>li>.div_li>p:nth-child(2)>span{
+				color: #FD8B01;
+			}
+			.second_two>ul>li>.div_li>p:nth-child(n+3){
+				color: pink;
+			}
+			.second_two>ul>li>.div_li>p:nth-child(3)>span{
+				color: pink;
+			}
+			.second_three{
+				width: 100%;
+				margin-top: 5%;
+			}
+			.second_three_header{
+				margin: 0 auto;
+				width: 90%;
+				display: flex;
+				justify-content: space-around;
+				align-content: center;
+			}
+			.second_three_header>p{
+				width: 50%;
+				font-size: 0.2remm;
+				text-align: center;
+				border-bottom: 0.1rem solid paleturquoise;
+			}
+			.second_three_header>p:hover{
+				border-bottom: 0.1rem solid #FD8B01;
+			}
+			.second_three_two{
+				width: 90%;
+				margin: 0 auto;
+			}
+			.second_three_two>ul{
+				width: 100%;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-around;
+				align-items: center;
+			}
+			.second_three_two>ul>li{
+				width: 50%;
+				margin: 1% 0%;
+			}
+			.second_three_two>ul>li>span{
+				width: 30%;
+				display: inline-block;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h3>热门房源</h1>
+			<p>Hot house</p>
+		</header>
+		<div class="second_two">
+			<ul>
+				<li>
+					<div class="div_img">
+						<img src="image/index/img1.jpg"/>
+					</div>
+					<div class="div_li">
+						<p>文化部中间层  一层带阁楼</p>
+						<p>2室1厅96㎡南北 <span>1105万</span></p>
+						<p>红庙北里<span>14268元/平</span></p>
+						<p>学区房 独家</p>
+					</div>
+				</li>
+				<li>
+					<div class="div_img">
+						<img src="image/index/img2.png"/>
+					</div>
+					<div class="div_li">
+						<p>光大水墨  精装复式 稀缺</p>
+						<p>2室1厅96㎡南北 <span>280万</span></p>
+						<p>光大水墨 <span>14268元/平</span></p>
+						<p>学区房 独家 满五唯一</p>
+					</div>
+				</li>
+				<li>
+					<div class="div_img">
+						<img src="image/index/img3.png"/>
+					</div>
+					<div class="div_li">
+						<p>南北通透两居  精装修 无</p>
+						<p>2室1厅96㎡南北 <span>320万</span></p>
+						<p>北京新天地 <span>14268元/平</span></p>
+						<p>地铁房 独家</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="second_three">
+			<div class="second_three_header">
+				<p>热门关注</p>
+				<p>友情链接</p>
+			</div>
+			<div class="second_three_two">
+				<ul>
+					<li><span></span>北京二手房</li>
+					<li><span></span>北京二手房价</li>
+					<li><span></span>海淀日租房</li>
+					<li><span></span>朝阳新房</li>
+					<li><span></span>北京找房无忧</li>
+					<li><span></span>青年家园</li>
+					<li><span></span>免税房源</li>
+					<li><span></span>满五年唯一免税</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<img src="img/erji.jpg"/>
+		<button id="btn1">淡入</button>
+		<button id="btn2">淡出</button>
+	</body>
+	<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('#btn1').click(function(){
+				$('img').fadeIn(1000);
+			})
+			$('#btn2').click(function(){
+				$('img').fadeOut(1000);
+			})
+		})
+	</script>
+</html>

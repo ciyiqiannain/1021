@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<style type="text/css">
+			*{
+				font-size: 0.1rem;
+			}
+			header{
+				width: 100%;
+			}
+			header>ul{
+				width: 100%;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				background-color: yellow;
+			}
+			header>ul>li{
+				width: 20%;
+				text-align: center;
+			}
+			.box{
+				width: 100%;
+				position: relative;
+			}
+			.hz{
+				width: 100%;
+				position: absolute;
+				top: 0.2rem;
+				left: 0rem;
+				display: none;
+			}
+			.xinwen{
+				display: block;
+			}
+			.hz>p{
+				width: 90%;
+				margin: 0 auto;
+			}
+			.hz>p>button{
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<header>
+				<ul class="ul">
+					<li class="li_xinwen">
+						新闻
+						<div class="hz xinwen">
+							<p>葛优和张国立同时落水先救谁？</p>
+							<p>摩拜与ofo为何如此之快进入肉搏战？</p>
+							<p>环保部：28市被确定为京津冀大气污染传输通道</p>
+							<p>国家旅游局发布赴韩提醒：望国人慎重选择旅行地</p>
+							<p><button>进入新闻中心>></button></p>
+						</div>
+					</li>
+					<li class="li_shehui">
+						社会
+						<div class="hz shehui">
+							<p>视频丨醉汉赖已婚女同学衣柜 男主人报警</p>
+							<p>饮水机火锅弱爆了！妹子这次在办公室针织方便面</p>
+							<p>男子一次定下20套房 被家人送至脑科医院</p>
+							<p>妻子发了句我爱你 老公吓得跑派出所</p>
+							<p><button>进入社会>></button></p>
+						</div>
+					</li>
+					<li class="li_junshi">
+						军事
+						<div class="hz junshi">
+							<p>日拟派F15战机常驻下地岛机场</p>
+							<p>特朗普上任后第一仗惨败：士兵阵亡</p>
+							<p>一套萨德毁掉全部汉江奇迹：韩国把自己玩到“解放前”</p>
+							<p>英媒：中国对萨德警告让人想起朝鲜战争时期</p>
+							<p><button>进入军事频道>></button></p>
+						</div>
+					</li>
+					<li class="li_huati">
+						话题
+						<div class="hz huati">
+							<p>谭咏麟:坠物竟是我行李</p>
+							<p>南方如何温暖度过寒冷冬天？</p>
+							<p>热火连续6个客场之旅注定不顺利</p>
+							<p>詹姆斯空中接力上篮，热火以18-12领先</p>
+							<p><button>进入话题>></button></p>
+						</div>
+					</li>
+				</ul>
+			</header>
+		</div>
+		
+	</body>
+	<script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		Zepto(function () {
+			$('.ul>li').tap(function () {
+				$(this).find('.hz').show();
+				$(this).siblings('li').find('.hz').hide();
+			})
+		})
+	</script>
+</html>

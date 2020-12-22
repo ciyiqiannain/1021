@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<style type="text/css">
+			*{
+				font-size: 0.1rem;
+			}
+			ul{
+				width: 100%;
+			}
+			ul>p{
+				width: 90%;
+				margin: 0 auto;
+				border: 1px solid black;
+			}
+			ul>p>span{
+				float: right;
+				text-align: center;
+				margin-right: 0.1rem;
+			}
+			ul>li{
+				width: 90%;
+				margin: 0 auto;
+				display: none;
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="ul">
+			<p class="p">Everyting <span class="sp"> ↓ </span></p>
+			<li>Everyting</li>
+			<li>Design</li>
+			<li>UI</li>
+			<li>Print</li>
+		</ul>
+	</body>
+	<script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		Zepto(function () {
+			$('.p').tap(function () {
+				$('.ul>li').toggle();
+				$('.sp').html(' ↑ ');
+			})
+			$('.ul>li').tap(function () {
+				$(this).css('background-color','violet');
+			})
+		})
+	</script>
+</html>

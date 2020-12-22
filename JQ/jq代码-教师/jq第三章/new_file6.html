@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			ul{
+				
+				height: 300px;
+			}
+			li{
+				width: 30px;
+				height: 300px;
+				margin-left: 100px;
+				display: none;
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>三阳始布，四序初开</li>
+			<li>福庆初新，寿禄延长</li>
+		</ul>
+		<p>
+			<button id="btn1">显示</button>
+			<button id="btn2">隐藏</button>
+		</p>
+	</body>
+	<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('#btn1').click(function(){
+				//slideDown()显示
+				$('li:eq(0)').slideDown(1500,function(){
+					$('li:eq(1)').slideDown(1500);
+				})
+			})
+			//slideUp()隐藏
+			$('#btn2').click(function(){
+				$('li:eq(1)').slideUp(1500,function(){
+					$('li:eq(0)').slideUp(1500);
+				})
+			})
+		})
+	</script>
+</html>

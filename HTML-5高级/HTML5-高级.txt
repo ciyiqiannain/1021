@@ -1,0 +1,75 @@
+第一章
+video音频
+audio视频
+属性：1.controls显示控件，
+2.loop循环,
+3.autoplay就绪后马上播放.需其他设置.暂不知,
+4.muted开始时静音
+PS:视频在muted存在时，autoplay可以使用
+
+第二章（1）
+canvas画布
+var cxt=c.getContext('2d')，，(((----创建2D！----)))
+例：cxt.属性
+属性：
+1.beginPath()开始
+2.moveTo(x,y)起始坐标
+3.lineTo(x,y)结束坐标
+4.strokeStyle线的颜色
+5.lineWidth线的宽（粗细）
+6.fillStyle填充色
+7.fill填充
+8.stroke描绘；轻抚
+9.closePath()结束
+
+第二章（2）
+translate(x,y)位移
+scale(x,y)缩放
+rotate(angle)旋转
+
+rect矩形
+rect(x,y,宽，高)矩形
+fillRect(x,y,宽，高)矩形，填充
+clearRect(x,y,宽，高)删除矩形
+
+arc圆
+arc(圆心x,圆心y,r,起始度，终止度，顺/逆时针)
+属性：
+1.Math.PI为180度
+2.0度，为x正半轴
+3.false顺时针，true逆时针
+
+quadraticCurveTo贝塞尔曲线
+moveTo(起始x,起始y)
+quadraticCurveTo(控制点x,控制点y,终止x,终止y)
+
+第三章
+线性渐变Linear
+var g=cxt.createLinearGradient(起点x,起点y,终止x,终止y)
+g.addColorStop(0~1，‘color’)
+
+圆形渐变Radial
+var g=cxt.createRadialGradient(起始x,起始y,r1开始渐变,终止x,终止y,r2渐变结束);
+
+图形组合
+cxt.globalCompositeOperation=type;
+type属性：......
+
+绘制阴影shadow
+cxt.shadowOffsetX，阴影位移量x
+cxt.shadowOffsetY，阴影位移量y
+cxt.shadowColor，阴影颜色
+cxt.shadowBlur，阴影模糊
+
+drawImag方法
+drawImag(image,x,y)
+drawImag(image,x,y,w,h)
+drawImag(image,sx,sy,sw,sh,dx,dy,dw,dh)
+
+x、y     ：绘制图像时在画布中的起始x、y坐标
+w、h    ：绘制时设置图像的宽度与高度
+sx、sy  ：原图像被复制的起始X坐标、Y坐标
+sw、sh ：图像被复制区域的宽度、高度
+dx、dy ：复制后的目标图像在canvas中的起始X坐标、Y坐标
+dw、dh：复制后的目标图像的宽度、高度
+

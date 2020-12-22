@@ -1,0 +1,116 @@
+.center>.right{
+				float: left;
+				margin-top: 15px;
+				width: 350px;
+				height: 1409px;
+			}
+			.center>.right>.top>h2{
+				width: 350px;
+				height: 35px;
+				background-color: RGB(255, 240, 217);
+			}
+			.center>.right>.one{
+				width: 350px;
+				height: 675px;
+			}
+			.center>.right>.one>ul{
+				width: 320px;
+				height: 380px;
+				float: right;
+				list-style: disc;
+			}
+			.center>.right>.one>ul>li{
+				width: 285px;
+				height: 30px;
+				line-height: 30px;
+				margin: 7px 0px;
+				border-bottom: 1px dashed black;
+			}
+			.center>.right>.one>p>img{
+				width: 338px;
+				height: 132px;
+				padding: 5px;
+				border: 1px solid pink;
+			}
+			.center>.right>.two{
+				width: 349px;
+				height: 497px;
+				margin-top: 20px;
+			}
+			.center>.right>.two>.top{
+				width: 349px;
+				height: 50px;
+				background-color: RGB(83, 133, 6);
+			}
+			.center>.right>.two>.top>h2{
+				height: 50px;
+				line-height: 50px;
+				color: white;
+			}
+			.center>.right>.two>.top>h2>img{
+				vertical-align: middle;
+			}
+			.center>.right>.two>.middle{
+				width: 349px;
+				height: 30px;
+				background-color: RGB(255, 234, 203);
+			}
+			.center>.right>.two>.middle>ul{
+				float: right;
+				height: 30px;
+			}
+			.center>.right>.two>.middle>ul>li{
+				height: 30px;
+				float: left;
+				line-height: 35px;
+				padding: 0px 13px;
+				border-radius: 15px 15px 0px 0px;
+				background: -webkit-linear-gradient(top,white,goldenrod);
+			}
+			.center>.right>.two>.down{
+				width: 349px;
+				height: 597px;
+				border: 1px solid black;
+				float: left;
+				background-color: RGB(255, 234, 203);
+			}
+			.center>.right>.two>.down>img{
+				float: left;
+			}
+			.center>.right>.two>.down>.img1{
+				width: 30px;
+				height: 30px;
+			}
+			.center>.right>.two>.down>.img2{
+				width: 75px;
+				height: 75px;
+			}
+			.center>.right>.two>.down>ul{
+				float: left;
+				width: 240px;
+				height: 95px;
+			}
+			.center>.right>.two>.down>.ul3{
+				margin-bottom: 30px;
+			}
+			.center>.right>.two>.down>ul>li{
+				width: 246px;
+				height: 22px;
+				font-size:20px ;
+			}
+			.center>.right>.two>.down>ul>li>a{
+				color: blue;
+			}
+			.center>.right>.two>.down>p>.img3{
+				width: 20px;
+				height: 20px;
+				vertical-align: middle;
+			}
+			.center>.right>.two>.down>p{
+				margin-top: 30px;
+				margin-right: 5px;
+			}
+			.center>.right>.two>.down>p>a{
+				color: blue;
+				font-size: 20px;
+			} 

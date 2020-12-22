@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="op">开始</button>
+		<button id="clo">停止</button>
+		<h1 id="h1">10</h1>
+	</body>
+	<script type="text/javascript">
+		var op=document.getElementById('op');
+		var clo=document.getElementById('clo');
+		var h1=document.getElementById('h1');
+		var sh=0;
+//		var timer=null;
+		
+		op.onclick=function () {
+			sh=sh+1;
+			if (sh == 1) {
+				timer=setInterval('fun()',1000)
+			}
+		}
+		function fun () {
+			var num=h1.innerHTML;
+			num=num-1;
+			h1.innerHTML=num;
+			if (num==0) {
+				clearInterval(timer);
+				alert('倒计时结束');
+			}
+		}
+		
+		clo.onclick=function () {
+			clearInterval(timer);
+//			timer=null;
+			alert('倒计时结束');
+		}
+	</script>
+</html>

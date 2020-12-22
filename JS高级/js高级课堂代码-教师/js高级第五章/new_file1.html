@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>第二遍</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#box{
+				width: 100px;
+				height: 100px;
+				background: red;
+				
+				cursor: move;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+	</body>
+	<script type="text/javascript">
+		var box=document.getElementById('box');
+		//如何得到盒子的宽和高
+		console.log(box.offsetWidth);
+		console.log(box.offsetHeight);
+		//盒子到浏览器左侧和上边的距离
+		console.log(box.offsetLeft);
+		console.log(box.offsetTop);
+		//浏览器窗口的宽高
+		console.log(document.documentElement.clientWidth);
+		console.log(document.documentElement.clientHeight);
+		
+		box.onmousedown=function(e){
+			var oEvent=e || event;
+			//鼠标点击浏览器得到点击坐标
+			console.log(oEvent.clientX);
+			console.log(oEvent.clientY);
+			//得到点击时，鼠标到盒子左侧和顶部的距离
+			var x=oEvent.clientX-box.offsetLeft;
+			var y=oEvent.clientY-box.offsetTop;
+			//获取浏览器窗口的宽高
+			var dWidth=document.documentElement.clientWidth;
+			var dHeight=document.documentElement.clientHeight;
+			document.onmousemove=function(e){
+				var oEvent=e || event;
+				var left=oEvent.clientX-x;
+				var top=oEvent.clientY-y;
+				var maxWidth=dWidth-box.offsetWidth;
+				var maxHeight=dHeight-box.offsetHeight;
+				if(left<0)left=0;
+				if(top<0)top=0;
+				if(left>maxWidth)left=maxWidth;
+				if(top>maxHeight)top=maxHeight;
+				box.style.left=left+'px';
+				box.style.top=top+'px';
+			}
+			
+		}
+		//鼠标松开事件
+		box.onmouseup=function(){
+			document.onmousemove=null;
+		}
+	</script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p></p>
+		<input type="text"></input>
+		<button class="btn">click</button>
+	</body>
+	<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function () {
+			var $num=parseInt(Math.random()*8999+1000);
+			var $pt=$('p').eq(0).html($num);
+			
+			$('.btn').click(function () {
+				if ( Number($pt) == $('input').eq(0).html() ) {
+					alert('zzzz');
+				} else{
+					alert('ssss');
+				}
+			})
+		})
+	</script>
+</html>

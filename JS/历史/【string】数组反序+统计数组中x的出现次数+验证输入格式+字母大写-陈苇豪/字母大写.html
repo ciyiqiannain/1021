@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var str='button-form-table';
+		var arr=str.split('-');
+		document.write(arr+'<br/>');
+		document.write(arr[0].substring(0,1).toUpperCase()+'<br/>');//B
+		document.write(arr[0].substring(1)+'<br/>');//utton
+		for (var index in arr) {
+			arr[index]=arr[index].substring(0,1).toUpperCase()+arr[index].substring(1);
+		}
+		document.write(arr+'<br/>');//Button,Form,Table
+		//若缺少+arr[index].substring(1)，则Button,Form,Table-->utton,orm,able
+		document.write(arr.join('-')+'<br/>');//Button-Form-Table
+	</script>
+</html>

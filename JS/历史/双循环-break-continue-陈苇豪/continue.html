@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		
+		for (var a=1;a<6;a++) {
+			var num=parseFloat(prompt('请输入第'+a+'名的成绩'));
+			if (num<0) {
+				document.write('第'+a+'名的成绩格式错误<br/>');
+				continue;                                           
+			} else{
+				document.write('第'+a+'名的成绩为：'+num+'<br/>');
+			}
+		}
+	</script>
+</html>

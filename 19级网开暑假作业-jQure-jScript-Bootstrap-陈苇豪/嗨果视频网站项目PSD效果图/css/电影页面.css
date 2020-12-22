@@ -1,0 +1,193 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.box{
+	width: 1519px;
+	height: 1517px;
+}
+/*-------------------nav--------------------*/
+nav{
+	width: 100%;
+	height: 70px;
+	background: black;
+}
+nav>ul{
+	width: 90%;
+	height: 70px;
+	margin: 0 auto;
+}
+nav>ul>li{
+	float: left;
+	height: 70px;
+	line-height: 70px;
+	margin: 0px 5px;
+}
+nav>ul>li>a{
+	color: white;
+}
+nav>ul>li>img{
+	vertical-align: middle;
+}
+nav>ul>.li{
+	width: 27%;
+	margin-left: 5%;
+}
+nav>ul>.li>button{
+	width: 100%;
+	height: 30px;
+	border: 1px solid green;
+	margin-top: 20px;
+	position: relative;
+}
+nav>ul>.li3{
+	width: 7%;
+}
+nav>ul>.li3>button{
+	width: 100%;
+	height: 30px;
+	background: -webkit-linear-gradient(left,green,yellow);
+	border: 1px solid green;
+	margin-top: 20px;
+	color: white;
+	position: relative;
+}
+.sp1{
+	position: absolute;
+	top: 6px;
+	right: 5px;
+}
+.sp2{
+	position: absolute;
+	top: 5px;
+	left: 3px;
+}
+.li2{
+	float: right;
+}
+.li2>ul{
+	float: left;
+	margin: 0px 5px;
+}
+.li2>ul>li{
+	color: white;
+	height: 24px;
+	line-height: 10px;
+	text-align: center;
+	font-size: 12px;
+	cursor: pointer;
+}
+.li2>ul>li:first-of-type{
+	margin-top: 20px;
+}
+.li2>ul:last-of-type>li{
+	margin-top: 10px;
+}
+/*-------------------one--------------------*/
+.one{
+	width: 100%;
+	height: 456px;
+	margin: 0 auto;
+}
+.one>img{
+	width: 100%;
+}
+.two{
+	height: 151px;
+}
+.three{
+	width: 100%;
+	height: 1700px;
+}
+.three>ul{
+	margin: 0 auto;
+	width: 87%;
+	height: 1700px;
+}
+.three>ul>li{
+	float: left;
+	height: 1700px;
+}
+.three>ul>.left{
+	width: 78%;
+}
+.three>ul>.left>ul{
+	width: 100%;
+	height: 327px;
+}
+.three>ul>.left>ul>li{
+	float: left;
+	width: 50%;
+	height: 327px;
+}
+.three>ul>.left>ul>.li1{
+	background-image: url(../img/电影/bg_u389.png);
+}
+.three>ul>.left>ul>.li2>ul{
+	width: 100%;
+	height: 100%;
+}
+.three>ul>.left>ul>.li2>ul>li{
+	float: left;
+	width: 50%;
+	height: 50%;
+	margin-top: 0;
+}
+.three>ul>.left>p:nth-child(3)>img{
+	width: 100%;
+}
+.three>ul>.right{
+	width: 22%;
+}
+.three>ul>.right>p>img{
+	width: 93%;
+}
+.four{
+	margin: 0 auto;
+	width: 90%;
+}
+.four>p>img{
+	width: 100%;
+}
+.five{
+	width: 100%;
+}
+.five>img{
+	width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

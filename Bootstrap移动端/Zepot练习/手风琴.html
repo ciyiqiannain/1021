@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<style type="text/css">
+			*{
+				font-size: 0.1rem;
+			}
+			ul{
+				width: 100%;
+			}
+			ul>li{
+				width: 100%;
+			}
+			ul>li>p{
+				width: 100%;
+				background: black;
+				color: white;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				padding: 1%;
+				border: 1px solid white;
+			}
+			ul>li>p>.sp2{
+				border: 1px solid white;
+				border-radius: 0.1rem;
+				padding: 1%;
+			}
+			ul>li>p>.sp1{
+				display: inline-block;
+			}
+			ul>li>p>.sp1>.sp{
+				display: inline-block;
+				width: 22px;
+				height: 22px;
+				overflow: hidden;
+				background-image: url(img/icons.png);
+				/*background-position: 0px -24px;*/
+				vertical-align: middle;
+			}
+			ul>li>p>.sp1>.sp_two{
+				background-position: -24px 0px;
+			}
+			ul>li>p>.sp1>.sp_three{
+				background-position: -48px 0px;
+			}
+			ul>li>p>.sp1>.sp_four{
+				background-position: -72px 0px;
+			}
+			
+			ul>li>.hz{
+				width: 100%;
+				display: none;
+			}
+			ul>li>.hz>p{
+				width: 100%;
+				background: pink;
+				color: white;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				padding: 1%;
+				border: 1px solid black;
+			}
+			ul>li>.hz>p>.sp2{
+				border: 1px solid white;
+				border-radius: 0.1rem;
+				padding: 1%;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>
+				<p class="p_li">
+					<span class="sp1">
+						<span class="sp"></span>My Files
+					</span>
+					<span class="sp2">495</span>
+				</p>
+				<div class="hz">
+					<p>
+						<span>01 My Files</span>
+						<span class="sp2">495</span>
+					</p>
+					<p>
+						<span>01 My Files</span>
+						<span class="sp2">495</span>
+					</p>
+					<p>
+						<span>01 My Files</span>
+						<span class="sp2">495</span>
+					</p>
+					<p>
+						<span>01 My Files</span>
+						<span class="sp2">495</span>
+					</p>
+				</div>
+			</li>
+			<li>
+				<p class="p_li">
+					<span class="sp1">
+						<span class="sp sp_two"></span>Mail
+					</span>
+					<span class="sp2">26</span>
+				</p>
+				<div class="hz">
+					<p>
+						<span>01 My Files</span>
+						<span class="sp2">495</span>
+					</p>
+					<p>
+						<span>01 My Files</span>
+						<span class="sp2">495</span>
+					</p>
+					<p>
+						<span>01 My Files</span>
+						<span class="sp2">495</span>
+					</p>
+					<p>
+						<span>01 My Files</span>
+						<span class="sp2">495</span>
+					</p>
+				</div>
+			</li>
+			<li>
+				<p class="p_li">
+					<span class="sp1">
+						<span class="sp sp_three"></span>Cloud
+					</span>
+					<span class="sp2">58</span>
+				</p>
+				<div class="hz">
+					<p>
+						<span>01 My Files</span>
+						<span class="sp2">495</span>
+					</p>
+					<p>
+						<span>01 My Files</span>
+						<span class="sp2">495</span>
+					</p>
+					<p>
+						<span>01 My Files</span>
+						<span class="sp2">495</span>
+					</p>
+					<p>
+						<span>01 My Files</span>
+						<span class="sp2">495</span>
+					</p>
+				</div>
+			</li>
+			<li>
+				<p class="p_li">
+					<span class="sp1">
+						<span class="sp sp_four"></span>Sign Out
+					</span>
+					<span> </span>
+				</p>
+				<div class="hz">
+					<p>
+						<span>01 My Files</span>
+						<span class="sp2">495</span>
+					</p>
+					<p>
+						<span>01 My Files</span>
+						<span class="sp2">495</span>
+					</p>
+					<p>
+						<span>01 My Files</span>
+						<span class="sp2">495</span>
+					</p>
+					<p>
+						<span>01 My Files</span>
+						<span class="sp2">495</span>
+					</p>
+				</div>
+			</li>
+		</ul>
+	</body>
+	<script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		Zepto(function () {
+			$('.p_li').tap(function () {
+				$(this).siblings('.hz').toggle();
+				$(this).parent('li').siblings('li').find('.hz').hide();
+				
+				$(this).find('.sp').css('background-position','0px -24px');
+				$(this).find('.sp_two').css('background-position','-24px -24px');
+				$(this).find('.sp_three').css('background-position','-48px -24px');
+				$(this).find('.sp_four').css('background-position','-72px -24px');
+			})
+		})
+	</script>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			h2{
+				cursor: pointer;
+			}
+			ul{
+				list-style: none;
+			}
+			li{
+				width: 200px;
+				text-align: center;
+				height: 50px;
+				line-height: 50px;
+				margin: 15px;
+				background: orange;
+			}
+		</style>
+	</head>
+	<body>
+		<h2 onclick="h2()">前端课程</h2>
+		<ul id="ul">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+	</body>
+	<script type="text/javascript">
+		function h2 () {
+			var ul=document.getElementById('ul');
+			if (ul.style.display=='block') {
+				ul.style.display='none';
+			}
+			else{
+				ul.style.display='block';
+			}
+		}
+	</script>
+</html>

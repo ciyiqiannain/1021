@@ -1,0 +1,18 @@
+.middle{
+				width: 738px;
+				height: 410px;
+				border: 1px solid pink;
+			}
+			.middle>form>ul>li{
+				margin: 20px;
+			}
+			.middle>form>ul>.li-1{
+				margin-left: 35px;
+			}
+			.a1{
+				text-decoration: underline;
+				color: deeppink;
+			}
+			.middle>.p{
+				margin-left: 310px;
+			}

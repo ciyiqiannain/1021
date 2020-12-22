@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<!--音频-->
+		<!--1.controls显示控件，2.loop循环,3.autoplay就绪后马上播放.需其他设置.暂不知,4.muted开始时静音-->
+		<audio src="video/music.mp3" controls="controls" loop="loop" autoplay="autoplay" muted="muted"></audio>
+		
+		<!--视频-->
+		<!--1.controls显示控件，2.loop循环,3.autoplay就绪后马上播放.需其他设置.暂不知,4.muted开始时静音-->
+		<!--视频在muted存在时，autoplay可以使用-->
+		<video width="400" height="" controls="controls" loop="loop" autoplay="autoplay" muted="muted">
+			<source src="video/movie.mp4" type="video/mp4"></source>        <!--video/movie.mp4-->
+			<source src="video/movie.ogg" type="video/ogg"></source>        <!--video/movie.ogg-->
+			<source src="video/movie.webm" type="video/webm"></source>      <!--video/movie.webm-->
+			<object width="" height="" type="application/x-shockwave-flash" data="myvideo.swf">
+				<param name="movie" value="myvideo.swf" />
+				<param name="flashvars" value="autostart=true&amp;file=myvideo.swf" />
+			</object>
+			当前浏览器不支持 video直接播放，点击这里下载视频： <a href="video/movie.ogg">下载视频</a>
+		</video>
+	</body>
+</html>

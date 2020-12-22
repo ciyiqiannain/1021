@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#xiao{
+				width: 200px;
+				height: 200px;
+				border: 1px solid black;
+				margin: 100px 100px;
+				position: relative;
+			}
+			#xiao>img{
+				width: 200px;
+				height: 200px;
+			}
+			span{
+				width: 100px;
+				height: 100px;
+				display: block;
+				background: yellow;
+				opacity: 0.5;
+				position: absolute;
+				top: 0px;
+			}
+			#da{
+				width: 400px;
+				height: 400px;
+				border: 1px solid black;
+				margin: 100px 200px;
+				overflow: hidden;
+				position: absolute;
+				left: 100px;
+				top: 0px;
+			}
+			#da>img{
+				width: 800px;
+				height: 800px;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+			}
+			
+			ul{
+				list-style: none;
+				width: 200px;
+				height: 50px;
+				position: absolute;
+				left: 100px;
+				top: 300px;
+			}
+			li{
+				width: 50px;
+				height: 50px;
+				float: left;
+			}
+			li>img{
+				width: 50px;
+				height: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="xiao">
+			<img src="img/1.jpg"/>
+			<span></span>
+		</div>
+		<div id="da">
+			<img src="img/1.jpg"/>
+		</div>
+		<ul>
+			<li><img src="img/1.jpg"/></li>
+			<li><img src="img/2.jpg"/></li>
+			<li><img src="img/3.jpg"/></li>
+			<li><img src="img/4.jpg"/></li>
+		</ul>
+	</body>
+	<script src="js/jquery3.5.0jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('img').click(function(){
+				var a=$(this).attr('src');
+				console.log(a);
+				$('div>img').attr('src',a);
+			})
+			$('#xiao').hover(function(e){
+				
+				$('#xiao').mousemove(function(e){
+					//得到鼠标到浏览器左侧的距离
+//					console.log(e.clientX);
+//					console.log(e.clientY);
+					//得到小盒子到左侧的距离
+					var left=$('#xiao').offset().left;
+					
+					var top=$('#xiao').offset().top;
+//					console.log(top);
+					var width=$('span').width()/2;
+//					console.log(width);
+					
+					var sleft=e.clientX-left-width;
+					var stop=e.clientY-top-width;
+					if(sleft<0){
+						sleft=0;
+					}
+					if(stop<0){
+						stop=0;
+					}
+					MaxWidth=$('#xiao').width()-$('span').width();
+					MaxHeight=$('#xiao').height()-$('span').height();
+					if(sleft>MaxWidth){
+						sleft=MaxWidth;
+					}
+					if(stop>MaxHeight){
+						stop=MaxHeight;
+					}
+					$('span').css('left',sleft+'px');
+					$('span').css('top',stop+'px');
+					
+					dleft=-($('span').offset().left-$('#xiao').offset().left)*($('#da>img').width()-$('#da').width())/MaxWidth;
+					dtop=-($('span').offset().top-$('#xiao').offset().top)*($('#da>img').width()-$('#da').width())/MaxWidth;
+					console.log(dleft);
+					$('#da>img').css('left',dleft);
+					$('#da>img').css('top',dtop);
+					
+				})
+			})
+			
+		})
+	</script>
+</html>

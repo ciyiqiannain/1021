@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+	<form action="" method="post">
+			<p>用户名：<input type="text"id="text" /></p>
+			<p>密码：<input type="password"id="password" /></p>
+			<p>邮箱：<input type="text"id="email" /></p>
+			<input type="submit" value="提交"/ onclick="sub()">
+	</form>		
+	</body>
+	<script type="text/javascript">
+		function sub(){
+			var text=document.getElementById('text').value;
+			var password=document.getElementById('password').value;
+			var email=document.getElementById('email').value;
+			if(text.length<6){
+				alert('用户名过短！');
+				return;
+			}
+			if(password.length<6){
+				alert('密码过短！');
+				return;
+			}
+			if(email.indexOf('@')==-1 || email.indexOf('.')==-1){
+				alert('不符合邮箱要求');
+			}else{
+				alert('提交成功！');
+			}
+		}
+	</script>
+</html>

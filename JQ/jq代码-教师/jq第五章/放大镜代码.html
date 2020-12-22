@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#box{
+				width: 800px;
+				height: 600px;
+				/*border: 1px solid black;*/
+				margin: 100px 100px;
+				position: relative;
+			}
+			#small{
+				width: 200px;
+				height: 200px;
+				border: 1px solid black;
+				position: absolute;
+			}
+			#small>img{
+				width: 200px;
+				height: 200px;
+			}
+			span{
+				width: 100px;
+				height: 100px;
+				background: yellow;
+				opacity: 0.3;
+				display: inline-block;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				display: none;
+			}
+			#big{
+				width: 600px;
+				height: 600px;
+				position: absolute;
+				left: 200px;
+				/*border: 1px solid red;*/
+				overflow: hidden;
+				display: none;
+			}
+			#big>img{
+				width: 1200px;
+				height: 1200px;
+				position: absolute;
+			}
+			
+			ul{
+				width: 200px;
+				height: 50px;
+				list-style: none;
+				position: absolute;
+				top: 221px;
+			}
+			li{
+				width: 50px;
+				height: 50px;
+				float: left;
+			}
+			li>img{
+				width: 50px;
+				height: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div id="small">
+				<img src="img/1.jpg"/>
+				<span></span>
+			</div>
+			<div id="big">
+				<img src="img/1.jpg"/>
+			</div>
+			<ul>
+				<li><img src="img/1.jpg"/></li>
+				<li><img src="img/2.jpg"/></li>
+				<li><img src="img/3.jpg"/></li>
+				<li><img src="img/4.jpg"/></li>
+			</ul>
+		</div>
+	</body>
+	<script src="js/jquery3.5.0jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('li>img').hover(function(){
+				var sr=$(this).attr('src');
+				$('div>img').attr('src',sr);
+			})
+			$('#small').hover(function(){
+				$('span').show();
+				$('#big').show();
+				$('#small').mousemove(function(e){
+					//1.鼠标移动   遮罩层移动
+					//鼠标的位置
+	//				console.log('X坐标'+e.clientX+'Y坐标'+e.clientY);
+					
+					//小盒子距离浏览器左侧和顶部的距离
+	//				console.log($('#small').offset().left);
+	//				console.log($('#small').offset().top);
+					//遮罩层的宽度
+	//				console.log($('span').width());
+	//				console.log($('span').height());
+					//找到遮罩层定位的最小left值
+					var Minleft=e.clientX-($('#small').offset().left+$('span').width()/2);
+					if(Minleft<0){
+						Minleft=0;
+					}
+					var Mintop=e.clientY-($('#small').offset().top+$('span').height()/2);
+					if(Mintop<0){
+						Mintop=0;
+					}
+						
+					var Maxleft=$('#small').width()-$('span').width();
+					var Maxtop=$('#small').height()-$('span').height();
+	//				console.log(Maxleft+'------------'+Maxtop);
+	//				
+					if(Minleft>Maxleft){
+						Minleft=Maxleft;
+					}
+					if(Mintop>Maxtop){
+						Mintop=Maxtop;
+					}
+					$('span').css('left',Minleft+'px');
+					$('span').css('top',Mintop+'px');
+					
+					//2、让大盒子图片进行相对移动
+					var Bimgleft=-($('span').offset().left-$('#small').offset().left)*($('#big>img').width()-$('#big').width())/Maxleft;
+					var Bimgtop=-($('span').offset().top-$('#small').offset().top)*($('#big>img').height()-$('#big').height())/Maxtop;
+					
+					$('#big>img').css('left',Bimgleft+'px');
+					$('#big>img').css('top',Bimgtop+'px');
+				})	
+			},function(){
+				$('span').hide();
+				$('#big').hide();
+			})
+		})
+	</script>
+</html>

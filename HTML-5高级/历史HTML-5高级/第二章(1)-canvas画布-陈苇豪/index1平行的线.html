@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			canvas{
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="c" width="600" height="600"></canvas>
+	</body>
+	<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var c=document.getElementById('c')
+		var cxt=c.getContext('2d')
+		
+		cxt.beginPath()
+		cxt.moveTo(0,50)
+		cxt.lineTo(550,600)
+		cxt.strokeStyle='blue';
+		cxt.lineWidth=3;
+		cxt.stroke()
+		cxt.closePath()
+		
+		cxt.beginPath()
+		cxt.moveTo(200,0)
+		cxt.lineTo(600,400)
+		cxt.strokeStyle='blue';
+		cxt.lineWidth=3;
+		cxt.stroke()
+		cxt.closePath()
+	</script>
+</html>

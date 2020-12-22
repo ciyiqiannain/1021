@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			span{
+				display: none;
+			}
+			i{
+				color: red;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<p>用户名：
+			<input type="text" name="" id="input" value="hello kgc" />
+			<span id="span">至少6-12位</span><i id="i1">✔</i><i id="i2">✘</i>
+		</p>
+	</body>
+	<script type="text/javascript">
+		var input=document.getElementById('input');
+		var span=document.getElementById('span');
+		var i1=document.getElementById('i1');
+		var i2=document.getElementById('i2');
+		
+		input.onfocus=function(){
+			input.value='';
+			i2.style.display='none';
+			i1.style.display='none';
+			span.style.display='inline-block';
+			input.style.color='red';
+		}
+		input.onblur=function(){
+			console.log(input.value);
+			var num=input.value.length;
+			if(num>=6 && num<=12){
+				i1.style.display='inline-block';
+			}else{
+				i2.style.display='inline-block';
+			}
+		}
+	</script>
+</html>

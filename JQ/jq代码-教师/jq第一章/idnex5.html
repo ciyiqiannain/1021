@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul>
+			<li id="li1">非缘勿扰</li>
+			<li id="li2">主演：苏有朋</li>
+			<li id="li3">导演：赖水清</li>
+			<li id="li4">标签：连续剧</li>
+			<button>收藏</button>
+		</ul>
+	</body>
+	<script src="js/3.4.1jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			//点击事件的两种书写方式
+//			$('#li1').click(function(){
+//				$('#li2').css({'color':'red','font-size':'38px'});
+//			})
+//			$('#li1').on('click',function(){
+//				$('#li2').css({'color':'red','font-size':'38px'});
+//			})
+
+			//hover  第一个函数是鼠标放上去的效果   
+//			$('#li1').hover(function(){
+//				$('#li2').css({'color':'red','font-size':'38px'});
+//			},function(){    //第二个函数是鼠标离开后的效果
+//				$('#li2').css({'color':'blue','font-size':'12px'});
+//			})
+			$('button').click(function(){
+				var a=confirm('确定收藏吗？');
+				console.log(a);
+			})
+		})
+	</script>
+</html>
