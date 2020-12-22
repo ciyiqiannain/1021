@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				font-size: 0.2rem;
+			}
+			header>img{
+				width: 100%;
+			}
+			.one{
+				display: flex;
+				justify-content: space-between;
+				flex-flow: row nowrap;
+				align-items: center;
+				margin: 0.1rem 0rem;
+			}
+			.one>p>input{
+				width: 100%;
+				border-radius: 1rem;
+				border: 0px;
+				padding: 0.1rem 0.4rem 0.1rem 0.2rem;
+				font-size: 0.1rem;
+			}
+			.one>p:nth-child(1){
+				margin-left: 5%;
+				width: 50%;
+				position: relative;
+			}
+			.one>p:nth-child(1)>img{
+				width: 15%;
+				position: absolute;
+				right: -0.5rem;
+				top: 0.04rem;
+			}
+			.one>p:nth-child(2)>img{
+				width: 65%;
+			}
+			.swiper-container{
+				margin: 0 auto;
+				width: 90%;
+			}
+			.swiper-container img{
+				width: 100%;
+			}
+			.swiper-pagination>span{
+				width: 0.2rem;
+				height: 0.05rem;
+				color: e9a6a2;
+				border-radius: 0.04rem;
+			}
+			.two>ul{
+				margin: 0 auto;
+				width: 90%;
+				display: flex;
+				flex-flow: row nowrap;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.two>ul>li{
+				width: 20%;
+			}
+			.two>ul>li>p{
+				text-align: center;
+				font-size: 0.12rem;
+				margin: 0.1rem 0rem;
+			}
+			.two>ul>li>p>img{
+				width: 65%;
+			}
+			.three{
+				margin: 0 auto;
+				width: 90%;
+				padding: 0.15rem 0rem;
+			}
+			.three>p{
+				margin: 0.1rem 0.05rem;
+				font-size: 0.15rem;
+			}
+			.three>p>span{
+				float: right;
+				font-size: 0.2rem;
+				margin-right: 5%;
+			}
+			.three>ul{
+				display: flex;
+				flex-flow: row nowrap;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.three>ul>li>p>img{
+				width: 100%;
+			}
+			.three>ul>li>p{
+				margin: 0rem 0.05rem;
+				font-size: 0.15rem;
+			}
+			.three>ul>li>p:nth-child(3){
+				font-size: 0.1rem;
+				color: #999999;
+			}
+			
+			.four>ul>li>p>img{
+				width: 75%;
+			}
+			
+			.one{
+				position: relative;
+			}
+			.one ul{
+				display: flex;
+				flex-flow: row wrap;
+				justify-content: space-around;
+				align-items: center;
+				background: white;
+				width: 71%;
+				position: absolute;
+				top: 0.35rem;
+				z-index: 999;
+				display: none;
+			}
+			.one ul>li{
+				width: 100%;
+				margin-left: 0.4rem;
+				border-bottom: 0.01rem solid pink;
+			}
+		</style>
+	</head>
+	<body>
+		<header><img src="img/top_02.jpg"/></header>
+		<div class="one">
+			<p>
+				<input type="text" name="" id="sou" placeholder="请输入套查找的内容" />
+				<img src="img/首页_03.jpg" class="btn"/>
+				<ul id="video">
+					<li>βios
+						<audio src="video/归去来兮（翻自 花粥） - 黑猫.mp3" controls="controls" loop="loop" autoplay="autoplay" muted="muted">
+						
+					</audio></li>
+				</ul>
+			</p>
+			<p><img src="img/首页_05.jpg"/></p>
+		</div>
+		<div class="swiper-container">
+		    <div class="swiper-wrapper">
+		        <div class="swiper-slide"><img src="img/1_03.jpg"/></div>
+		        <div class="swiper-slide"><img src="img/1_03.jpg"/></div>
+		        <div class="swiper-slide"><img src="img/1_03.jpg"/></div>
+		        <div class="swiper-slide"><img src="img/1_03.jpg"/></div>
+		    </div>
+		    <!-- 如果需要分页器 -->
+		    <div class="swiper-pagination"></div>
+		    <div class="swiper-pagination"></div>
+		    <div class="swiper-pagination"></div>
+		    <div class="swiper-pagination"></div>
+		</div>
+		<div class="two">
+			<ul>
+				<li>
+					<p><img src="img/首页_13.jpg"/></p>
+					<p>短信</p>
+				</li>
+				<li>
+					<p><img src="img/首页_16.jpg"/></p>
+					<p>备忘录</p>
+				</li>
+				<li>
+					<p><img src="img/首页_18.jpg"/></p>
+					<p>标签</p>
+				</li>
+				<li>
+					<p><img src="img/首页_20.jpg"/></p>
+					<p>电话</p>
+				</li>
+				<li>
+					<p><img src="img/首页_22.jpg"/></p>
+					<p>视频</p>
+				</li>
+			</ul>
+		</div>
+		<div class="three">
+			<p>猜你喜欢<span> > </span></p>
+			<ul>
+				<li>
+					<p><img src="img/2_03_03.jpg"/></p>
+					<p>YOU DESER</p>
+					<p>LEDR</p>
+				</li>
+				<li>
+					<p><img src="img/2_03_03.jpg"/></p>
+					<p>YOU DESER</p>
+					<p>LEDR</p>
+				</li>
+				<li>
+					<p><img src="img/2_03_03.jpg"/></p>
+					<p>YOU DESER</p>
+					<p>LEDR</p>
+				</li>
+			</ul>
+		</div>
+		<hr />
+		<div class="three four">
+			<p>歌手信息-推荐<span> > </span></p>
+			<ul>
+				<li>
+					<p><img src="img/03_03.jpg"/></p>
+				</li>
+				<li>
+					<p><img src="img/03_05.jpg"/></p>
+				</li>
+				<li>
+					<p><img src="img/03_07.jpg"/></p>
+				</li>
+				<li>
+					<p><img src="img/03_09.jpg"/></p>
+				</li>
+			</ul>
+		</div>
+	</body>
+	<script src="js/jquery-3.5.1.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/runner.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function () {
+			runner(function *(){
+				let data=yield $.ajax({url:"json/video.json",dataType:"json"});
+				console.log(data)
+				setTimeout(()=>{console.log(data.arr)},2000);
+				
+				$(".btn").click(function () {
+					$('.one ul').find('li').remove();
+					
+//					if ($("#sou").val()=='') {
+//						return false;
+//					}
+					let $text=$("#sou").val()
+//					console.log(data.arr.length)
+					for (let i=0;i<data.arr.length;i++) {
+						if (data.arr[i].music.indexOf($text) != -1 ||  data.arr[i].singer.indexOf($text) != -1) {
+							$('#video').show();
+							$('#video').append($(
+								"<li>"+
+									data.arr[i].music+"-"+data.arr[i].singer+
+									"<audio src=' "+data.video[i].src+"' controls loop muted "
+								+"</li>"))
+						}
+					}
+				})
+			})
+		})
+		var mySwiper = new Swiper ('.swiper-container', {
+//		    direction: 'vertical', // 垂直切换选项
+		    loop: true, // 循环模式选项
+		    autoplay: {
+			    delay: 1000,//1秒切换一次
+			  },
+		    // 如果需要分页器
+		    pagination: {
+		      el: '.swiper-pagination',
+		    },
+		})
+	</script>
+</html>
